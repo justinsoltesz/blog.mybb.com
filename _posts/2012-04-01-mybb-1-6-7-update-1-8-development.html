@@ -1,0 +1,83 @@
+---
+layout: post
+title: MyBB 1.6.7 Release, Merge 1.6.7 & MyBB 1.8 Development
+date: 2012-04-01 00:00:08.000000000 -04:00
+categories:
+- Releases
+- Security
+- Updates
+tags:
+- '1.6'
+- '1.8'
+- Merge System
+author: Chris Boulton
+---
+<h2>MyBB 1.6.7 - Security, Maintenance and Feature Release</h2>
+<p>MyBB 1.6.7 is now available from the MyBB website and is a security, maintenance and feature update.</p>
+<p>In 1.6.7 there are 5 new feature updates and over 70 reported issues fixed. Please be aware that to be able to provide easy to manage updates not all issues have been fixed in this version.</p>
+<ul>
+<li><a href="http://dev.mybb.com/projects/mybb/issues?fixed_version_id=42">Fixed issues in 1.6.7</a></li>
+<li><a href="http://dev.mybb.com/projects/mybb/issues">Unfixed issues</a></li>
+</ul>
+<p>1.6.7 fixes 5 low-risk security vulnerabilities.</p>
+<ul>
+<li>SQL injection vulnerability within the Admin Control Panel (ACP) in user search (reported by Nathan Malcolm, MyBB SQA Team)</li>
+<li>SQL injection vulnerability within the ACP in Mail Log (reported by Nathan Malcolm, MyBB SQA Team)</li>
+<li>SQL injection vulnerability within the ACP in User Inline Moderation (reported by Jammerx2, MyBB Developer)</li>
+<li>XSS within the ACP where an orphaned attachment has a malformed filename (reported by Nathan Malcolm, MyBB SQA Team)</li>
+<li>Full Path Disclosure if malformed forumread cookie is used</li>
+</ul>
+<p>ACP vulnerabilities require Administrator permissions and so considered low-risk. We recommend planning your upgrade as quickly as possible to ensure your forum is as secure as it can be.</p>
+<p>New features included in 1.6.7 update include the ability to login with a username, an email or both. For more information about new features, please see the Wiki on 1.6.7.</p>
+<blockquote><p><a href="http://wiki.mybb.com/index.php/1.6.7" target="_blank">View 1.6.7 Changes in the Wiki</a></p></blockquote>
+<h4>Upgrading from 1.6.6 and Other Versions</h4>
+<p>Before performing any upgrade, please remember to backup your forum's files and database and store them safely. If you have edited core files, including languages files, please make sure you make a change log for these changes so you can make them again once the upgrade is complete.</p>
+<p>To upgrade, follow the Upgrading process. The <strong>upgrade script</strong> is required. There are also <strong>language</strong> and <strong>theme</strong> changes.</p>
+<blockquote><p>If you're using MyBB 1.6.6</p>
+<ul>
+</ul>
+<ul>
+<li>Download and use the <a href="https://github.com/downloads/mybb/mybb16/1607_changed_files.zip">Changed Files Package</a></li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li><a href="http://wiki.mybb.com/index.php/Upgrading#Beginning_the_Upgrade">Follow the Wiki Upgrading instructions</a></li>
+</ul>
+<p>If you're not using MyBB 1.6.6</p>
+<ul>
+</ul>
+<ul>
+<li>Download and use the full <a href="https://github.com/downloads/mybb/mybb16/mybb_1607.zip">1.6.7 release package</a></li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+<li><a href="http://mybb.com/downloads/latest/">Follow the </a><a href="http://wiki.mybb.com/index.php/Upgrading#Beginning_the_Upgrade" target="_blank">Wiki Upgrading instructions</a></li>
+</ul>
+</blockquote>
+<h4>Reporting MyBB security vulnerabilities</h4>
+<p>If you think you've found a vulnerability in MyBB, we advise you not to publicly post it on these forums or publicly release information about it elsewhere until we've had time to prepare and release a patch.</p>
+<p>As always, you can send through security related messages on the MyBB website from the <a target="_blank">Contact Us</a> page or in our <a href="http://community.mybb.com/forum-135.html">Private Inquiries</a> forum - where you can start a new thread that only you and the MyBB Team can see.</p>
+<h2>MyBB Merge System 1.6.7</h2>
+<p>MyBB Merge System 1.6.7 is <a href="https://github.com/downloads/mybb/mybb16/merge_1.6.7.zip">now available</a> on the MyBB website and is a maintenance update to the MyBB Merge 1.6 series.</p>
+<p>This release is to ensure that all users of MyBB Merge 1.6 have the latest fixes.</p>
+<p>This release fixes several reported issues since the release of 1.6.3, which caused some incorrect functionality of the Merge System. These bugs have been fixed to provide a more stable version of the Merge System for public use.</p>
+<h4>What's new in this version?</h4>
+<ul>
+<li>3 bug fixes (<a href="http://dev.mybb.com/projects/mybb-import/versions/43">view all</a>)</li>
+<li>Version jump to 1.6.7 from 1.6.3 to match the current MyBB Version. From now on we'll do our best to keep these in sync.</li>
+</ul>
+<p>This includes some critical fixes for phpBB that caused infinite loops.</p>
+<h2>MyBB Mascot Update</h2>
+<p><img class="alignright" style="margin-left:5px;margin-right:5px;float:right;" title="Bolt" src="{{ site.baseurl }}/assets/images/attachment.php?aid=25703" alt="" width="99" height="214" /><br />
+We recently held our MyBB Mascot Naming Contest.   Many community members <a href="http://community.mybb.com/thread-114748.html" target="_blank">proposed names</a> and after a week a <a href="http://community.mybb.com/thread-115639.html" target="_blank">poll with the top names</a> was put up.  After another week of voting, the name "Bolt", after MyBB founder Chris Boulton, was chosen.  <a href="http://community.mybb.com/thread-114748-post-832444.html#pid832444" target="_blank">Proposed by Mebes Net</a>, we of the MyBB Team feels this name conveys the strength and speed of MyBB very effectively.</p>
+<p>We are proud to present to you the MyBB Mascot, Bolt!</p>
+<h2>MyBB 1.8 - The Bridge to 2.0</h2>
+<p>Everyone here at MyBB are proud to announce the impending arrival of our next major feature release - MyBB 1.8.</p>
+<p>Over the last 2 months we've been developing in secret at our Github lair, plotting to once again attempt to take over the forum world with our evil plans and awesome free software and to celebrate the 10th anniversary of DevBB - our supreme overlord predecessor.</p>
+<p>1.8 isn't as big of an overhaul as 1.2, 1.4 or 1.6 upgrades which introduced more than 100 features; this is more of a facelift. We took Justin, our lead designer, and locked him in a room with nothing but bacon and water until he came up with a <strong>new default theme</strong> which is taken from one of (if not the) most popular theme collections used by MyBB communities across the world; his Apart series. That's not all - we developed <strong>attachable base colours</strong> to themes so that creating (and using) multi-coloured themes no longer involve adding 14 separate styles. You add just one. A <strong>new default theme for your Admin Control Panel (ACP)</strong> is available too.</p>
+<p>For more than half of MyBB's rule of the forum world, our JavaScript has been powered by Prototype. It was a popular library when we started using it but it has fallen behind a more powerful (and popular) rival and so we've consigned it to MyBB history; MyBB 1.8 is <strong>powered by jQuery</strong>.</p>
+<p>Two of the most requested features for MyBB will also be heading to 1.8. With our switch to jQuery, along comes a new post editor (yet to be decided) and a <strong>Trash Can</strong> - or more the ability to recover deleted posts via the Mod CP.</p>
+<p>Along with the regular bug fixes and a host of other planned improvements, such as an APC cache handler, being able to make a cup of hot cocoa, separating the plugin list to active/inactive, making some functions a bit easier to use and projecting your forum's logo onto the face of the Moon, we'll be working with MyBB gurus to improve performance, plugin integrations and we're looking into making the authentication to 3rd party software much easier too with a dedicated login datahandler. It doesn't have to be just gurus though; we'll be opening up 1.8 to everyone on Github so that they too can fork, improve, update and become one with the MyBB Team.</p>
+<p>We're all very excited about this release and hope you are too! More information will be coming soon but in the mean time please feel free to suggest more improvements in our <a href="http://community.mybb.com/forum-7.html" target="_blank">Suggestions and Feedback Forum</a>!</p>
+<p>Thanks,</p>
+<p>MyBB Team</p>

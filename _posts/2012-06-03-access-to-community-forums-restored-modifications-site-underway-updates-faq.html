@@ -1,0 +1,28 @@
+---
+layout: post
+title: Access to community forums restored, modifications site underway, updates &
+  FAQ
+date: 2012-06-03 09:29:15.000000000 -04:00
+categories:
+- Security
+- Updates
+tags: []
+author: Chris Boulton
+---
+<p>Following on from our <a href="http://blog.mybb.com/2012/06/02/well-be-back-soon/#comments">We'll be back soon post</a> yesterday, I just wanted to provide an update on our recovery efforts as well as address a few of the commonly asked questions.</p>
+<p><strong>After a comprehensive investigation, including audits of all files on our existing servers as well as an analysis of server and website access logs, we're happy to confidently say that we do not believe any of our servers were compromised, or our databases accessed.</strong></p>
+<p>As you've likely noticed, access to the <a href="http://community.mybb.com/">MyBB Community Forums</a> has now been restored. Because we don't believe the MyBB database was compromised, we have opted to not require users to change their passwords on next login. If you're having difficulty accessing the forums (for example, if it's redirecting to www.mybb.com, or stylesheets aren't loading correctly), then please clear your web browser cache and try again.</p>
+<p>We're working on restoring access to the MyBB Mods website as soon as we can, however expect the modifications site take another 24 hours before it can be pushed live.</p>
+<p>Our team are also busy working on relaunching the official MyBB documentation, using <a href="http://pages.github.com/">GitHub Pages</a>. We're moving away from MediaWiki and wiki-based documentation primarily because we believe our efforts are best focused on maintaining our core website, forums and modifications site rather than managing a slew of third-party applications (this is the same reason why our blog is now powered by <a href="http://www.wordpress.com/">WordPress.com</a>). Because GitHub Pages is directly backed to a Git repository, the entire community can still collaborate to our documentation using <a href="https://help.github.com/send-pull-requests/">pull requests</a>.</p>
+<p>At this stage, we plan to discontinue the MyBB Ideas site. We believe that through great collaboration on the MyBB Community Forums in our <a href="http://community.mybb.com/forum-7.html">MyBB 1.8 Feature Suggestions</a> and <a href="http://community.mybb.com/forum-152.html">MyBB 2.0 Feature Suggestions</a> forums, together we can build even greater software. It also means there's one less place to collect feedback from.</p>
+<p>We're taking an overly cautious process with the restoration. If we chose to, we could simply flick all services on again, and have the wiki, modifications site, etc live. Instead, even though we're confident there was no breach of our servers, we're still handling the situation if there were. Before anything is relaunched, we're:</p>
+<ul>
+<li>Verifying access logs of the site to look for suspicious behavior</li>
+<li>Verifying the content of the sites by comparing them against previously taken backups (both onsite and offsite, and against backups taken recently and those taken weeks ago) and analysing each and every difference by hand</li>
+<li>Pushing the content of all websites to our new servers from an offline copy, instead of our old servers</li>
+<li>Verifying that all of our websites work behind <a href="http://www.cloudflare.com/">CloudFlare</a>, and implementing caching strategies in CloudFlare to give you even faster page loads</li>
+</ul>
+<p>There's also been a lot of discussion around what legal action we will be taking against those that have attacked us. At this stage, we believe our time and effort is better spent improving and educating users about security, and moving forward with the development of <a href="http://blog.mybb.com/2012/04/03/mybb-1-8-tour-introduction/">MyBB 1.8</a>, MyBB 2.0, and our rebranding.</p>
+<p>Again, we want to thank everyone for their support and patience and look forward to moving onwards and upwards!</p>
+<p>Regards,</p>
+<p>Chris, Tim, and the rest of the MyBB Team</p>

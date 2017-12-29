@@ -1,0 +1,14 @@
+<section class="block">
+    <h1 class="block__heading">Categories</h1>
+    <nav class="sidebar__nav">
+		<ul class="sidebar__nav__links">
+            {% assign sorted_categories = site.categories | sort %}
+			{% for category in sorted_categories %}
+            {% capture category_name %}{{ category | first }}{% endcapture %}
+            <li class="sidebar__nav__links__item">
+                <a href="{{ site.baseurl }}/category/{{ category_name | slugify }}" class="sidebar__nav__links__item__link">{{ category_name }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </nav>
+</section>

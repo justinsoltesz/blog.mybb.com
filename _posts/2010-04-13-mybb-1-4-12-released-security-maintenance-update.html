@@ -1,0 +1,231 @@
+---
+layout: post
+title: MyBB 1.4.12 Released - Security & Maintenance Update
+date: 2010-04-13 12:37:19.000000000 -04:00
+categories:
+- Releases
+- Security
+- Updates
+tags:
+- '1.4'
+author: Chris Boulton
+---
+<p>MyBB 1.4.12 is now available on the MyBB website and is a security and maintenance update to MyBB 1.4.11. This will be the last maintenance release of the MyBB 1.4 series. We will still continue to provide security updates for the MyBB 1.4 series.</p>
+<p>This release is to ensure that all users on 1.4.11 have the latest fixes, and to patch two medium-risk security issues and a low risk security issue within MyBB.</p>
+<p>Thank you to Stefan Esser and Labrocca for alerting us of these issues.</p>
+<h4><strong>What's fixed in this version?</strong></h4>
+<ul>
+<li><a href="http://dev.mybboard.net/issues/309" target="_blank">#309</a> - Direct access of some files generates PHP errors</li>
+<li><a href="http://dev.mybboard.net/issues/374" target="_blank">#374</a> - editpost editpost_start hook run twice</li>
+<li><a href="http://dev.mybboard.net/issues/466" target="_blank">#466</a> - Last post date after custom merge</li>
+<li><a href="http://dev.mybboard.net/issues/556" target="_blank">#556</a> - Wrong additional groups in ACP</li>
+<li><a href="http://dev.mybboard.net/issues/565" target="_blank">#565</a> - Custom view in browse users error</li>
+<li><a href="http://dev.mybboard.net/issues/575" target="_blank">#575</a> - Redundant Code in inc/class_parser.php</li>
+<li><a href="http://dev.mybboard.net/issues/583" target="_blank">#583</a> - UTF8-conversion fails with PostgreSQL</li>
+<li><a href="http://dev.mybboard.net/issues/586" target="_blank">#586</a> - Posts after updating the attachments of drafts</li>
+<li><a href="http://dev.mybboard.net/issues/592" target="_blank">#592</a> - Forum subrscription displaying always the wrong image</li>
+<li><a href="http://dev.mybboard.net/issues/593" target="_blank">#593</a> - Image upload</li>
+<li><a href="http://dev.mybboard.net/issues/594" target="_blank">#594</a> - portal_pms template not getting cached</li>
+<li><a href="http://dev.mybboard.net/issues/597" target="_blank">#597</a> - $yearsel not defined</li>
+<li><a href="http://dev.mybboard.net/issues/598" target="_blank">#598</a> - Split thread - post icon</li>
+<li><a href="http://dev.mybboard.net/issues/604" target="_blank">#604</a> - Make private event public</li>
+<li><a href="http://dev.mybboard.net/issues/606" target="_blank">#606</a> - Server Statistics - Hostname and hosturl not working</li>
+<li><a href="http://dev.mybboard.net/issues/609" target="_blank">#609</a> - Wrong first day of week in week view</li>
+<li><a href="http://dev.mybboard.net/issues/613" target="_blank">#613</a> - Error is invalid smilie path is used</li>
+<li><a href="http://dev.mybboard.net/issues/618" target="_blank">#618</a> - Alternating trows on profile page</li>
+<li><a href="http://dev.mybboard.net/issues/621" target="_blank">#621</a> - global_pm_alert template typo dismis_notice</li>
+<li><a href="http://dev.mybboard.net/issues/622" target="_blank">#622</a> - Reputation by a deleted user</li>
+<li><a href="http://dev.mybboard.net/issues/623" target="_blank">#623</a> - Upgrade 1.1.18 -&gt; 1.4.11</li>
+<li><a href="http://dev.mybboard.net/issues/627" target="_blank">#627</a> - private_nomessages template not getting cached</li>
+<li><a href="http://dev.mybboard.net/issues/632" target="_blank">#632</a> - Settings not selected if error appears</li>
+<li><a href="http://dev.mybboard.net/issues/634" target="_blank">#634</a> - firstpost of copied thread set to 0</li>
+<li><a href="http://dev.mybboard.net/issues/643" target="_blank">#643</a> - Missing field when fetching latest announcements into portal page</li>
+<li><a href="http://dev.mybboard.net/issues/647" target="_blank">#647</a> - function generate_thumbnail generates warning</li>
+<li><a href="http://dev.mybboard.net/issues/650" target="_blank">#650</a> - Status Icon of Forum not shown on Forum Subscription List</li>
+<li><a href="http://dev.mybboard.net/issues/660" target="_blank">#660</a> - forumdisplay_rules not cached</li>
+<li><a href="http://dev.mybboard.net/issues/662" target="_blank">#662</a> - member.php and $referrals</li>
+<li><a href="http://dev.mybboard.net/issues/672" target="_blank">#672</a> - threadviews task won't disable from settings change</li>
+<li><a href="http://dev.mybboard.net/issues/673" target="_blank">#673</a> - Typo in member.lang.php $l['hide_dob']</li>
+<li><a href="http://dev.mybboard.net/issues/678" target="_blank">#678</a> - Hard-coded language string in /admin/modules/style/templates.php</li>
+<li><a href="http://dev.mybboard.net/issues/684" target="_blank">#684</a> - Typo in postbit when ignoring users</li>
+<li><a href="http://dev.mybboard.net/issues/685" target="_blank">#685</a> - Akismet "unmark" does not reduce number of "akismetstopped" field.</li>
+<li><a href="http://dev.mybboard.net/issues/688" target="_blank">#688</a> - Old avatars are not deleted</li>
+<li><a href="http://dev.mybboard.net/issues/689" target="_blank">#689</a> - Usercp.php + Modcp.php - XHTML 1.0 Problem ($bdaymonthsel)</li>
+<li><a href="http://dev.mybboard.net/issues/703" target="_blank">#703</a> - Mass Mail Auto Generated Text Version</li>
+<li><a href="http://dev.mybboard.net/issues/716" target="_blank">#716</a> - Error reads "[WRITE] Unable to slave database", should be select</li>
+<li><a href="http://dev.mybboard.net/issues/720" target="_blank">#720</a> - UTF8 conversion causes mysql error on blob/text fields</li>
+<li><a href="http://dev.mybboard.net/issues/722" target="_blank">#722</a> - Group Join Requests From Guests</li>
+<li><a href="http://dev.mybboard.net/issues/727" target="_blank">#727</a> - Converting a forum with threads to a category should be disallowed</li>
+<li><a href="http://dev.mybboard.net/issues/728" target="_blank">#728</a> - Post Edit bypasses max. [img] MyCodes per Post</li>
+<li><a href="http://dev.mybboard.net/issues/749" target="_blank">#749</a> - Portal "Since then, there have been:" counts unapproved threads and drafts</li>
+<li><a href="http://dev.mybboard.net/issues/750" target="_blank">#750</a> - Theme importing ignored error</li>
+<li><a href="http://dev.mybboard.net/issues/759" target="_blank">#759</a> - Stars are shown on user profile even if they are set to 0 for the group</li>
+<li><a href="http://dev.mybboard.net/issues/764" target="_blank">#764</a> - attachment MyCode isn't parsed in feeds</li>
+<li><a href="http://dev.mybboard.net/issues/774" target="_blank">#774</a> - mysqli_pconnect function not exists</li>
+<li><a href="http://dev.mybboard.net/issues/778" target="_blank">#778</a> - db reconstruction in inc/functions.php $config check fails</li>
+<li><a href="http://dev.mybboard.net/issues/791" target="_blank">#791</a> - Ratings column of forum display ignores group settings</li>
+<li><a href="http://dev.mybboard.net/issues/794" target="_blank">#794</a> - Badwords preg_quote fix</li>
+<li><a href="http://dev.mybboard.net/issues/802" target="_blank">#802</a> - Stars are shown in Postbit even if they are set to zero and no image is linked</li>
+<li><a href="http://dev.mybboard.net/issues/809" target="_blank">#809</a> - Unviewable threads showing on portal</li>
+<li><a href="http://dev.mybboard.net/issues/810" target="_blank">#810</a> - Portal post shows smilies even when set not to in post</li>
+<li><a href="http://dev.mybboard.net/issues/812" target="_blank">#812</a> - allow [img] in posts depends on MyCode being allowed</li>
+<li><a href="http://dev.mybboard.net/issues/816" target="_blank">#816</a> - Duplicate htmlspecialchar in inc/functions_online.php</li>
+<li><a href="http://dev.mybboard.net/issues/821" target="_blank">#821</a> - syndication.php errors</li>
+<li><a href="http://dev.mybboard.net/issues/822" target="_blank">#822</a> - Use of $_POST in ./xmlhttp.php</li>
+<li><a href="http://dev.mybboard.net/issues/835" target="_blank">#835</a> - MyBB, dl(), and PHP 5.3.x - no dl() in many 5.3.x releases</li>
+<li><a href="http://dev.mybboard.net/issues/836" target="_blank">#836</a> - Debug code left in inc/class_mailhandler.php</li>
+<li><a href="http://dev.mybboard.net/issues/843" target="_blank">#843</a> - Improvements to PHP's mt_rand RNG seeding</li>
+<li><a href="http://dev.mybboard.net/issues/849" target="_blank">#849</a> - We can set date of birth as future date</li>
+<li><a href="http://dev.mybboard.net/issues/852" target="_blank">#852</a> - CSRF issue in usercp2.php</li>
+<li><a href="http://dev.mybboard.net/issues/862" target="_blank">#862</a> - Rebuilding Attachment Thumbnails Plugin Hook Name</li>
+<li><a href="http://dev.mybboard.net/issues/870" target="_blank">#870</a> - Missing warning messages</li>
+<li><a href="http://dev.mybboard.net/issues/871" target="_blank">#871</a> - Datahandler merge ignores updating post message variable</li>
+</ul>
+<p>This release has been tested by our Software Quality Assurance group.</p>
+<p><span style="color:red;"><strong>This update <span style="font-size:large;text-decoration:underline;">does</span> require running the upgrader.</strong></span><br />
+<em>There <strong>are</strong> database schema, language string, or template changes in this version.</em></p>
+<h4><strong>MyBB 1.4.11 to MyBB 1.4.12 Patch</strong></h4>
+<p>This patch is only for users running MyBB 1.4.11. If you are running an older version of MyBB then please download MyBB 1.4.12 from the MyBB site and update to it using the general <a title="View the MyBB Wiki page for Upgrading" href="http://wiki.mybboard.net/index.php/Upgrading" target="_blank">[Wiki: Upgrading]</a> guide.</p>
+<p>Please download the attached ZIP archive and replace the files in your forum directory with those from the ZIP archive.<br />
+<a href="http://mybboard.net/download/118">changed_files_1412.zip</a></p>
+<p>A manual patch file is not being offered for this release due to the multitude of changes required to implement the security fix. We apologize for any inconvenience this causes.</p>
+<h4>The following files were changed since the initial MyBB 1.4.11 release:</h4>
+<ul>
+<li>announcements.php</li>
+<li>calendar.php</li>
+<li><span style="color:red;">captcha.php</span></li>
+<li>editpost.php</li>
+<li>forumdisplay.php</li>
+<li>managegroup.php</li>
+<li>member.php</li>
+<li>modcp.php</li>
+<li><span style="color:red;">newreply.php</span></li>
+<li><span style="color:red;">newthread.php</span></li>
+<li>portal.php</li>
+<li><span style="color:red;">private.php</span></li>
+<li>reputation.php</li>
+<li><span style="color:red;">showthread.php</span></li>
+<li>syndication.php</li>
+<li><span style="color:red;">usercp.php</span></li>
+<li><span style="color:red;">usercp2.php</span></li>
+<li>xmlhttp.php</li>
+<li>jscripts
+<ul>
+<li>inline_moderation.js</li>
+</ul>
+</li>
+<li>install
+<ul>
+<li>resources
+<ul>
+<li><span style="color:red;">mybb_theme.xml</span></li>
+<li>upgrade16.php</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>admin
+<ul>
+<li><span style="color:red;">index.php</span></li>
+<li>modules
+<ul>
+<li>forum
+<ul>
+<li>management.php</li>
+</ul>
+</li>
+<li>user
+<ul>
+<li>mass_mail.php</li>
+<li><span style="color:red;">users.php</span></li>
+</ul>
+</li>
+<li>config
+<ul>
+<li>mod_tools.php</li>
+<li>settings.php</li>
+<li>smilies.php</li>
+</ul>
+</li>
+<li>tools
+<ul>
+<li>recount_rebuild.php</li>
+<li>system_health.php</li>
+</ul>
+</li>
+<li>style
+<ul>
+<li>templates.php</li>
+<li>themes.php</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>inc
+<ul>
+<li>class_core.php</li>
+<li>class_custommoderation.php</li>
+<li><span style="color:red;">class_mailhandler.php</span></li>
+<li>class_moderation.php</li>
+<li>class_parser.php</li>
+<li>db_mysqli.php</li>
+<li><span style="color:red;">functions.php</span></li>
+<li>functions_image.php</li>
+<li>functions_online.php</li>
+<li>functions_serverstats.php</li>
+<li><span style="color:red;">functions_upload.php</span></li>
+<li>functions_user.php</li>
+<li><span style="color:red;">init.php</span></li>
+<li>plugins
+<ul>
+<li>akismet.php</li>
+</ul>
+</li>
+<li>languages
+<ul>
+<li>english
+<ul>
+<li>global.lang.php</li>
+<li>member.lang.php</li>
+<li><span style="color:red;">messages.lang.php</span></li>
+<li>warnings.lang.php</li>
+<li>admin
+<ul>
+<li>forum_management.lang.php</li>
+<li>user_groups.lang.php</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>datahandlers
+<ul>
+<li><span style="color:red;">post.php</span></li>
+<li>user.php</li>
+</ul>
+</li>
+<li>cachehandlers
+<ul>
+<li>eaccelerator.php</li>
+<li>memcache.php</li>
+<li>xcache.php</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>* <span style="color:red;">Red represents files that contain security updates</span><br />
+* <span style="color:green;">Green represents new files added in this release</span></p>
+<h4><strong>Reporting MyBB security vulnerabilities</strong></h4>
+<p>If you think you've found a vulnerability in MyBB, we advise you not to publicly post it on these forums or publicly release information about it elsewhere until we've had time to prepare and release a patch.</p>
+<p>As always, you can send through security related messages on the MyBB website from the <a href="http://www.mybboard.net/contact/" target="_blank">Contact Us</a> page.</p>
+<h4><strong>MyBB 1.2.14 Patch</strong></h4>
+<p>All users of the 1.2.x series are urged to upgrade to the latest release of MyBB. (1.4.12) MyBB 1.2 is no longer being supported and security updates for the MyBB 1.2 series ceased as of January 1, 2010.</p>
+<p>Thank you,<br />
+MyBB Team</p>
+<h1><span style="color:red;font-weight:bold;">Important Update: April 16, 2010</span></h1>
+<p>If you applied the MyBB 1.4.12 update before April 16, 2010 7:00 UTC we recommend you redownload the changed file package and reupdate the inc/functions.php file to your forum. The change fixes an issue identified in the previous hot patch relating to the random number generator.  We are sincerely sorry for the inconvenience caused by this.</p>
+<p>Thank you for your cooperation.</p>

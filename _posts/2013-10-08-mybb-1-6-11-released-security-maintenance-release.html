@@ -1,0 +1,53 @@
+---
+layout: post
+title: MyBB 1.6.11 Released - Security & Maintenance Release
+date: 2013-10-08 11:06:14.000000000 -04:00
+categories:
+- Releases
+- Security
+- Updates
+tags:
+- '1.6'
+author: Nathan Malcolm
+---
+<p>MyBB 1.6.11 is now available from the MyBB website and is a security and maintenance release.</p>
+<h4>Important Security Patches</h4>
+<p>It was reported to us by Philly that a user was able to register on his forum with three 'emoji' characters which led to the user becoming "unregistered". After looking in to this issue we discovered it was more complex than originally thought.</p>
+<p>The technical explanation is MySQL's UTF8 implementation only supports up to 3 bytes per character. When someone tries to insert a string containing a 4 byte utf8 character in to the database, MySQL truncates the string immediately before the 4 byte character. Not only does this affect security, it affects the user's experience as half their post or private message could be lost without them knowing why.</p>
+<p>The vulnerability was exploited by a user registering on a forum with a username consisting of only 4 byte UTF8 characters. As I explained before, MySQL truncates the string before the first occurrence of a 4 byte UTF8 character which led to the username column becoming empty. When someone sent a PM it would be automatically sent to the nameless user and they would be able to read it.</p>
+<p>This security issue affects <strong>MySQL</strong> databases with a <strong>utf8_general_ci</strong> collation (This may also affect utf8_unicode_ci collations too). If you're using a SQLite or PostgreSQL database you're not affected by this.</p>
+<h4>What's added/changed in this version?</h4>
+<p>This release fixes <strong>5 vulnerabilities</strong> and over <strong>65 reported issues</strong> causing incorrect functionality of MyBB. Please be aware that to be able to provide easy to manage updates not all issues have been fixed in this version.</p>
+<ul>
+<li>Vulnerabilities:
+<ul>
+<li>High Risk: Authorization bypass vulnerability within the PM system – reported by <a href="http://community.mybb.com/user-33320.html" target="_blank">Philly</a></li>
+<li>Medium Risk: Accounts without login keys could be hijacked – reported by <a href="http://community.mybb.com/user-2824.html" target="_blank">StefanT</a></li>
+<li>Low Risk: Weakness within the generate_post_check() function – reported by <a href="http://community.mybb.com/user-27579.html" target="_blank">Nathan Malcolm</a></li>
+<li>Low Risk: Anonymous statistics may not always be anonymous – reported by <a href="http://community.mybb.com/user-27579.html" target="_blank">Nathan Malcolm</a></li>
+<li>Low Risk: Database backups are exposed in logs – reported by <a href="http://community.mybb.com/user-27579.html" target="_blank">Nathan Malcolm</a></li>
+</ul>
+</li>
+<li><a href="http://dev.mybb.com/versions/47">Fixed issues in 1.6.11</a></li>
+<li><a href="http://dev.mybb.com/projects/mybb/issues">Unfixed issues</a></li>
+</ul>
+<p>Please view the <a href="http://docs.mybb.com/1611.html" target="_blank">1.6.11 changes on the Docs site</a> for more information about the changes in this version.</p>
+<h4>Upgrading from 1.6.10 and Other Versions</h4>
+<p>Before performing any upgrade please remember to backup your forum's files and database and store them safely. If you have edited core files, including language files, please make sure you make a changelog for these changes so you can make them again (if necessary) once the upgrade is complete.</p>
+<p>To upgrade, follow the Upgrading process. The <strong>upgrade script</strong> is required. There are changes to <strong>4</strong> language files. <strong>5</strong> templates have been changed or added.</p>
+<blockquote><p>If you're using MyBB 1.6.10</p>
+<ul>
+<li>Download and use the <a href="http://resources.mybb.com/downloads/changedfiles_1611.zip">Changed Files Package</a> (MD5: e48c948cbdeef2cea756f88874d84ceb)</li>
+<li><a href="http://docs.mybb.com/Upgrading.html#Beginning_the_Upgrade">Follow the Docs Upgrading Instructions</a></li>
+</ul>
+<p>If you're using MyBB 1.6.9 or lower</p>
+<ul>
+<li>Download and use the full <a href="http://resources.mybb.com/downloads/mybb_1611.zip">1.6.11 Release Package</a> (MD5: 918be9675d3d50c63bfe4c6cbf17fd0f)</li>
+<li><a href="http://docs.mybb.com/Upgrading.html#Beginning_the_Upgrade">Follow the Docs Upgrading Instructions</a></li>
+</ul>
+</blockquote>
+<h4>Reporting MyBB security vulnerabilities</h4>
+<p>If you think you've found a vulnerability in MyBB, we advise you not to publicly post it on these forums or publicly release information about it elsewhere until we've had time to prepare and release a patch.</p>
+<p>As always, you can send through security related messages on the MyBB website from the <a href="http://www.mybb.com/contact">Contact Us</a> page or in our <a href="http://community.mybb.com/forum-135.html" target="_blank">Private Inquiries</a> forum – where you can start a new thread that only you and the MyBB Team can see.</p>
+<p>Thanks,</p>
+<p>MyBB Team</p>

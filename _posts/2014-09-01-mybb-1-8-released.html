@@ -1,0 +1,210 @@
+---
+layout: post
+title: MyBB 1.8 Released
+date: 2014-09-01 11:45:16.000000000 -04:00
+categories:
+- Releases
+- Updates
+tags:
+- '1.8'
+author: Pirata Nervo
+---
+<p>It is with the highest honor that we release MyBB 1.8 Gold to the general public.</p>
+<p>Our team, and you the community, have been on a fantastic journey since that <a title="MyBB 1.6.7 Release, Merge 1.6.7 &amp; MyBB 1.8 Development" href="http://blog.mybb.com/2012/04/01/mybb-1-6-7-update-1-8-development/">April Fools day in 2012</a> when MyBB 1.8 development was first announced to the public. Now here we are, 2 years and 5 months on, proudly showing you our completed product. It may have taken longer than first anticipated but we are sure you're going to love what has been produced at the end of the line.</p>
+<p>As said in the initial announcement of 1.8, it is the bridge to MyBB 2.0; this has not changed. Because now, hidden away in our lair, we've been drawing up plans and discussing the development of 2.0. These discussions and plans are to be put into action now so the development of 2.0 is really getting going.</p>
+<p>As you may have noticed the new MyBB website and documentation have been launched. This new design is courtesy of <a title="Justin S." href="http://community.mybb.com/user-1830.html">Justin S</a>, our lead designer, which we're very proud of. Unfortunately the new documentation for 1.8 is a bit threadbare, however most of the 1.6 Docs still apply to 1.8; so while we're working on the new documentation you can continue to use the 1.6 Docs.</p>
+<h4>Download</h4>
+<p>You can find the download link <a title="MyBB 1.8.0" href="http://resources.mybb.com/downloads/mybb_1800.zip">here</a> (MD5: a36ab62236a24caeb827b769bf493f26). <strong><span style="color:#ba0f00;">If you're upgrading, make sure to backup your database and files first.</span></strong></p>
+<h4>Updating from previous versions</h4>
+<p><strong>Be warned that with the following release:</strong></p>
+<ul>
+<li>Despite our attempts to keep theme changes to a minimum there are still several changes to templates which will need to be addressed by you upon upgrading to 1.8. You'll need to run the "Find Updated Templates" tool in the Templates &amp; Style section of your Admin CP to update templates to be 1.8 compatible. This can be found Admin CP -&gt; Templates &amp; Style -&gt; Templates -&gt; Find Updated Templates.</li>
+<li>Most plugins and code modifications will need to be updated to work with MyBB 1.8. <span style="text-decoration:underline;"><strong>Make sure you disable your plugins before upgrading</strong></span> and make sure updated copies compatible with MyBB 1.8 are available.</li>
+<li>Custom language packs from earlier versions will also need to be updated.</li>
+</ul>
+<p><strong>Before you attempt to upgrade, ensure you have a database backup and a copy of the files currently in use on your board.</strong> This is so you can revert back to your earlier version if you need to or something goes horribly wrong with the upgrade process.</p>
+<p>This is a moderately long upgrade process. Please make sure you don’t refresh pages whilst they’re loading, and don't click the "Next" button more than once (if you don't have JavaScript enabled). <strong>You should plan your upgrade before attempting to perform it.</strong></p>
+<p>Follow the general <a href="http://docs.mybb.com/Upgrading">Upgrading</a> guide outlined on the MyBB Documentation to complete the upgrade process.</p>
+<h3>Changes</h3>
+<p>Color legend:</p>
+<ul>
+<li><span style="color:#0059ba;">Dark Blue</span> - Small (new) feature/change</li>
+<li><span style="color:#0090ff;">Light Blue</span> - Enhancement</li>
+<li><span style="color:#ff6e00;">Orange</span> - New Feature</li>
+</ul>
+<h4>Admin CP &amp; Front-End</h4>
+<ul>
+<li><span style="color:#0059ba;">Remove PHP Closing tags </span>- <a href="https://github.com/mybb/mybb/issues/979">#979</a></li>
+<li><span style="color:#0059ba;">Performance improvement: intval to (int) conversion </span>- <a href="https://github.com/mybb/mybb/issues/491">#491</a></li>
+<li><span style="color:#0059ba;">Update 3rd part libraries </span>- <a href="https://github.com/mybb/mybb/issues/957">#957</a></li>
+<li><span style="color:#0059ba;"><span style="color:#0090ff;">Warnings class/datahandler </span></span>- <a href="https://github.com/mybb/mybb/issues/957">#922</a></li>
+<li><span style="color:#ff6e00;">Hide signtature of users to certain groups </span>- <a href="https://github.com/mybb/mybb/issues/949">#949</a></li>
+<li><span style="color:#ff6e00;">Hide website links/buttons from certain groups </span>- <a href="https://github.com/mybb/mybb/issues/922">#922</a></li>
+<li><span style="color:#0059ba;">Add more hooks </span>- <a href="https://github.com/mybb/mybb/issues/555">#555</a> <a href="https://github.com/mybb/mybb/issues/882">#882</a></li>
+<li><span style="color:#0059ba;">Allow custom flash messages </span>- <a href="https://github.com/mybb/mybb/issues/881">#881</a></li>
+<li><span style="color:#ff6e00;">Allow website field for certain groups only </span>- <a href="https://github.com/mybb/mybb/issues/808">#808</a></li>
+</ul>
+<h4>Admin CP</h4>
+<ul>
+<li><span style="color:#ff6e00;">New theme</span> - <a href="https://github.com/mybb/mybb/issues/561">#561</a></li>
+<li><span style="color:#ff6e00;">AdminCP PIN</span> - <a href="https://github.com/mybb/mybb/issues/38">#38</a></li>
+<li><span style="color:#0090ff;">Improved Newsfeed</span> - <a href="https://github.com/mybb/mybb/issues/562">#562</a></li>
+<li><span style="color:#0090ff;">Replace CodePress with CodeMirror</span> - <a href="https://github.com/mybb/mybb/issues/37">#37</a></li>
+<li><span style="color:#0059ba;">Stylesheet Display order</span> - <a href="Stylesheet display order">#562</a></li>
+<li><span style="color:#0090ff;">Inactive/active Plugin list</span> - <a href="https://github.com/mybb/mybb/issues/573">#573</a></li>
+<li><span style="color:#0090ff;">Ability to create own template groups</span> - <a href="https://github.com/mybb/mybb/issues/588">#588</a></li>
+<li><span style="color:#0059ba;">Added Enabled/Disabled indicators to Promotions and MyCodes</span> - <a href="https://github.com/mybb/mybb/issues/457">#457</a></li>
+<li><span style="color:#0059ba;">Template groups updates</span> - <a href="https://github.com/mybb/mybb/issues/452">#452</a></li>
+<li><span style="color:#0090ff;">Disable Attachments Globally</span> - <a href="https://github.com/mybb/mybb/issues/495">#495</a></li>
+<li><span style="color:#0090ff;">ACP Banning Improvements</span> - <a href="https://github.com/mybb/mybb/issues/628">#628</a> <a href="https://github.com/mybb/mybb/issues/554">#554</a></li>
+<li><span style="color:#0059ba;">Selectable areas for group/forum settings.</span> - <a href="https://github.com/mybb/mybb/issues/428">#428</a></li>
+<li><span style="color:#0059ba;">Warning for marked vulnerable plugins.</span> - <a href="https://github.com/mybb/mybb/commit/0147b0873197a4c5dc1503a32584ac6842f634c7">#0147b08</a></li>
+<li><span style="color:#0059ba;">ACP shouldn't reset $mybb-&gt;input</span> - <a href="https://github.com/mybb/mybb/issues/754">#754</a></li>
+<li><span style="color:#0090ff;">Admin CP language</span> - <a href="https://github.com/mybb/mybb/issues/690">#690</a></li>
+<li><span style="color:#0059ba;">Disable Default MyCodes</span> - <a href="https://github.com/mybb/mybb/issues/686">#686</a></li>
+<li><span style="color:#0090ff;">More recount tools</span> - <a href="https://github.com/mybb/mybb/issues/494">#494</a></li>
+<li><span style="color:#0090ff;">Option to disable contact details </span>- <a href="https://github.com/mybb/mybb/issues/900">#900</a></li>
+<li><span style="color:#ff6e00;">Log all 'locked out' failures in ACP </span>- <a href="https://github.com/mybb/mybb/issues/859">#859</a></li>
+<li><span style="color:#0090ff;">Add reported posts stats to ACP </span>- <a href="https://github.com/mybb/mybb/issues/858">#858</a></li>
+<li><span style="color:#0090ff;">Delayed moderation improvements </span>- <a href="https://github.com/mybb/mybb/issues/440">#440</a></li>
+<li><span style="color:#0090ff;">New Promotion rules </span>- <a href="https://github.com/mybb/mybb/issues/429">#429</a></li>
+</ul>
+<h4>Front-end</h4>
+<ul>
+<li><span style="color:#ff6e00;"><span style="color:#ff6e00;">New Theme - <a href="https://github.com/mybb/mybb/issues/571">#571</a></span></span>
+<ul>
+<li><span style="color:#0059ba;">CSS buttons, PNG images, Sprite images, Fugue icons</span> - <a href="https://github.com/mybb/mybb/issues/571">#571</a></li>
+<li><span style="color:#0090ff;">Attachable base colors for themes</span> - <a href="https://github.com/mybb/mybb/issues/580">#580</a></li>
+<li><span style="color:#0059ba;">Relative Time</span> - <a href="https://github.com/mybb/mybb/issues/558">#558</a></li>
+<li><span style="color:#ff6e00;">Prototype to jQuery Conversion (yay!)</span> - <a href="https://github.com/mybb/mybb/issues/251">#251</a></li>
+<li><span style="color:#0059ba;">Attachment Types Name</span> - <a href="https://github.com/mybb/mybb/issues/442">#442</a></li>
+<li><span style="color:#ff6e00;">CSS Minification</span> - <a href="https://github.com/mybb/mybb/issues/564">#564</a></li>
+</ul>
+</li>
+<li><span style="color:#0059ba;">Add ltrim() to search users input</span> - <a href="https://github.com/mybb/mybb/issues/50">#590</a></li>
+<li><span style="color:#0059ba;">Change trim() in templates to rtrim()</span> - <a href="https://github.com/mybb/mybb/issues/584">#584</a></li>
+<li><span style="color:#0090ff;">A tool to rebuild reputation</span> - <a href="https://github.com/mybb/mybb/issues/591">#591</a></li>
+<li><span style="color:#ff6e00;">Contact Page</span> - <a href="https://github.com/mybb/mybb/issues/592">#592</a> <a href="https://github.com/mybb/mybb/issues/715">#715</a></li>
+<li><span style="color:#0059ba;">Ability to delete default help topics</span> - <a href="https://github.com/mybb/mybb/issues/589">#589</a></li>
+<li><span style="color:#0059ba;">If user is invisible &amp; permissions disallow, hide all public data</span> - <a href="https://github.com/mybb/mybb/issues/593">#593</a></li>
+<li><span style="color:#0059ba;">Post reputation should include thread subject</span> - <a href="https://github.com/mybb/mybb/issues/594">#594</a></li>
+<li><span style="color:#ff6e00;">Remove Gallery; Integrate Gravatar</span> - <a href="https://github.com/mybb/mybb/issues/582">#582</a> <a href="https://github.com/mybb/mybb/issues/586">#586</a></li>
+<li><span style="color:#0059ba;">Delete post on full edit should not show if no permission to delete</span> - <a href="https://github.com/mybb/mybb/issues/595">#595</a></li>
+<li><span style="color:#0090ff;">Add option to stick/unstick to custom tools</span> - <a href="https://github.com/mybb/mybb/issues/435">#435</a></li>
+<li><span style="color:#0090ff;">PM thread author in custom tools for threads</span> - <a href="https://github.com/mybb/mybb/issues/581">#581</a></li>
+<li><span style="color:#0059ba;">Users cannot rate their own posts</span> - <a href="https://github.com/mybb/mybb/issues/570">#570</a></li>
+<li><span style="color:#0059ba;">format_avatar() function</span> - <a href="https://github.com/mybb/mybb/issues/569">#569</a></li>
+<li><span style="color:#0059ba;">Whitelist of avatar upload extensions</span> - <a href="https://github.com/mybb/mybb/issues/568">#568</a></li>
+<li><span style="color:#0090ff;">Preview announcements</span> - <a href="https://github.com/mybb/mybb/issues/567">#567</a></li>
+<li><span style="color:#0090ff;">Minimum post length to exclude MyCode</span> - <a href="https://github.com/mybb/mybb/issues/566">#566</a></li>
+<li><span style="color:#ff6e00;">IPv6 features</span> - <a href="https://github.com/mybb/mybb/issues/565">#565</a></li>
+<li><span style="color:#ff6e00;">APC cache handler</span> - <a href="https://github.com/mybb/mybb/issues/574">#574</a></li>
+<li><span style="color:#0059ba;">$cache-&gt;delete method</span> - <a href="https://github.com/mybb/mybb/issues/575">#575</a></li>
+<li><span style="color:#0059ba;">is_member() function</span> - <a href="https://github.com/mybb/mybb/issues/576">#576</a></li>
+<li><span style="color:#0059ba;">delete_user() function</span> - <a href="https://github.com/mybb/mybb/issues/408">#408</a></li>
+<li><span style="color:#0059ba;">IP addresses in PMs</span> - <a href="https://github.com/mybb/mybb/issues/563">#563</a></li>
+<li><span style="color:#0059ba;">Don't ask for validation if validation is disabled</span> - <a href="https://github.com/mybb/mybb/issues/577">#577</a></li>
+<li><span style="color:#0059ba;">Slow reply posting in long threads</span> - <a href="https://github.com/mybb/mybb/issues/578">#578</a></li>
+<li><span style="color:#ff6e00;">Soft Delete</span> - <a href="https://github.com/mybb/mybb/issues/560">#560</a></li>
+<li><span style="color:#0059ba;">Login Datahandler</span> - <a href="https://github.com/mybb/mybb/issues/572">#572</a></li>
+<li><span style="color:#0090ff;">Add theme selector to footer</span> - <a href="https://github.com/mybb/mybb/issues/496">#496</a></li>
+<li><span style="color:#0059ba;">Forum redirect icon</span> - <a href="https://github.com/mybb/mybb/issues/453">#453</a></li>
+<li><span style="color:#0090ff;">Permission to reply to own threads</span> - <a href="https://github.com/mybb/mybb/issues/409">#409</a></li>
+<li><span style="color:#0059ba;">ModCP banned users list descending by default</span> - <a href="https://github.com/mybb/mybb/issues/138">#138</a></li>
+<li><span style="color:#ff6e00;">Quick Reply PM</span> - <a href="https://github.com/mybb/mybb/issues/437">#437</a></li>
+<li><span style="color:#0090ff;">Poll Updates (Add poll link to thread page; limit of time before a thraed author can no longer add a poll)</span> - <a href="https://github.com/mybb/mybb/issues/456">#456</a></li>
+<li><span style="color:#0059ba;">Update contact fields</span> - <a href="https://github.com/mybb/mybb/issues/455">#455</a></li>
+<li><span style="color:#ff6e00;">Are You a Human CAPTCHA</span> - <a href="https://github.com/mybb/mybb/issues/443">#443</a></li>
+<li><span style="color:#ff6e00;">Report Center </span> - <a href="https://github.com/mybb/mybb/issues/556">#556</a></li>
+<li><span style="color:#0090ff;">Ability to sort Private Messages in inbox and other folders</span> - <a href="https://github.com/mybb/mybb/pull/70">#70</a></li>
+<li><span style="color:#0090ff;">Recount Warning Points</span> - <a href="https://github.com/mybb/mybb/pull/85">#85</a></li>
+<li><span style="color:#0090ff;">Warning points as a Group Promotion criteria</span> - <a href="https://github.com/mybb/mybb/pull/88">#88</a></li>
+<li><span style="color:#0090ff;">Registration date and last active time as mass mail criteria</span> - <a href="https://github.com/mybb/mybb/pull/100">#100</a></li>
+<li><span style="color:#0090ff;">Display profile fields on posts </span>- <a href="https://github.com/mybb/mybb/pull/133">#133</a></li>
+<li><span style="color:#0090ff;">Add "Display posts in classic mode" option when editing user in Admin CP</span> - <a href="https://github.com/mybb/mybb/pull/107">#107</a></li>
+<li><span style="color:#0090ff;">Move Edit Time Limit and Max Post Per Day to group settings</span> - <a href="https://github.com/mybb/mybb/pull/114">#114</a></li>
+<li><span style="color:#0090ff;">Recount Private Messages</span> - <a href="https://github.com/mybb/mybb/pull/132">#132</a></li>
+<li><span style="color:#0090ff;">Hide members from the Member List</span> - <a href="https://github.com/mybb/mybb/pull/142">#142</a></li>
+<li><span style="color:#0090ff;">Force redirect page</span> - <a href="https://github.com/mybb/mybb/pull/550">#550</a></li>
+<li><span style="color:#0059ba;">Searching plugins will highlight vulnerable ones (requires new Mods site)</span> - <a href="https://github.com/mybb/mybb/commit/0147b0873197a4c5dc1503a32584ac6842f634c7">Commit Link</a></li>
+<li><span style="color:#0059ba;">Update $groupzerogreater array</span> - <a href="https://github.com/mybb/mybb/issues/809">#809</a></li>
+<li><span style="color:#ff6e00;">CDN Compatbility </span>- <a href="https://github.com/mybb/mybb/issues/776">#776</a></li>
+<li><span style="color:#ff6e00;">Goodbye Spammer </span>- <a href="https://github.com/mybb/mybb/issues/775">#775</a></li>
+<li><span style="color:#0059ba;">Add Time Zones</span> - <a href="https://github.com/mybb/mybb/issues/764">#764</a></li>
+<li><span style="color:#ff6e00;">Thread Count</span> - <a href="https://github.com/mybb/mybb/issues/761">#761</a></li>
+<li><span style="color:#ff6e00;">Buddy System Enhancements</span> - <a href="https://github.com/mybb/mybb/issues/757">#757</a></li>
+<li><span style="color:#0090ff;">Remove Hardcoded HTML</span> - <a href="https://github.com/mybb/mybb/issues/756">#756</a></li>
+<li><span style="color:#0090ff;">Database optimization</span> - <a href="https://github.com/mybb/mybb/issues/738">#738</a></li>
+<li><span style="color:#0059ba;">Overqualified Selectors</span> - <a href="https://github.com/mybb/mybb/issues/976">#976</a> <a href="https://github.com/mybb/mybb/issues/700">#700</a></li>
+<li><span style="color:#0090ff;">Subscription PM notification option</span> - <a href="https://github.com/mybb/mybb/issues/689">#689</a></li>
+<li><span style="color:#0090ff;">Expand Forum Moderator permissions</span> - <a href="https://github.com/mybb/mybb/issues/688">#688</a></li>
+<li><span style="color:#0090ff;">Add profile fields on registration</span> - <a href="https://github.com/mybb/mybb/issues/687">#687</a></li>
+<li><span style="color:#0059ba;">Admin and Email activation option</span> - <a href="https://github.com/mybb/mybb/issues/685">#685</a></li>
+<li><span style="color:#0059ba;">Publicly shown poll end date</span> - <a href="https://github.com/mybb/mybb/issues/587">#587</a></li>
+<li><span style="color:#0090ff;">CAPTCHA Improvements</span> - <a href="https://github.com/mybb/mybb/issues/557">#557</a></li>
+<li><span style="color:#0090ff;">Search Help Files</span> - <a href="https://github.com/mybb/mybb/issues/497">#497</a></li>
+<li><span style="color:#0090ff;">Invite-only joinable groups</span> - <a href="https://github.com/mybb/mybb/issues/493">#493</a></li>
+<li><span style="color:#0059ba;">Maximum Nested Quote Tags for PMs</span> - <a href="https://github.com/mybb/mybb/issues/492">#492</a></li>
+<li><span style="color:#0090ff;">Hide stuff users don't have permission to use</span> - <a href="https://github.com/mybb/mybb/issues/454">#454</a></li>
+<li><span style="color:#ff6e00;">Edit Reason</span> - <a href="https://github.com/mybb/mybb/issues/451">#451</a></li>
+<li><span style="color:#0059ba;">Add to [video] mycode</span> - <a href="https://github.com/mybb/mybb/issues/450">#450</a></li>
+<li><span style="color:#0059ba;">User option to disable images/videos</span> - <a href="https://github.com/mybb/mybb/issues/449">#449</a></li>
+<li><span style="color:#0090ff;">Moderation Tools Improvements</span> - <a href="https://github.com/mybb/mybb/issues/435">#435</a></li>
+<li><span style="color:#0090ff;">Forum Statistics Improvements</span> - <a href="https://github.com/mybb/mybb/issues/434">#434</a> <a href="https://github.com/mybb/mybb/issues/824">#824</a></li>
+<li><span style="color:#0090ff;">Profile Fields Enhancements</span> - <a href="https://github.com/mybb/mybb/issues/433">#433</a></li>
+<li><span style="color:#0059ba;">Using update_query with BIT(1) fields</span> - <a href="https://github.com/mybb/mybb/issues/360">#360</a></li>
+<li><span style="color:#ff6e00;">inline_moderation.js friendly to table-less themes </span>- <a href="https://github.com/mybb/mybb/issues/915">#915</a></li>
+<li><span style="color:#0090ff;">Memberlist sorting </span>- <a href="https://github.com/mybb/mybb/issues/914">#914</a></li>
+<li><span style="color:#ff6e00;">Force Login </span>- <a href="https://github.com/mybb/mybb/issues/906">#906</a></li>
+<li><span style="color:#0059ba;">Add class to smilies </span>- <a href="https://github.com/mybb/mybb/issues/905">#905</a></li>
+<li><span style="color:#0059ba;">AJAX for security questions </span>- <a href="https://github.com/mybb/mybb/issues/894">#894</a></li>
+<li><span style="color:#0059ba;">Add get_user_by_username() helper function </span>- <a href="https://github.com/mybb/mybb/issues/893">#893</a></li>
+<li><span style="color:#0059ba;">find_replace_templates() accepts SID </span>- <a href="https://github.com/mybb/mybb/issues/889">#889</a></li>
+<li><span style="color:#0059ba;">$this-&gt;options in class_parser.php </span>- <a href="https://github.com/mybb/mybb/issues/880">#880</a></li>
+<li><span style="color:#0059ba;">Add class to announcements </span>- <a href="https://github.com/mybb/mybb/issues/879">#879</a></li>
+<li><span style="color:#0059ba;">Make forum friendly to outside pages </span>- <a href="https://github.com/mybb/mybb/issues/878">#878</a></li>
+<li><span style="color:#0059ba;">Change showthread.php icons to sprite </span>- <a href="https://github.com/mybb/mybb/issues/877">#877</a></li>
+<li><span style="color:#0059ba;">Add rebuild settings to cache tools </span>- <a href="https://github.com/mybb/mybb/issues/875">#875</a></li>
+<li><span style="color:#0059ba;">Add email description editing to editor </span>- <a href="https://github.com/mybb/mybb/issues/869">#869</a></li>
+<li><span style="color:#0059ba;">Add video sites to editor </span>- <a href="https://github.com/mybb/mybb/issues/862">#862</a></li>
+<li><span style="color:#ff6e00;">Check new members against StopForumSpam </span>- <a href="https://github.com/mybb/mybb/issues/860">#860</a></li>
+<li><span style="color:#0090ff;">Jump to Page in pagination </span>- <a href="https://github.com/mybb/mybb/issues/857">#857</a></li>
+<li><span style="color:#0059ba;">send_pm() should consider users' language </span>- <a href="https://github.com/mybb/mybb/issues/834">#834</a></li>
+<li><span style="color:#0090ff;">Image re-scaling and long words/text wrapping CSS/HTML changes </span>- <a href="https://github.com/mybb/mybb/issues/816">#816</a></li>
+<li><span style="color:#ff6e00;">Moderate Groups </span>- <a href="https://github.com/mybb/mybb/issues/439">#439</a></li>
+<li><span style="color:#0090ff;">Portal Improvements </span>- <a href="https://github.com/mybb/mybb/issues/436">#436</a></li>
+<li><span style="color:#0090ff;">Moderation Notifications </span>- <a href="https://github.com/mybb/mybb/issues/430">#430</a></li>
+<li><span style="color:#0090ff;">Thread Prefix system improvements </span>- <a href="https://github.com/mybb/mybb/issues/427">#427</a></li>
+<li><span style="color:#0090ff;">Ability to Stop tracking all messages </span>- <a href="https://github.com/mybb/mybb/issues/364">#364</a></li>
+<li><span style="color:#0059ba;">Settings description on installation </span>- <a href="https://github.com/mybb/mybb/issues/197">#197</a></li>
+<li><span style="color:#0059ba;">Add Template::render method </span>- <a href="https://github.com/mybb/mybb/issues/1344">#1344</a></li>
+</ul>
+<p>&nbsp;</p>
+<h3>The New Mods site</h3>
+<p>Along with the new website, the much awaited new Mods Site has also hit action on the MyBB Community Forums. This may come as a surprise but we have come to the decision that the new Mods Site will only contain 1.8 compatible plugins and themes. Worry not for the old Mods Site will still be accessible at <a title="MyBB Mods" href="http://mods.mybb.com">mods.mybb.com</a>, as it is being archived for a short while allowing for the continued use of 1.6 resources. Developers will, therefore, have to manually port their resources from 1.6 to 1.8 in order for them to be approved on the new Mods Site.</p>
+<p>To find out more about the Mods site, please <a href="http://docs.mybb.com/mods/">check the documentation</a>.</p>
+<p>&nbsp;</p>
+<h3>What's Next</h3>
+<p>With the release of 1.8.0, our focus will now turn into two different directions: 1.8.1 and 2.0. Some people will prefer to stick to 1.8.1 development while some will prefer to work on 2.0 (or even both).</p>
+<h4>Merge System</h4>
+<p>The Merge System will be released soon but we concentrated on releasing MyBB 1.8 during the last months so there may be a slight delay before we have the Merge System working to merge your forum to 1.8. In the meantime, you can use the 1.6 Merge System to merge to 1.6 and then upgrade to 1.8.</p>
+<p>&nbsp;</p>
+<h3>Contributors</h3>
+<p>We'd like to thank all who have helped us make 1.8 a reality, but following contributors, have been exceptional during the 1.8 development:</p>
+<ul>
+<li><a href="http://community.mybb.com/user-49058.html" target="_blank">martec</a></li>
+<li><a href="http://community.mybb.com/user-69212.html" target="_blank">My-BB.ir</a></li>
+<li><a href="http://community.mybb.com/user-31011.html" target="_blank">envira</a></li>
+<li><a href="http://community.mybb.com/user-61867.html" target="_blank">effone</a></li>
+<li><a href="http://community.mybb.com/user-17022.html" target="_blank">frostschutz</a></li>
+<li><a href="http://community.mybb.com/user-84065.html" target="_blank">Eldenroot</a></li>
+<li><a href="http://community.mybb.com/user-68822.html" target="_blank">avril</a></li>
+<li><a href="http://community.mybb.com/user-52123.html" target="_blank">.m.</a></li>
+<li><a href="http://community.mybb.com/user-13376.html" target="_blank">Eric J.</a></li>
+<li><a href="http://community.mybb.com/user-63578.html" target="_blank">Nik101010</a></li>
+</ul>
+<p>&nbsp;</p>
+<p>If you want to help us out and become a Contributor, be sure to read <a href="http://blog.mybb.com/2014/05/30/getting-involved-contributors/">this blog post</a>. If you'd rather <a href="http://www.mybb.com/about/apply">join the team</a>, feel free to contact us through <a href="http://community.mybb.com/forum-135.html">Private Inquires</a>. The project would be nothing without the team and contributors. If you want to help improve MyBB, now is the time.</p>
+<p>&nbsp;</p>
+<h3>Celebrating</h3>
+<p>Everyone is welcome in the <a href="http://www.mybb.com/get-involved/irc-channel/"><strong>#mybb</strong> IRC channel</a> at Freenode to celebrate the release of 1.8! We also encourage you to spread the word of social media to help everyone running a MyBB forum to share this fantastic new release!</p>

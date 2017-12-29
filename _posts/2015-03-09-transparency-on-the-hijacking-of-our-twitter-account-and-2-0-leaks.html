@@ -1,0 +1,16 @@
+---
+layout: post
+title: Transparency on the hijacking of our Twitter account and 2.0 leaks
+date: 2015-03-09 16:30:22.000000000 -04:00
+categories: []
+tags:
+- Security
+- staff members
+- Twitter
+author: Paul H.
+---
+<p>Recently our Twitter account was compromised and there have been questions in the community about what happened.  We'd like to take some time for a short explanation of what happened.</p>
+<p>On January 27th, a MyBB group team member's account was compromised, as well as his personal website.  We had unfortunately been storing out Twitter account password in plaintext in a thread.  The attacker found the password and changed the email &amp; password of the <a href="https://twitter.com/mybb" target="_blank">@MyBB</a> twitter account and began to post offensive messages.  IPs of staff members were also released during this time, as well as installation statistics.  Within two hours, we had isolated the breach and banned the staff member's account to prevent any further purusing of private data.  The staff member in question does not have access the the Admin Control Panel, so no private user data was accessible.  We have no reason to believe any other information was accessed.  The staff member is currently on a leave of absence related to personal issues not related to MyBB.</p>
+<p>We immediately contacted Twitter and Chris talked to a former co-worker who works at Twitter to escalate the ticket. The hacker's access to the account was locked, and Twitter began to investigate our claim to the account.  The issue was quickly sorted and we regained access.</p>
+<p>There was also recently a thread posted on TheAdminZone with screenshots of the 2.0 GitHub repository.  The poster claimed to be selling the 2.0 source code.  The code the user had was simple the initial commit of Laravel into the repository, none of the actual 2.0 code was present. As for seeing some of that 2.0 code, watch the blog over the next few days!</p>
+<p>At MyBB we have a strong commitment to security.  All staff with ACP access use a secret PIN, a form of 2FA.  We release patches to any serious issues usually within hours of them being reported.  We have Two Factor Authentication enabled on our staff email accounts and Github, and are actively working on getting 2FA for our other development tools.  Security is a process, as former staff member Nathan Malcolm, now of <a href="https://twitter.com/sintheticlabs" target="_blank">@sintheticlabs</a>, says.  We continue to improve our processes and incorporate more secure policies and features.</p>

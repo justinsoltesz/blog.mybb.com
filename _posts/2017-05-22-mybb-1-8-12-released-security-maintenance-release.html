@@ -1,0 +1,71 @@
+---
+layout: post
+title: MyBB 1.8.12 Released – Security & Maintenance Release
+date: 2017-05-22 19:26:53.000000000 -04:00
+categories:
+- Releases
+- Security
+- Updates
+tags:
+- '1.8'
+author: Euan T
+excerpt: "MyBB 1.8.11 is now available from the MyBB website, and is a security and
+  maintenance release. What’s added/changed in this version? This release fixes 3
+  security vulnerabilities and 32 reported issues causing incorrect functionality
+  of MyBB. Please be aware that not all issues have been fixed in this version in
+  order to provide easy to manage updates. […]\r\n"
+---
+<p>MyBB 1.8.12 is now available from the MyBB website, and is a security and maintenance release.</p>
+<h4>What’s added/changed in this version?</h4>
+<p>This release fixes <strong>3 security vulnerabilities</strong> and <strong>14 reported issues</strong> causing incorrect functionality of MyBB. Please be aware that not all issues have been fixed in this version in order to provide easy to manage updates.</p>
+<ul>
+<li>Vulnerabilities:
+<ul>
+<li>Medium risk: Insufficient permission check in multiquote feature – reported by <a href="https://community.mybb.com/user-17022.html">frostschutz</a></li>
+<li>Medium risk: CSV macro injection on PM export – reported by <a href="https://www.facebook.com/yslvlln">Rico A. Silvallana</a><i></i></li>
+<li>Low risk: Weak password reset codes &amp; false positives - reported by <a href="https://community.mybb.com/user-47371.html">Devilshakerz</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>Bugs fixed:
+<ul>
+<li><a href="https://github.com/mybb/mybb/issues?q=milestone%3A1.8.12+is%3Aclosed">Fixed issues in 1.8.12</a></li>
+<li><a href="https://github.com/mybb/mybb/issues?q=is%3Aopen+label%3A1.8+is%3Aissue">Unfixed issues</a></li>
+</ul>
+</li>
+</ul>
+<p>Please view the <a href="http://docs.mybb.com/versions/1.8.12">1.8.12 changes</a> on the Docs site for more information about the changes in this version.</p>
+<p>Please note, that you <strong>do</strong> need to run the upgrade script for this version.</p>
+<h4>Upgrading from 1.8.11 and Other Versions</h4>
+<p>Before performing any upgrade please remember to backup your forum’s files and database and store them safely. If you have edited core files, including language files, please make sure you make a changelog for these changes so you can make them again (if necessary) once the upgrade is complete.</p>
+<p>To upgrade, follow the Upgrading process. The <strong>upgrade script</strong> is required. There are changes to <b>9</b> language files and <b>9</b> templates were changed or added.</p>
+<p>If you’re using MyBB 1.8.11:</p>
+<ul>
+<li>Download and use the <a href="https://resources.mybb.com/downloads/changed_files_1812.zip">Changed Files Package</a>
+<ul style="font-size:.8em;word-break:break-all;">
+<li>MD5: <code>9ebfae510ec51bc27f7b0062f4f99394</code></li>
+<li>SHA1: <code>d97f0e13799661b5811245030ef9e56c597086ff</code></li>
+<li>SHA256: <code>17eab833ae6f1a7653d324da3866573437a566f0c2e4f7b4ceddb23795a933f0</code></li>
+<li>SHA512: <code>1b10d9d85dca44a854783f1e37afbec2aac9d657689d09147d414ae41835386f4d97ea0c686edb06fd5de13d2a929bccf7af67fd8af7d95cddc009c6f81812d8</code></li>
+</ul>
+</li>
+<li><a href="https://docs.mybb.com/1.8/install/upgrade/">Follow the Docs Upgrading Instructions</a></li>
+</ul>
+<p>If you’re using MyBB 1.8.10 or lower:</p>
+<ul>
+<li>Download and use the <a href="https://resources.mybb.com/downloads/mybb_1812.zip">full 1.8.12 Release Package</a>
+<ul style="font-size:.8em;word-break:break-all;">
+<li>MD5: <code>aa0e92e5e55b69f33cab3401994f767a</code></li>
+<li>SHA1: <code>1a406afbb9343145877b0382ab479dc5d17d7813</code></li>
+<li>SHA256: <code>a6decde96ae84a2f34a40c2f175172be163ca1fb294c5e4cef5a6396c3eb9f42</code></li>
+<li>SHA512: <code>c5292eab2b9a6dbefe1a696aecdb3202a7d4c9f27de3983ba975c3381aaadd775537f4bd5e389eee18ee2237506a2c8e8bb60e2ec7f0f48483335c8e3a6a5ce4</code></li>
+</ul>
+</li>
+<li><a href="https://docs.mybb.com/1.8/install/upgrade/">Follow the Docs Upgrading Instructions</a></li>
+</ul>
+<h4>Reporting MyBB security vulnerabilities</h4>
+<p>If you think you’ve found a vulnerability in MyBB, we advise you not to publicly post it on these forums or publicly release information about it elsewhere until we’ve had time to prepare and release a patch.</p>
+<p>As always, you can send through security related messages on the MyBB website from the <a href="https://www.mybb.com/contact/">Contact Us</a> page or in our <a href="https://community.mybb.com/forum-135.html" target="_blank" rel="noopener noreferrer">Private Inquiries</a> forum – where you can start a new thread that only you and the MyBB Team can see.</p>
+<p>Thanks,</p>
+<p>MyBB Team</p>

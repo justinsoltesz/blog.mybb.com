@@ -1,0 +1,114 @@
+---
+layout: post
+title: MyBB 1.6.2 and 1.4.15 - Security Update
+date: 2011-02-22 06:47:30.000000000 -05:00
+categories:
+- Releases
+- Security
+tags:
+- '1.4'
+- '1.6'
+author: Chris Boulton
+---
+<p>MyBB 1.6.2 is a security update to the 1.6 series. It fixes 2 medium risk security vulnerabilities and one low risk issue. We recommend everybody upgrades to this release as soon as possible - or patch their boards with the manual instructions below.</p>
+<p>MyBB 1.4.15 is also a security update to the 1.4 series which is affected by the same vulnerabilities.</p>
+<p>Thank you to MustLive (Websecurity), MattRogowski and Max Roth for alerting us of these issues.</p>
+<h4><strong>What's fixed in this version?</strong></h4>
+<ul>
+<li><a href="http://dev.mybb.com/issues/1464">Issue #1464</a></li>
+<li><a href="http://dev.mybb.com/issues/1460">Issue #1460</a></li>
+</ul>
+<p>The medium-risk issue reported by Max Roth requires HTML in posts to be enabled in a forum. This issue was fixed as part of <a href="http://dev.mybb.com/issues/1422">Issue #1422</a>. Even if you don't have HTML enabled in posts, it is still recommended to update to resolve this issue.</p>
+<h4><strong>MyBB 1.6.1 to MyBB 1.6.2 Patch</strong></h4>
+<p>This patch is only for users running MyBB 1.6.1. If you are running an older version of MyBB then please <a href="http://www.mybb.com/download/133/zip">download MyBB 1.6.2</a> from the MyBB site and update to it.</p>
+<p>Please download the attached ZIP archive and replace the files in your forum directory with those from the ZIP archive.<br />
+<span style="color:red;font-size:x-larger;"><strong>This update does <span style="text-decoration:underline;">not</span> require running the upgrader.</strong></span></p>
+<p>The following files have changed since the initial 1.6.1 release:</p>
+<ul>
+<li>admin
+<ul>
+<li>modules
+<ul>
+<li>tools
+<ul>
+<li><span style="color:#ff0000;">modlog.php</span></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>inc
+<ul>
+<li>class_core.php</li>
+<li><span style="color:#ff0000;">class_parser.php</span></li>
+</ul>
+</li>
+<li>jscripts
+<ul>
+<li><span style="color:#ff0000;">validator.js</span></li>
+</ul>
+</li>
+<li><span style="color:#ff0000;">member.php</span></li>
+<li><span style="color:#ff0000;">modcp.php</span></li>
+<li><span style="color:#ff0000;">xmlhttp.php</span></li>
+</ul>
+<p>* <span style="color:#ff0000;">Red represents files that contain security updates</span><br />
+* <span style="color:#008000;">Green represents new files added in this release</span></p>
+<p><a href="http://www.mybb.com/download/136/zip">changed_files_1602.zip</a></p>
+<p>If you wish to manually patch your board please download "mybb_1601_patches.txt" and follow the instructions in that file.</p>
+<p><a href="http://www.mybb.com/download/134/zip">mybb_1601_patches.txt</a></p>
+<h4><strong>MyBB 1.4.14 to MyBB 1.4.15 Patch</strong></h4>
+<p>This patch is only for users running MyBB 1.4.14 who have updated their forum when <a href="http://blog.mybb.com/2010/12/15/mybb-1-6-1-release-1-4-14-update/">1.6.1 and 1.4.14 Update was released</a>. If you have not made these updates or are unsure whether you have - and you don't want to upgrade to 1.6 - then please <a href="http://www.mybb.com/download/132/zip">download 1.4.15</a> from the MyBB site and update to it.</p>
+<p><a href="http://www.mybb.com/download/135">mybb_1414_patches.txt</a></p>
+<p>To ensure users of the 1.4 series have all the recent security updates the following changed files package contains updates since 1.4.13. The changes to files are mentioned below. If you are still using the 1.4 series, then please make sure that all these files have been updated to keep your forum secure (either by updating to 1.4.15, uploading <a href="http://www.mybb.com/download/137">the changed files package</a>, finding differences using a file difference tool or patches from blog posts).</p>
+<p>It is heavily recommended that you upgrade to 1.6.</p>
+<ul>
+<li>admin
+<ul>
+<li>modules
+<ul>
+<li>tools
+<ul>
+<li><span style="color:#ff0000;">modlog.php</span></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>inc
+<ul>
+<li>datahandlers
+<ul>
+<li><span style="color:#ff0000;">post.php</span></li>
+</ul>
+</li>
+<li>class_core.php</li>
+<li><span style="color:#ff0000;">class_parser.php</span></li>
+<li><span style="color:#ff0000;">functions.php</span></li>
+<li><span style="color:#ff0000;">functions_search.php</span></li>
+</ul>
+</li>
+<li>jscripts
+<ul>
+<li><span style="color:#ff0000;">validator.js</span></li>
+</ul>
+</li>
+<li>attachment.php</li>
+<li><span style="color:#ff0000;">editpost.php</span></li>
+<li><span style="color:#ff0000;">forumdisplay.php</span></li>
+<li><span style="color:#ff0000;">member.php</span></li>
+<li><span style="color:#ff0000;">modcp.php</span></li>
+<li><span style="color:#ff0000;">newreply.php</span></li>
+<li><span style="color:#ff0000;">syndication.php</span></li>
+<li><span style="color:#ff0000;">xmlhttp.php</span></li>
+</ul>
+<p>* <span style="color:#ff0000;">Red represents files that contain security updates</span><br />
+* <span style="color:#008000;">Green represents new files added in this release</span></p>
+<p><a href="http://www.mybb.com/download/137/zip">changed_files_1415.zip</a></p>
+<h4><strong>Reporting MyBB security vulnerabilities</strong></h4>
+<p>If you think you've found a vulnerability in MyBB, we advise you not to publicly post it on these forums or publicly release information about it elsewhere until we've had time to prepare and release a patch.</p>
+<p>As always, you can send through security related messages on the MyBB website from the <a href="http://www.mybb.com/contact/" target="_blank">Contact Us</a> page.</p>
+<p>Thank you,<br />
+MyBB Team</p>

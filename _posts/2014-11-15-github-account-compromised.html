@@ -1,0 +1,31 @@
+---
+layout: post
+title: "[UPDATED - IMPORTANT] GitHub Account Compromised"
+date: 2014-11-15 16:46:01.000000000 -05:00
+categories:
+- General
+- Security
+tags: []
+author: Pirata Nervo
+---
+<p><strong>UPDATE: Updated the page in which you should check for suspicious activity. It should be the Admin Logs page, not the Database Backups. You should also rebuild the cache (if you're on 1.8) for 'update_check'.<br />
+</strong></p>
+<p>&nbsp;</p>
+<p>Hello,</p>
+<p>Yesterday, 14th of November, my (Pirata Nervo) GitHub account was compromised. By taking advantage of that, the attacker made a commit to our GH pages, more specifically one which is retrieved by the MyBB software in order to process version checks. Unfortunately, the attack allowed the attacker to setup Database backups of any MyBB forum, without exception, via JavaScript.</p>
+<p>In order for you to know if you were attacked, you must have accessed the Admin CP of your forum from 14th November 23:00 GMT to 15th November 15:30 GMT. If you accessed your AdminCP during this timespan, i<strong>t is likely that you were attacked. Note that if you're on 1.8, the version check task may have been executed during this period, which may still allow the attack if you login after this period.<br />
+</strong></p>
+<p>To be sure about it, please log on to your AdminCP now and check your Database Backup Logs from <strong>ACP -&gt; Tools &amp; Maintenance -&gt; Administrator Logs</strong>. If there is at least one log for a database backup made between that time span mentioned above, <strong>you were affected</strong>. We strongly recommend you to alert your users about it so they can change their passwords.</p>
+<p>&nbsp;</p>
+<p>What you have to do: (in case you were attacked)</p>
+<ul>
+<li>Alert your users to change password.</li>
+<li>Change your password.</li>
+<li>Clear your cookies.</li>
+<li>ACP -&gt; Tools &amp; Maintenance -&gt; Cache Manager -&gt; Rebuild Cache for 'update_check'.</li>
+</ul>
+<p>&nbsp;</p>
+<p>I've already enabled 2 Factor Authentication on my GitHub account and changed my password. I deeply apologize for this event for it was never my intention to cause any harm to anyone but it should be my responsibility to keep my account as secure as possible.</p>
+<p>&nbsp;</p>
+<p>My apologies,</p>
+<p>Pirata Nervo</p>

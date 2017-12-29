@@ -1,0 +1,26 @@
+---
+layout: post
+title: MyBB 1.6.4 Update
+date: 2011-07-29 01:17:33.000000000 -04:00
+categories:
+- Updates
+tags: []
+author: Chris Boulton
+---
+<p><strong><span style="color:#ff0000;">Note: you only need to read this if you upgraded to 1.6.4 before this blog post was made. If you have not upgraded yet, you will need this: <a href="http://blog.mybb.com/2011/07/26/mybb-1-6-4-released-feature-update-security-maintenance-release/">http://blog.mybb.com/2011/07/26/mybb-1-6-4-released-feature-update-security-maintenance-release/</a></span></strong></p>
+<p>A few days ago, we released <a href="http://blog.mybb.com/2011/07/26/mybb-1-6-4-released-feature-update-security-maintenance-release/">MyBB 1.6.4 - a feature update, maintenance and security release</a>. We've noticed one or two problems with this, so we've decided to give out an immediate update.</p>
+<p>There is no security threat to 1.6.4 - this update fixes a problem with quote tags, split posts and an issue with two templates. To apply this update, please follow these instructions:</p>
+<ul>
+<li>As usual, backup your forum's database and files, and switch off your forum's front end. You may want to follow the <a href="http://wiki.mybb.com/index.php/Upgrading">Wiki Upgrading Procedure</a>.</li>
+<li><a href="http://www.mybb.com/download/148">Download the 1.6.4 Update Files</a> and upload them to your forum - overwriting the existing ones.</li>
+<li>Delete ./install/lock and visit the upgrader - normally found at yourforum/install/upgrade.php and run the upgrader again. Choose 1.6.3 from the list of versions.</li>
+</ul>
+<p>The above process won't cause any problems with your forum - it merely updates the default templates again to 1.6.4's versions and adds a database column missing from the original update.</p>
+<p>You also need to check two templates - online_today and member_profile_adminoptions. Please see the attached patch file and make the changes where necessary in each of the themes you have installed.</p>
+<ul>
+<li><a href="http://www.mybb.com/download/149">1.6.4 Template Update Patch</a></li>
+</ul>
+<p>These changes have already been made to the main download of 1.6.4 - so it you're still waiting to upgrade, now is the time to do it!</p>
+<p>Many apologies for the less-than-perfect quality - we're updating our release procedures so that hopefully in the future we won't have these problems again.</p>
+<p>Thanks you,<br />
+MyBB Team</p>

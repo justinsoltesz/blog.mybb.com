@@ -1,0 +1,13 @@
+<section class="block">
+    <h1 class="block__heading">Recent Posts</h1>
+    <nav class="sidebar__nav">
+		<ul class="sidebar__nav__links">
+			{% for post in site.posts limit:5 %}
+            {% capture category_name %}{{ category | first }}{% endcapture %}
+            <li class="sidebar__nav__links__item">
+                <a href="{{ site.baseurl }}{{ post.url }}" class="sidebar__nav__links__item__link">{{ post.title }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </nav>
+</section>

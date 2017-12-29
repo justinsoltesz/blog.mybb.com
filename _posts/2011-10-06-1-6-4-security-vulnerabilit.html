@@ -1,0 +1,31 @@
+---
+layout: post
+title: 1.6.4 Security Vulnerability
+date: 2011-10-06 20:00:16.000000000 -04:00
+categories:
+- General
+- Security
+- Updates
+tags: []
+author: Chris Boulton
+---
+<p>When 1.6.4 was announced almost 3 months ago it was one of the biggest updates MyBB has ever released. It fixed over 100 issues and brought performance improvements for MyBB forums - large or small - across the world. It was also popular for people who were new to MyBB - starting their project for the first time.</p>
+<p>Unfortunately, the 1.6.4 release files were contaminated by code that was not meant to be there and could open a security vulnerability on your forum. It only affects those that are running 1.6.4.</p>
+<p>We advise that you fix the problem as soon as you can. You can do so by following these instructions:</p>
+<ul>
+<li>Download the <a href="http://www.mybb.com/download/latest" target="_blank">latest release of MyBB</a>.</li>
+<li>Replace ./index.php (in the root folder of your forum) with the one in the download (./Upload/index.php).</li>
+<li>Remove the ./install/ folder</li>
+</ul>
+<p>OR</p>
+<ul>
+<li>Download and follow the <a href="http://blog.mybb.com/wp-content/uploads/2011/10/mybb_1604_patches.txt">1.6.4 Patch Instructions</a></li>
+<li>If you are unable to find the affected areas, this issue does not affect you. Otherwise, remove the ./install/ folder.</li>
+</ul>
+<p>If you have any problems, please report them in the <a href="http://community.mybb.com/forum-127.html">General Support Forum</a> on the Community. If you have renamed 'index.php', for example if you're using the portal as your homepage, please remember to update the correct file accordingly.</p>
+<p>We discovered the extent of this problem earlier today but with the release of MyBB 1.6.5 still being a few weeks away, forums need to be patched to protect against any vulnerabilities. We're still investigating how our release became contaminated and if we find anything else in the mean time, we'll be sure to let you know.</p>
+<h4><strong>Reporting MyBB security vulnerabilities</strong></h4>
+<p>If you think you've found a vulnerability in MyBB, we advise you not to publicly post it on these forums or publicly release information about it elsewhere until we've had time to prepare and release a patch.</p>
+<p>As always, you can send through security related messages on the MyBB website from the <a href="http://www.mybb.com/contact/" target="_blank">Contact Us</a> page.</p>
+<p>Thank you,<br />
+MyBB Team</p>

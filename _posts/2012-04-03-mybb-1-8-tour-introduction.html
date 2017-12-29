@@ -1,0 +1,41 @@
+---
+layout: post
+title: 'MyBB 1.8 Tour: Introduction'
+date: 2012-04-03 19:31:59.000000000 -04:00
+categories:
+- Development
+- General
+- Updates
+tags:
+- '1.8'
+author: Chris Boulton
+---
+<p>On April 1st we announced a 1.6.7 Update which updated both MyBB and the Merge System. If you haven't seen this or not upgraded yet please make sure you read the <a href="http://blog.mybb.com/2012/04/01/mybb-1-6-7-update-1-8-development/" target="_blank">MyBB and Merge System 1.6.7 Release blog post</a>. We also announced our plans for MyBB 1.8; it was no April Fool.</p>
+<p>Back in 2010, just under 2 years ago, we released MyBB 1.6 which introduced over 40 new features - some more at home in commercial software. As MyBB's popularity continues to grow, the rise of social networks, rival software and the greater expectations of users old and new gives us some of the hardest challenges we've faced; to stay on top, to deliver a brilliant product and provide it to you for free.</p>
+<p>With our development roadmap for MyBB 2.0 getting underway soon, we quickly felt the need to bridge the large gap that would have been 1.6 to 2.0. We wanted to create something that would provide a legacy to users of the 1.x series - the best of the best - and there was only one way we could get that to our users; MyBB 1.8.</p>
+<h3>What You Can Expect From 1.8</h3>
+<p>Whereas 1.2, 1.4 and 1.6 delivered over 100 new features 1.8 aims to be more of a subtle upgrade, a facelift and a move to more open source development so that others too can help create the best free forum software. We'll of course be providing the usual bug fixes and working with large forum owners to see if we can help further improve performance and stability. MyBB 1.8 is a perfect chance for us to provide changes that we couldn't typically do within our maintenance cycles.</p>
+<h4>A New Look</h4>
+<p>When we announced our new logo and mascot, Bolt, the Team soon realised that we didn't want to wait until 2.0 was released to use them. The 1.6 default theme made these look out of place in its dated design (which was last updated in 2008) so we needed something more up to date. Justin, our lead designer, who created the Apart theme series (from which many MyBB communities either use or have customised the look for themselves) has worked on developing the series for the new 1.8 default theme. We worked together to figure out a method for enabling the Apart colours to be included by default but without the need for including 14 separate themes before the administrator even opened their forum. This method is what we call <strong>attachable base colours</strong>.</p>
+<p><a href="http://blogdotmybbdotcom.files.wordpress.com/2012/04/apart-1800-overview.png" target="_blank"><img class="teaser_illustration" title="The new default theme for MyBB 1.8" src="{{ site.baseurl }}/assets/images/apart-1800-overview.png" alt="The new default theme for MyBB 1.8" width="670" height="246" /></a></p>
+<p>These changes to the theme system allow you to create colours to which you can attach stylesheets (just like you can attach stylesheets to pages). You can also set a display order for all your stylesheets so that they can override styles. Together, the changes mean you can add a theme with as many custom colours as you want. Using the parent/child theme structure that already exists in 1.x you can restrict or allow certain usergroups to use these colours and, as they inherit the main stylesheets, they're very easy to manage. So, there is no longer the need to install a dozen different themes just for a different colour header.</p>
+<h4>A New Look Admin Control Panel (ACP)</h4>
+<p>Along with the new default theme there needs to be a new look Admin Control Panel (ACP). Our ACP is regarded as one of the easiest to use; it's friendly and we didn't want to change it much. Instead, we gave it a similar Apart makeover to our front-end.</p>
+<p><a href="http://blogdotmybbdotcom.files.wordpress.com/2012/04/acp-1800-overview.jpg" target="_blank"><img class="teaser_illustration" title="Screenshot of the MyBB 1.8 ACP" src="{{ site.baseurl }}/assets/images/acp-1800-overview.jpg" alt="Screenshot of the MyBB 1.8 ACP" width="670" height="379" /></a></p>
+<p>Please note that along with the default theme the look may change as development continues.</p>
+<h4>Powered by jQuery</h4>
+<p>While 1.8 won't be able to make your cocoa or project your forum's logo onto the moon, much to our disappointment, we really weren't pulling a prank on this one; MyBB 1.8 will be powered by jQuery. The lighter and more powerful JavaScript library should be able to extend what both Theme Artists and Plugin Developers are able to do without causing conflicts or heavy loading pages. Both front-end and back-end will use the library. This change is probably the most destructive for themes and plugins in the 1.8 upgrade and we'll be providing support throughout its beta period ready for a main release. In total, including the changes to the default theme, about 20 templates require updating from 1.6.</p>
+<p>Along with jQuery comes a change in post editor. Although I've had my eye on an 'off the shelf' editor for quite some time we've yet to make a decision on whether we write our own or not; we'll be covering that in a future tour. However, please don't suggest which editor to use as our aim is to make it interchangeable so you can use your favourite one.</p>
+<h4>Trash Can</h4>
+<p>One of the most requested features for MyBB is a trash can - or as I prefer, the ability to recover deleted posts. In 1.8, you'll be able to decide if a user's deleted post is obliterated forever or is recoverable via the Mod CP. Global and usergroup permissions will allow this to be controlled across your users.</p>
+<h4>Spam Improvements</h4>
+<p>For those of you waiting for Spam Ninja I'm very sorry to disappoint as I did promise it to you last year. As soon as 1.8 was decided, I stopped developing it as a plugin and started integrating relevant parts into the core instead. We'll be looking to improve spam prevention and detection in 1.8 which we'll cover in a future tour.</p>
+<h4>Upgrading to 1.8</h4>
+<p>Upgrading to 1.8 will be similar to upgrading from 1.4 to 1.6; many plugins will only need to change their compatibility line and will only need some major changes if they use Prototype JavaScript, use login functions or make large theme changes. Throughout the beta period, we'll be upgrading the Wiki with new information and providing support to plugin developers to help them with their new plugins.</p>
+<h4>Github</h4>
+<p>The Team has been trying to plan a move away from our current SVN setup to the popular social coding site Github for some time. We've come up against problems but feel confident that now is the time to open up our development to people outside of the MyBB Team. Github can be an extremely powerful tool for development and it is something we're eager to do - we have been working on 1.8 in secret in one of our repositories there which will be made available after our first beta release.</p>
+<p>We've gone outside of our usual box with 1.8 in that we're actually telling you what we're doing and what we're planning even though none of this is public. We're aiming to provide a beta of 1.8 in May so please be patient while we're polishing our development and removing all the takeaways and soft drink cans.</p>
+<h3>Wrap</h3>
+<p>With MyBB 1.8, our aim is to fully complete the series with features and improvements that make us a better rival not only to our free forum software friends but also to commercial community software too. We want to make it more friendly, faster and go further than any of our products have been before. Everyone here at MyBB is looking forward to 1.8 and hope you are too!</p>
+<p>See you at the next tour!</p>
+<p>Tomm</p>

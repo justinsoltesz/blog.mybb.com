@@ -1,0 +1,58 @@
+---
+layout: post
+title: '2.0 dev post #3'
+date: 2015-05-30 22:25:28.000000000 -04:00
+categories:
+- 2.0 Dev Posts
+- Development
+tags:
+- '2.0'
+author: Euan T
+---
+<p>It’s that time again, time for another MyBB 2.0 dev blog! This post is the third in a series of development update posts regarding MyBB 2.0.  Currently in pre-alpha, MyBB 2.0 is the long awaited upcoming major version of the open source MyBB forum software.  We’ll be posting regular updates (we promise!) in regards to the development to keep you all updated. The development team have been hard at work since <a href="http://blog.mybb.com/2015/04/13/2-0-dev-post-2/">our last dev post</a>, adding new features and polishing existing functionality. This post will explore some of these new features and highlight our approach to the development of the system.</p>
+<p><!--more--></p>
+<h2>New approach to feature suggestions</h2>
+<p>Some of you who frequent our <a href="http://community.mybb.com">community forums</a> may have noticed the newly reorganised <a href="http://community.mybb.com/forum-166.html">MyBB 2.0 Development forum</a>. The new structure makes it far easier to suggest new features and enhancements, and to track the currently confirmed and planned features we are implementing. Previously, the suggestions forum has been hectic and unorganised with no clear structure. I hope you agree that this more structured approach is for the better for all of us, but please do suggest any additional changes that you think might help.</p>
+<h2>Some Development Background</h2>
+<p>We've been trying to provide some background on how we're actually developing MyBB 2.0 as part of this series rather than just using it to look at features and such. In this post, I'd like to talk about how we're working on the front-end of the software - namely the CSS stylesheets and the JavaScript.</p>
+<p>During the development stages for 2.0, we're utilising <a href="http://sass-lang.com">Sass</a> to develop the core theme. Sass brings a whole lot more flexibility to the table, and is allowing us to rapidly work on the style and make use of useful features such as CSS variables for colours and mixing to provide common rule sets. We chose Sass due to its easy to learn syntax and rich feature set, though we also considered alternatives such as LESS.</p>
+<p>We're also trying to follow the <a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">BEM syntax</a> for the core theme, in an effort to make the CSS classes used in the core much more understandable to other developers and to make the reuse of useful classes far easier.</p>
+<p>We're also currently investigating how easy it would be to provide the use of Sass and LESS to theme authors straight from the Admin Control Panel. This would give theme developers a great deal more flexibility, and would see Sass or LESS being used to create a theme, with the compiled CSS served up to end users.</p>
+<p>Our approach to JavaScript at the moment still uses raw JavaScript (rather than a language such as CoffeeScript or TypeScript that compiles to JavaScript), though all JavaScript components are being written as separate modules under a global "MyBB" namespace. We're also still making use of jQuery, though the version has been bumped to version 2.1.4 as of the time of writing.</p>
+<p>Here's a taster of this new approach to writing our JavaScript, as seen in our MyBB.Spinner module:</p>
+<p>[code language="javascript"]<br />
+(function ($, window) {<br />
+   window.MyBB = window.MyBB || {};</p>
+<p>   window.MyBB.Spinner = {<br />
+      inProgresses: 0,<br />
+      add: function () {<br />
+         this.inProgresses++;<br />
+         if (this.inProgresses == 1) {<br />
+            $(&quot;#spinner&quot;).show();<br />
+         }<br />
+      },<br />
+      remove: function () {<br />
+         this.inProgresses--;<br />
+         if (this.inProgresses == 0) {<br />
+            $(&quot;#spinner&quot;).hide();<br />
+         }<br />
+      }<br />
+   }<br />
+})<br />
+(jQuery, window);<br />
+[/code]</p>
+<p>In order to aid the process of compiling our SASS files and combining our JavaScript modules, we're making use of the <a href="http://gulpjs.com">gulp.js build system</a>. This system compiles our SASS stylesheets into CSS, saves them and then minifies then into "*.min.css" files for use in the main theme. It also combines all of the JavaScript files (including vendor scripts such as jQuery) and minifies them too, along with optimising all of the images used by the theme.</p>
+<p>This whole process is allowing for a rapid iteration of the front-end development and design of MyBB 2.0, and we look forward to bringing some of this power to theme developers and site owners. We're currently intending to have an Admin Control Panel area under the Templates and Styles module to allow the management of JavaScript files rather than requiring manual template edits. This, combined with the automatic minifying of source files and the use of CDNs being made far easier should offer administrators much more flexibility and provide a welcome speed boat to the loading of forum pages.</p>
+<h2> Private Conversations</h2>
+<p>MyBB has long had the ability to send other members Private Messages, which are hidden from public view. This system has become rather restrictive in recent times though, with the PM system only showing the last message and allowing only two participants. We therefore decided for MyBB 2.0 to overhaul this system to act as a much more powerful Conversation based system.</p>
+<p>This new system allows for multiple participants within a conversation, and a fully threaded approach to messages. This allows for much greater communications between users in private outside of the usual forums.</p>
+<p>[caption id="attachment_2518" align="aligncenter" width="660"]<a href="https://blogdotmybbdotcom.files.wordpress.com/2015/05/screen-shot-2015-05-30-at-23-11-27.png"><img class="size-large wp-image-2518" src="{{ site.baseurl }}/assets/images/screen-shot-2015-05-30-at-23-11-27.png?w=660" alt="A sample Private Conversation, with several participants taking part." width="660" height="392" /></a> A sample Private Conversation, with several participants taking part.[/caption]</p>
+<h2>Redesigned User Control Panel</h2>
+<p>The User Control Panel in MyBB is the one-stop place for users to manage their details, update their signature and avatar, edit their preferences and more. In MyBB 2.0, it has received a significant redesign and overhaul in order to simplify the way things are presented to the user.</p>
+<p>The Control Panel maintains its sidebar (and the easy extensibility it provides for plugin developers), but trims down the default entries by combining items that may be combined. In addition, the section to manage your Private Messages has been removed, and is instead accessible via the conversations management page and the conversations drop-down menu found in the header of all pages.</p>
+<p>Most of a user's details are configured via a single "Profile" page within the new User Control Panel. This page also shows all custom user profile fields configured by the board administrator, allowing users to fill in all of their details in one single easily accessible location.</p>
+<p>[caption id="attachment_2520" align="aligncenter" width="660"]<a href="https://blogdotmybbdotcom.files.wordpress.com/2015/05/screen-shot-2015-05-30-at-23-19-13.png"><img class="size-large wp-image-2520" src="{{ site.baseurl }}/assets/images/screen-shot-2015-05-30-at-23-19-13.png?w=660" alt="The new User Control Panel, showing the Profile management page. Note that almost all actions related to your user account are managed via this page rather than being spread across several." width="660" height="201" /></a> The new User Control Panel, showing the Profile management page. Note that almost all actions related to your user account are managed via this page rather than being spread across several.[/caption]</p>
+<p>[caption id="attachment_2521" align="aligncenter" width="660"]<a href="https://blogdotmybbdotcom.files.wordpress.com/2015/05/screen-shot-2015-05-30-at-23-19-20.png"><img class="size-large wp-image-2521" src="{{ site.baseurl }}/assets/images/screen-shot-2015-05-30-at-23-19-20.png?w=660" alt="Some of the administrator configured custom profile fields. Fields can be grouped together and shown under different headings, as well as having validation rules attached, being set to be required and having several different input types." width="660" height="335" /></a> Some of the administrator configured custom profile fields. Fields can be grouped together and shown under different headings, as well as having validation rules attached, being set to be required and having several different input types.[/caption]</p>
+<p>Custom profile fields have been greatly enhanced in MyBB 2.0 and should replace the functionality provided by many plugins used with MyBB 1.8 today. We're looking forward to covering this additional functionality in more depth in future blog posts.</p>
+<h2>Wrapping Up</h2>
+<p>Well, that’s it for this month’s MyBB 2.0 development progress post. As you can hopefully see, the team has been hard at work and listening to user feedback. If you have any suggestions, post them in a comment or in the <a href="http://community.mybb.com/forum-152.html">2.0 suggestion forum</a>, but please do remember to follow the <a href="http://community.mybb.com/thread-170791.html">new guidelines for posting suggestions</a>! We still have a lot more to both announce and to show, so keep your eyes tuned to the blog for future updates.</p>

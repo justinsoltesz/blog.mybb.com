@@ -1,0 +1,17 @@
+---
+layout: post
+title: Attack against the community forums prior to 1.8.3 release
+date: 2014-11-25 10:45:42.000000000 -05:00
+categories:
+- General
+- Security
+tags: []
+author: Tim B.
+---
+<p>The recent <a href="http://blog.mybb.com/2014/11/20/mybb-1-8-3-1-6-16-released-security-releases/">1.8.3 release</a> fixes a high risk SQL injection vulnerability, it is critically important that users upgrade as soon as possible to ensure their systems are safe.</p>
+<p>Unfortunately, we wish to inform users that this vulnerability was used against the community forums in the days before it was discovered and patched by our team. The attack was successful in accessing our database, however our logs indicate that only a very small portion of the database was obtained. While we know the size of what was downloaded, we have no way of knowing what data it contained and therefore we cannot rule out that the attacker downloaded a small portion of the users table. The attacker also had access to the ACP for a short period.</p>
+<p><strong>In light of this we recommend all community forum users take appropriate precautions on the assumption that their account was accessed. This includes changing your password and monitoring your account for any suspicious activity.</strong></p>
+<p>Our understanding is that the attacker used the SQL injection to reset Chris' community forum password by retrieving the confirmation code, then discover the ACP directory name by searching PMs sent between team members. They were then able to edit the log settings in the ACP to write to a publicly accessible location and create a back-door script on the file-system. Upon discovering the attack we immediately took steps to prevent further access, and we are now confident that the system is secure having searched for any additional back-doors. We have also changed our ACP directory, adopted the new ACP PIN functionality added in 1.8, and used an isolated communication channel to distribute these new details to team members.</p>
+<p>We'd like to reiterate that users running the latest version of MyBB are already secured against the vulnerabilities used to gain access to the ACP, and we'll be using information learned from this attack to further improve security within the ACP in future releases.</p>
+<p>Regards,</p>
+<p>The MyBB Team.</p>

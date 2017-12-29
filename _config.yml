@@ -1,0 +1,51 @@
+name: MyBB Development Blog
+markdown: kramdown
+kramdown:
+  input: GFM
+highlighter: rouge
+permalink: /:year/:month/:day/:title/
+url: https://blog.mybb.com
+baseurl: /blog.mybb.com-test
+mainsiteurl: https://mybb.com
+
+search_site: blog.mybb.com
+search_field_placeholder: Search Blog
+
+remote_theme: mybb/mybb-website-theme
+
+plugins:
+  - jekyll-redirect-from
+  - jekyll-remote-theme
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-archives
+
+paginate: 5
+paginate_path: /page/:num/
+
+jekyll-archives:
+  enabled: all
+  layout: archive
+  layouts:
+    year: archive_year
+    month: archive_month
+    day: archive_day
+    category: archive_category
+    tag: archive_tag
+  permalinks:
+    year: '/:year/'
+    month: '/:year/:month/'
+    day: '/:year/:month/:day/'
+    tag: '/tag/:name/'
+    category: '/category/:name/'
+
+exclude:
+  - CNAME
+  - README.md
+  - CONTRIBUTING.md
+  - key_private.key
+  - key_public.pem
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - Rakefile

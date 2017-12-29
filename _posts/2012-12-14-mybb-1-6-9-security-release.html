@@ -1,0 +1,45 @@
+---
+layout: post
+title: MyBB 1.6.9 Security Release
+date: 2012-12-14 23:51:04.000000000 -05:00
+categories:
+- General
+- Releases
+- Security
+tags:
+- '1.6'
+author: Tom Moore
+---
+<p>MyBB 1.6.9 is now available from the MyBB website and is a security release for the 1.6 series.</p>
+<h4>What's added/changed in this version?</h4>
+<p>It has come to our attention that there is an SQL injection vulnerability in all versions of MyBB, including MyBB 1.6.8. We advise all MyBB forum owners to upgrade their forum as soon as possible.</p>
+<p>With thanks to frostschutz and StefanT for finding and reporting these issues.</p>
+<p>Vulnerabilities fixed:</p>
+<ul>
+<li>High Risk: An SQL vulnerability when editing a post</li>
+<li>Medium Risk: CAPTCHA systems non effective, providing possible brute-force access</li>
+</ul>
+<p>Bugs fixed:</p>
+<ul>
+<li>An issue with the editor not working in Firefox 16 and above</li>
+</ul>
+<p>We apologise for any inconvenience.</p>
+<h4>Upgrading from 1.6.8 and Other Versions</h4>
+<p>Before performing any upgrade please remember to backup your forum's files and database and store them safely. If you have edited core files, including language files, please make sure you make a changelog for these changes so you can make them again once the upgrade is complete.</p>
+<p>To upgrade, follow the Upgrading process. The <strong>upgrade script</strong> is required. There are changes to <strong>1 language file</strong> (<em>messages.lang.php</em>). There are changes to <strong>3 templates</strong> (<em>portal_welcome_guesttext</em>, <em>loginbox</em> &amp; <em>codebuttons</em>).</p>
+<blockquote><p>If you're using MyBB 1.6.8</p>
+<ul>
+<li><a href="http://resources.mybb.com/downloads/changedfiles_1609.zip">Download and use the Changed Files Package</a></li>
+<li>Follow the <a href="http://docs.mybb.com/Upgrading.html">upgrading instructions</a></li>
+</ul>
+<p>If you’re using MyBB 1.6.7 or below</p>
+<ul>
+<li><a href="http://resources.mybb.com/downloads/mybb_1609.zip">Download and use the full 1.6.9 Release Package</a></li>
+<li>Follow the <a href="http://docs.mybb.com/Upgrading.html">upgrading instructions</a></li>
+</ul>
+</blockquote>
+<h4>Reporting MyBB Security Vulnerabilities</h4>
+<p>If you think you’ve found a vulnerability in MyBB, we advise you not to publicly post it on these forums or publicly release information about it elsewhere until we’ve had time to prepare and release a patch.</p>
+<p>As always, you can send through security related messages on the MyBB website from the Contact Us page or in our <a href="http://community.mybb.com/forum-135.html">Private Inquiries</a> forum – where you can start a new thread that only you and the MyBB Team can see.</p>
+<p>Thank you,</p>
+<p>MyBB Team</p>

@@ -1,0 +1,45 @@
+---
+layout: post
+title: Developing the Future
+date: 2011-06-07 23:50:48.000000000 -04:00
+categories:
+- Development
+- Updates
+tags: []
+author: Chris Boulton
+---
+<p>After almost 8 years, MyBB has certainly come a long way. Its popularity among forum software is strong, and with the release of 1.6 almost a year ago it just keeps growing and growing. With its simplicity and extensions, there's really nothing you can't do with MyBB. Every member of the Team, past and present, are no doubt proud of where we are today.</p>
+<p>However, we can't sit still in the ever moving world of forums and message boards. New software appears - it seems, every month - which people expect MyBB to better, and who are we to disappoint? It's time for us to develop the future.</p>
+<h4>MyBB 1.6</h4>
+<p>While there are no new 'features' expected for the 1.6 series of MyBB, we're still dedicated to maintaining it and making sure your forum (and business) is safe.</p>
+<p>1.6.4 - where there are over 100 issues that have been fixed - is going to be available very soon. It fixes some (very) old issues dating back years including some obscure security issues. While none of these are 'high risk' issues or bugs, it's always a nice feeling knowing that your site is as stable as it can be. We aren't just stopping there though - this version is the first in a minor release to have 'feature updates'.</p>
+<p>These feature updates are small improvements to MyBB - as apposed to feature releases which are big changes - and range from things like a setting to globally switch on/off all plugins to providing better access for Plugin Developers and Administrators to check for updates. These will be coming throughout the 1.6 series - and if they affect Plugin Developers or Theme Artists, we'll keep you informed before their release on the MyBB Community Forums.</p>
+<h4>Spam Prevention</h4>
+<p>This year, there has been somewhat of an explosion in the amount of human-cooked spam. More realistic than the robot kind, this spam can range from signature links to forums filled with posts in hours. While the best method is moderation - and reporting users who do spam - there's always going to be better methods and controls for protecting your forum and cleaning up after them. That's why we're working to produce Spam Ninja - a feature update for the 1.6 series that will introduce basic controls to help you eliminate spam and their robot|human chefs permanently.</p>
+<p>The Spam Ninja update will be available later this year and will be completely optional if you use it or not. More information on the new features it introduces will be announced closer to the time.</p>
+<p>Alongside maintaining 1.6 however, developing MyBB 2 is just as important.</p>
+<h4>MyBB 2.0</h4>
+<p>At MyBB, we tend to keep 2.0 secrets close - it's not that we don't want you to know! It's because as the development process moves on, coding and features are more than likely going to change so we don't want to promise things that might never materialize. Rest assured, while many may think that 2.0 is a mere myth, it does exist and we'll be walking through some of the boring stuff that won't be likely to change.</p>
+<p>We've made no surprises that Justin - our Lead Designer - has created the awesome 2.0 default theme. It brings sweeping changes to the thread and forum layout that will make MyBB stand out from other software, and contrary to a popular thread on the Community, it definitely does not look like vBulletin. While the software still has that MyBB look and charm, it does mean that we've had the chance to reorganize various other areas - such as introducing conversation-style Private Messaging, a simplified User CP and Moderation Queues to make things much more modern, efficient and user friendly. As you would expect, it looks and feels like a state-of-the-art forum system.</p>
+<p>While we won't be showing off the software just yet, we can still keep you in the loop.</p>
+<div style="float:right;margin:10px;"><a href="http://blogdotmybbdotcom.files.wordpress.com/2011/06/login_2-0-dev.jpg" target="_blank"><img class="inline_illustration" title="2.0 Login Page" src="{{ site.baseurl }}/assets/images/login_2.0-dev-300x189.jpg" alt="" width="180" height="100" /></a></div>
+<p>MyBB 2.0 has been written from scratch in a MVC (Model-View-Controller) method and we've been using <a href="http://www.yiiframework.com" target="_blank">Yii</a> as its base framework. Standing for "Yes It Is!", Yii is a powerful, very secure and fast framework and after a very long process, we found it to be the best choice for MyBB. Its database abstraction layers introduces various options (including PDO transactions and Active Record, Yii's Object Relational Mapping (ORM) techniques) and it provides some fantastically simple language and internationalization ideas. We've also used the <a href="http://www.twig-project.org/" target="_blank">Twig Template Engine</a> for views, increasing security and adding various possibilities of using PHP in templates. You can see an example (currently part of the 2.0 "login" page) of a Twig template and its output in the screenshot to the right.</p>
+<p>For languages, we're embracing Yii's language translations. As an example, to translate a string in 2.0 you simply call like this:</p>
+<div style="margin-left:30px;"><code>// Structure of the 'global' language file<br />
+return array(<br />
+&nbsp;&nbsp;&nbsp;'mybb_welcome' =&gt; 'Welcome to MyBB {version}!',<br />
+&nbsp;&nbsp;&nbsp;'language_string' =&gt; 'Another language string',<br />
+&nbsp;&nbsp;&nbsp;'language_string_2' =&gt; "Yet another language string that's awesome."<br />
+);</p>
+<p>// An example of use in the software<br />
+// Will display 'Welcome to MyBB {version}!'<br />
+$foo = Yii::t('global', 'mybb_welcome');</p>
+<p>// Will display 'Welcome to MyBB 2.0!'<br />
+$foo = Yii::t('global', 'mybb_welcome', array('{version}' =&gt; Yii::app()-&gt;mybb-&gt;version));<br />
+</code></div>
+<p>You can call on whatever language file you want from anywhere in the software. Making a language pack is just as easy as it was in 1.6 too - if not easier!</p>
+<div style="float:right;margin:10px;"><a href="http://blogdotmybbdotcom.files.wordpress.com/2011/06/install_2-0-dev.jpg" target="_blank"><img class="inline_illustration" title="2.0 Installation" src="{{ site.baseurl }}/assets/images/install_2.0-dev-180x100.jpg" alt="" width="180" height="100" /></a></div>
+<p>Another area we're keen to improve on is MyBB's installer. The new version introduces a one-click install - you just simply enter all your details and the process practically completes itself. See the screenshot of the introduction page!</p>
+<p>As you can tell, we have the basics of the software prepped and ready to start. It's no longer 'Planning', but what I would call 'Pre-Production' - where we concrete ideas, features and most importantly, a road map, are written. After working with 2.0, I can tell you that the future definitely is exciting. It's never tasted so good!</p>
+<h4>Developing for MyBB</h4>
+<p>Being apart of the MyBB family and developing the future of forum software is no small task. Being volunteers takes dedication and patience as well as the skills to pull off your role. Take a look at <a href="http://www.mybb.com/about/apply">Joining the Team</a>, and if you meet the descriptions, send us an application - we'd love to have you on the Team!</p>

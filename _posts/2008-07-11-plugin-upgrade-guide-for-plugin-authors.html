@@ -1,0 +1,58 @@
+---
+layout: post
+title: Plugin Upgrade Guide (for Plugin Authors)
+date: 2008-07-11 11:24:47.000000000 -04:00
+categories:
+- Updates
+tags:
+- Development
+- Forum
+- MyBB
+- PHP
+author: Chris Boulton
+---
+<p>As we approach the release of MyBB 1.4 and the code is finalized I thought it would be a good idea to take some time and write an in-depth guide on how to upgrade your plugins for MyBB 1.4.</p>
+<p>First are the required code changes in MyBB 1.4:</p>
+<ul>
+<li>TABLE_PREFIX is not used anymore except in $db-&gt;query().
+<ul>
+<li>In MyBB 1.2 it would look like this: $db-&gt;simple_select(TABLE_PRFEFIX."users", "*", "uid='1'");</li>
+<li>In MyBB 1.4 it now looks like this: $db-&gt;simple_select("users", "*", "uid='1'");</li>
+</ul>
+</li>
+<li>All "yes"/"no" columns have been converted to 1/0 for speed improvements. All plugins will need to change this.</li>
+<li>The function is_moderator() now returns true/false in MyBB 1.4 versus the old "yes"/"no" in MyBB 1.2.</li>
+<li>sprintf() is no longer used in MyBB. If you use sprintf() now use $lang-&gt;sprintf() instead.</li>
+<li>Links to forums/threads/posts now use functions to generate them because of the SEO in MyBB 1.4:
+<ul>
+<li>get_thread_link(arg1 thread id, [arg2 page,] [arg3 action])</li>
+<li>get_forum_link(arg1 forum id, [arg2 page])</li>
+<li>get_post_link(arg1 post id, [arg2 thread id])</li>
+<li>get_profile_link(arg1 user id)</li>
+<li>get_announcement_link(arg1 announcement id)</li>
+<li>get_event_link(arg1 event id)</li>
+<li>get_calendar_link(arg1 calendar id, [arg2 year,] [arg3 month,] [arg4 day])</li>
+<li>get_calendar_week_link(arg1 calendar id, [arg2 week])</li>
+</ul>
+</li>
+<li>All queries in your mods that <strong>write </strong>data to the database and use $db-&gt;query() will now have to use $db-&gt;write_query().  You won't have to worry about queries that use simple_select or update_query as they automatically assign it to the correct function. By doing this, you can make your plugin compatible with forums that run on multiple servers. These forums are usually large, in the scale of millions of posts or more.</li>
+<li>rebuildsettings() has been renamed to rebuild_settings().  Plugins looking for backward-compatibility should execute a check to function_exists before defining their own rebuild_settings() function in order not to have "function already defined" errors.</li>
+<li>Plugins using the Moderation class should take note of a few changes to the function parameters
+<ul>
+<li>tid and fid are no longer passed into Moderation::unapprove_posts and Moderation::approveposts</li>
+</ul>
+</li>
+<li>Any plugins written to add / change functionality to the Administration Control Panel (ACP) will have to be completely rewritten. The changes needed to be made are too vast and too complex to be covered in this article. However, take a look at the 'Akismet' plugin bundled with MyBB 1.4 for examples of how to use the Admin Control Panel functionality.</li>
+</ul>
+<p>Second, the suggested changes in MyBB 1.4:</p>
+<ul>
+<li>There are two new fields for the information array in your plugin:<code></code>
+<ul>
+<li>guid and compatibility.</li>
+<li><em>guid's</em> (Globally Unique Identifiers) are assigned to plugins on the MyBB Mods site and can be put in plugins to allow for "Plugin Updates" via the new ACP page in MyBB 1.4.</li>
+<li><em>compatibility</em> can be set to "14*" so MyBB knows in the future which plugins work and don't work with the next version of MyBB.</li>
+</ul>
+</li>
+<li>The 'website' field should point towards the URL to your plugin on the MyBB Mods website (or the link to the plugin where it is hosted at.) We've noticed that it's been a common misconception to use that field to point towards your own personal site, while it's intention was to be used to allow the average admin to go directly to the plugin's page and check for updates, etc.</li>
+</ul>
+<p>There is of course more material not covered that is out of the scope of this article. If you have any questions feel free to ask where appropriate.</p>

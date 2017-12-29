@@ -1,0 +1,93 @@
+---
+layout: post
+title: MyBB 1.4.14 Released – Maintenance Release
+date: 2010-08-03 11:22:34.000000000 -04:00
+categories:
+- Releases
+- Updates
+tags:
+- '1.4'
+author: Chris Boulton
+---
+<p>MyBB 1.4.14 is now available on the MyBB website and is a general maintenance release.</p>
+<p>This release fixes a few reported issues with version released since 1.4.13 causing some incorrect functionality of MyBB. These bugs have been fixed to provide a more stable version of MyBB for public use. This will be the last maintenance release to the MyBB 1.4 series.</p>
+<h4><strong>What's added/changed in this version?</strong></h4>
+<ul>
+<li>MyBB 1.4.14 is now fully compatible with PHP 5.3.</li>
+<li>Attachment management now properly checks for the post key.</li>
+</ul>
+<p>This release has been tested by our Software Quality Assurance group.</p>
+<p>Information on upgrading, template changes and language changes can be found in the posts below.</p>
+<p><span style="color:red;font-size:x-larger;"><strong>Please note, that you do not need to run the upgrade script for this version.</strong></span><br />
+<em>There are <strong>no</strong> database schema changes in this version.</em></p>
+<h4><strong>Upgrading from the 1.4 series</strong></h4>
+<p>When upgrading from 1.4.13, you will not lose any custom themes, plugins or language packs which you may have installed.</p>
+<p>Follow the general <a title="View the MyBB Wiki page for Upgrading" href="http://wiki.mybboard.net/index.php/Upgrading" target="_blank">[Wiki: Upgrading]</a> guide outlined on the MyBB Wiki to complete the upgrade process. You may download a ZIP archive of changed files here:</p>
+<p><a href="http://mybboard.net/download/122">changed_files_1414.zip</a></p>
+<p><strong>You must then check for modified templates using the instructions below.</strong></p>
+<h4><strong>Upgrading from other versions</strong></h4>
+<p>If you are upgrading from a version earlier than 1.2 then you will lose your custom themes, templates and language packs due to the number of changes between your version and the 1.2 series.</p>
+<p><span style="color:red;"><strong>Before you attempt to upgrade, ensure you have a database backup and a copy of the files currently in use on your board.</strong></span> This is so you can revert back to your earlier version if you need to or something goes horribly wrong with the upgrade process.</p>
+<p>Follow the general <a title="View the MyBB Wiki page for Upgrading" href="http://wiki.mybboard.net/index.php/Upgrading" target="_blank">[Wiki: Upgrading]</a> guide outlined on the MyBB Wiki to complete the upgrade process.</p>
+<h4><strong>Changed files since MyBB 1.4.13</strong></h4>
+<ul>
+<li>editpost.php</li>
+<li>newreply.php</li>
+<li>newthread.php</li>
+<li>admin
+<ul>
+<li>modules
+<ul>
+<li>home
+<ul>
+<li>version_check.php</li>
+</ul>
+</li>
+<li>config
+<ul>
+<li>plugins.php</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>install
+<ul>
+<li>index.php</li>
+<li>upgrade.php</li>
+<li>resources
+<ul>
+<li>upgrade16.php</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>inc
+<ul>
+<li>class_core.php</li>
+<li>init.php</li>
+<li>function_serverstats.php</li>
+<li>languages
+<ul>
+<li>english.php</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>* <span style="color:red;">Red represents files that contain security updates</span><br />
+* <span style="color:green;">Green represents new files added in this release</span></p>
+<h4><strong>Bugs fixed since MyBB 1.4.13</strong></h4>
+<ul>
+<li><a href="http://dev.mybboard.net/issues/180" target="_blank">#180</a> - PHP 5.3/6.0 Changes &amp; Support</li>
+<li><a href="http://dev.mybboard.net/issues/630" target="_blank">#630</a> - PHP 5.1+ generates "date_default_timezone_set" warning on every page</li>
+<li><a href="http://dev.mybboard.net/issues/959" target="_blank">#959</a> - Magic Quotes Check</li>
+<li><a href="http://dev.mybboard.net/issues/1077" target="_blank">#1077</a> - Post key not checked for attachment management</li>
+</ul>
+<h4><strong>Theme and template changes</strong></h4>
+<p>There have been <strong>no</strong> template changes in this release.</p>
+<h4><strong>Language file changes</strong></h4>
+<p>There have been <strong>no</strong> language file changes in this release.</p>
+<h4><strong>Plugins</strong></h4>
+<p>All of your MyBB 1.4.x plugins will work correctly with 1.4.14 without any updates.</p>

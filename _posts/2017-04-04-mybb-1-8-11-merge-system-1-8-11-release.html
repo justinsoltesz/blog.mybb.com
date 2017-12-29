@@ -1,0 +1,82 @@
+---
+layout: post
+title: MyBB 1.8.11 & Merge System 1.8.11 Release
+date: 2017-04-04 18:56:23.000000000 -04:00
+categories:
+- Merge System
+- Releases
+- Security
+- Updates
+tags:
+- '1.8'
+author: StefanT
+---
+<p>MyBB 1.8.11 is now available from the MyBB website, and is a security and maintenance release.</p>
+<h4>What’s added/changed in this version?</h4>
+<p>This release fixes <strong>3 security vulnerabilities</strong> and <strong>32 reported issues</strong> causing incorrect functionality of MyBB. Please be aware that not all issues have been fixed in this version in order to provide easy to manage updates.</p>
+<ul>
+<li>Vulnerabilities:
+<ul>
+<li>High risk: XSS Injection in Email MyCode – reported by Zhiyang Zeng of <em>Tencent security platform department</em></li>
+<li>Medium risk: SSRF protection can be bypassed - reported by Orange Tsai of <i>DEVCORE</i> and Jasveer Singh of <i><a href="https://www.sec-consult.com">SEC Consult Vulnerability Lab</a></i></li>
+<li>Low risk: Directory Traversal in smilie module - reported by Zhiyang Zeng of <em>Tencent security platform department</em></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>Bugs fixed:
+<ul>
+<li><a href="https://github.com/mybb/mybb/issues?q=milestone%3A1.8.11+is%3Aclosed">Fixed issues in 1.8.11</a></li>
+<li><a href="https://github.com/mybb/mybb/issues?q=is%3Aopen+label%3A1.8+is%3Aissue">Unfixed issues</a></li>
+</ul>
+</li>
+</ul>
+<p>Please view the <a href="http://docs.mybb.com/versions/1.8.11">1.8.11 changes</a> on the Docs site for more information about the changes in this version.</p>
+<p>Please note, that you <strong>do</strong> need to run the upgrade script for this version.</p>
+<h4>Upgrading from 1.8.10 and Other Versions</h4>
+<p>Before performing any upgrade please remember to backup your forum’s files and database and store them safely. If you have edited core files, including language files, please make sure you make a changelog for these changes so you can make them again (if necessary) once the upgrade is complete.</p>
+<p>To upgrade, follow the Upgrading process. The <strong>upgrade script</strong> is required. There are changes to <strong>5</strong> language files and <strong>7</strong> templates were changed or added.</p>
+<p>If you’re using MyBB 1.8.10:</p>
+<ul>
+<li>Download and use the <a href="https://resources.mybb.com/downloads/changed_files_1811.zip">Changed Files Package</a>
+<ul style="font-size:.8em;word-break:break-all;">
+<li>MD5: <code>f99cdecf3d96c8c39441c81d8468e4f6</code></li>
+<li>SHA1: <code>323bec46d3da051fe5e9899e1a4ffdd8e538b5f5</code></li>
+<li>SHA256: <code>f3a50f31dc6045e63ccad826fd4fa35f1240891238f4fbcdaeb724835cd58f4d</code></li>
+<li>SHA512: <code>4d9018f2e1f286dd447e4c4db0ba9be18b1c407ed63272711d11deb6a09d7e301967917d465e368d8ebdd046cc0c7c5a23308b8ed72f8d5f9e9307ba6a81f8e3</code></li>
+</ul>
+</li>
+<li><a href="https://docs.mybb.com/1.8/install/upgrade/">Follow the Docs Upgrading Instructions</a></li>
+</ul>
+<p>If you’re using MyBB 1.8.9 or lower:</p>
+<ul>
+<li>Download and use the <a href="https://resources.mybb.com/downloads/mybb_1811.zip">full 1.8.11 Release Package</a>
+<ul style="font-size:.8em;word-break:break-all;">
+<li>MD5: <code>d4d3de795b69b076264a007e7a989f64</code></li>
+<li>SHA1: <code>5ca8bf23a8efe0940bfe3c6fba852676144ea134</code></li>
+<li>SHA256: <code>c95cf770fffb37f811bee17a828cea8f0c789f22069c1783f3fb6f567fa7ca43</code></li>
+<li>SHA512: <code>9db6ec3894cd66a26dffb5682109e25073148f1c885f2e0638be8c7d95eb2ba5e16db6dc66087431e919d849acdb7c2c11c95e247e99f6f8f44bcc19fe721015</code></li>
+</ul>
+</li>
+<li><a href="https://docs.mybb.com/1.8/install/upgrade/">Follow the Docs Upgrading Instructions</a></li>
+</ul>
+<h4>Reporting MyBB security vulnerabilities</h4>
+<p>If you think you’ve found a vulnerability in MyBB, we advise you not to publicly post it on these forums or publicly release information about it elsewhere until we’ve had time to prepare and release a patch.</p>
+<p>As always, you can send through security related messages on the MyBB website from the <a href="https://www.mybb.com/contact/">Contact Us</a> page or in our <a href="https://community.mybb.com/forum-135.html" target="_blank">Private Inquiries</a> forum – where you can start a new thread that only you and the MyBB Team can see.</p>
+<h2>MyBB Merge System 1.8.11</h2>
+<p>MyBB Merge System 1.8.11 is <a href="https://resources.mybb.com/downloads/merge_1811.zip">now available</a> on the MyBB website and is a maintenance update to the MyBB Merge 1.8 series.</p>
+<p>This release is to ensure that all users of MyBB Merge 1.8 have the latest fixes.</p>
+<h4>What’s new in this version?</h4>
+<ul>
+<li>2 bug fixes (<a href="https://github.com/mybb/merge-system/issues?q=milestone%3A1.8.11">View all</a>)</li>
+</ul>
+<p>Thanks,</p>
+<p>MyBB Team</p>
+<h2>Note about updated packages</h2>
+<p>The original packages have been replaced by updated packages to fix a compatibility issue causing warnings on certain PHP environments.</p>
+<p>If you installed or updated your forums using either the full or changed files packages prior to 19:00 on April 6, 2017 GMT please download a fresh package from the links above and replace the following file:</p>
+<ul>
+<li>inc/functions.php</li>
+</ul>
+<p>You do not need to run the installer or make any further changes. You can use the file verification tool to determine whether you have the latest package, the file above will appear to be modified if you need to download an updated copy.</p>
+<p>We apologise of any inconvenience.</p>

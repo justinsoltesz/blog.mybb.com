@@ -1,0 +1,176 @@
+---
+layout: post
+title: MyBB 1.4 Admin CP - The Complete Overview (Part 3)
+date: 2008-03-18 12:41:09.000000000 -04:00
+categories:
+- Updates
+tags:
+- Admin CP
+- Design
+- Development
+- MyBB
+- Usability
+author: Chris Boulton
+excerpt: |-
+  Welcome back for another overview of MyBB 1.4’s Administrator Control Panel - this time, we’ll be covering the “Users & Groups” tab as well as some of the technical decisions made.
+
+
+
+  See the full post for this week's overview.
+---
+<p>Welcome back for another overview of MyBB 1.4’s Administrator Control Panel - this time, we’ll be covering the “Users &amp; Groups”  as well as some of the technical decisions made.</p>
+<p><img src="{{ site.baseurl }}/assets/images/codeflashlight.png" alt="A portion of code in the Users ACP page" title="A portion of code in the Users ACP page" class="teaser_illustration" /></p>
+<h2 style="clear:both;"><strong>Users &amp; Groups</strong></h2>
+<h4 style="clear:both;">Users</h4>
+<p>Like many other sections of the new Admin CP, the user management section is quite different from what you'll be familiar with in MyBB 1.2.  The focus of the new section is still very much to make it quick and easy to find and manage the users you need to.  When you click on the new "Users &amp; Groups" tab, you'll automatically be taken to the Users page, from which you can quickly find, merge, and create new users.  When you find the user you're looking for, a number of options are available to you; including edit, delete or ban the user, show referred users, show IP addresses used by that user, and view the user's attachments.</p>
+<div class="float_left" style="margin-right:10px;"><a href="http://blog.mybboard.net/wp-content/uploads/2008/03/users.png" title="Users"><img src="{{ site.baseurl }}/assets/images/users.thumbnail.png" alt="Users" title="Users" class="inline_illustration" /></a></div>
+<div class="float_left" style="margin-right:10px;"><a href="http://blog.mybboard.net/wp-content/uploads/2008/03/users_find.png" title="Find Users"><img src="{{ site.baseurl }}/assets/images/users_find.thumbnail.png" alt="Find Users" title="Find Users" class="inline_illustration" /></a></div>
+<div class="float_left" style="margin-right:10px;"><a href="http://blog.mybboard.net/wp-content/uploads/2008/03/users_create.png" title="Creating a User"><img src="{{ site.baseurl }}/assets/images/users_create.thumbnail.png" alt="Creating a User" title="Creating a User" class="inline_illustration" /></a></div>
+<div class="float_left" style="margin-right:10px;"><a href="http://blog.mybboard.net/wp-content/uploads/2008/03/users_ips.png" title="Show IP Addresses"><img src="{{ site.baseurl }}/assets/images/users_ips.thumbnail.png" alt="Show IP Addresses" title="Show IP Addresses" class="inline_illustration" /></a></div>
+<div class="float_left" style="margin-right:10px;"><a href="http://blogdotmybbdotcom.files.wordpress.com/2008/03/users_merge.png" title="Merging Users"><img src="{{ site.baseurl }}/assets/images/users_merge.thumbnail.png" alt="Merging Users" title="Merging Users" class="inline_illustration" /></a></div>
+<p style="clear:both;">In the first screenshot above you'll probably notice that the page begins listing all the registered users of the board in business card style.  This is part of a new feature called "Views," which is a great new way of quickly getting to the information you require regularly.  Essentially, views are saved live searches.  In the screenshot for example, the default "All Users" view is selected and is therefore starting to display all the registered users of the board, along with the user's email address, registration date, the date on which they were last active, and the user's post count.  You can modify the view or create a new view which instead listed users with different information such as their primary user group, additional user groups, reputation, and so on.  You can also specify search criteria and sorting options for any view you create, as well as view the results in either list or business card style.</p>
+<div class="float_left" style="margin-right:10px;"><a href="http://blog.mybboard.net/wp-content/uploads/2008/03/users_views.png" title="Views"><img src="{{ site.baseurl }}/assets/images/users_views.thumbnail.png" alt="Views" title="Views" class="inline_illustration" /></a>
+</div>
+<div class="float_left" style="margin-right:10px;"><a href="http://blog.mybboard.net/wp-content/uploads/2008/03/users_views_add.png" title="Adding a View"><img src="{{ site.baseurl }}/assets/images/users_views_add.thumbnail.png" alt="Adding a View" title="Adding a View" class="inline_illustration" /></a>
+</div>
+<div class="float_left" style="margin-right:10px;"><a href="http://blog.mybboard.net/wp-content/uploads/2008/03/users_views_add2.png" title="Adding a View"><img src="{{ site.baseurl }}/assets/images/users_views_add2.thumbnail.png" alt="Adding a View" title="Adding a View" class="inline_illustration" /></a>
+</div>
+<div class="float_left" style="margin-right:10px;"><a href="http://blog.mybboard.net/wp-content/uploads/2008/03/users_views_edit.png" title="Editing a View"><img src="{{ site.baseurl }}/assets/images/users_views_edit.thumbnail.png" alt="Editing a View" title="Editing a View" class="inline_illustration" /></a></div>
+<div class="float_left" style="margin-right:10px;"><a href="http://blogdotmybbdotcom.files.wordpress.com/2008/03/users_table.png" title="Users List View"><img src="{{ site.baseurl }}/assets/images/users_table.thumbnail.png" alt="Users List View" title="EUsers List View" class="inline_illustration" /></a></div>
+<p style="clear:both;">There's a lot of information to store for each user, such as their details, profile information, and personal options.  In the front-end these options have always been grouped into different sections of the User CP in order to make it easier for users to find exactly what they want to change.  We've introduced a similar idea into the new Admin CP.  When you select a user to edit you'll be taken to a page with five tabs, on which only the relevant options are displayed.  These tabs are labeled "Overview," "Profile," "Account Settings," "Signature," and "Avatar."</p>
+<div class="float_left" style="margin-right:10px;"><a href="http://blog.mybboard.net/wp-content/uploads/2008/03/users_edit1.png" title="Editing a User"><img src="{{ site.baseurl }}/assets/images/users_edit1.thumbnail.png" alt="Editing a User" title="Editing a User" class="inline_illustration" /></a></div>
+<div class="float_left" style="margin-right:10px;"><a href="http://blog.mybboard.net/wp-content/uploads/2008/03/users_edit2.png" title="Edit User Profile"><img src="{{ site.baseurl }}/assets/images/users_edit2.thumbnail.png" alt="Edit User Profile" title="Edit User Profile" class="inline_illustration" /></a></div>
+<div class="float_left" style="margin-right:10px;"><a href="http://blog.mybboard.net/wp-content/uploads/2008/03/users_edit3.png" title="Edit User Account Settings"><img src="{{ site.baseurl }}/assets/images/users_edit3.thumbnail.png" alt="Edit User Account Settings" title="Edit User Account Settings" class="inline_illustration" /></a></div>
+<div class="float_left" style="margin-right:10px;"><a href="http://blog.mybboard.net/wp-content/uploads/2008/03/users_edit4.png" title="Edit User Signature"><img src="{{ site.baseurl }}/assets/images/users_edit4.thumbnail.png" alt="Edit User Signature" title="Edit User Signature" class="inline_illustration" /></a></div>
+<div class="float_left" style="margin-right:10px;"><a href="http://blog.mybboard.net/wp-content/uploads/2008/03/users_edit5.png" title="Edit User Avatar"><img src="{{ site.baseurl }}/assets/images/users_edit5.thumbnail.png" alt="Edit User Avatar" title="Edit User Avatar" class="inline_illustration" /></a></div>
+<div class="float_left" style="margin-right:10px;"><a href="http://blogdotmybbdotcom.files.wordpress.com/2008/03/users_edit6.png" title="Edit User Avatar"><img src="{{ site.baseurl }}/assets/images/users_edit6.thumbnail.png" alt="Edit User Avatar" title="Edit User Avatar" class="inline_illustration" /></a></div>
+<h4 style="clear:both;">Groups</h4>
+<p>When you head to the "Groups" section of the new Admin CP, you'll be taken to a page that looks very similar to its 1.2 counterpart.  You'll see a list of the current user groups along with the group description, the number of users in the group, its order on the "Forum Team" page, and the relevant control options.  There's also a new icon next to each group which makes it more obvious which groups are custom groups and which are there by default.  You'll notice a significant difference when you click to edit a group.  Rather than displaying all the group options at the same time, the options have been separated into four different tabs; namely, "General", "Forums and Posts", "Users and Permissions" and "Miscellaneous".</p>
+<div class="float_left" style="margin-right:10px;"><a href="http://blog.mybboard.net/wp-content/uploads/2008/03/users_groups.png" title="Manage Groups"><img src="{{ site.baseurl }}/assets/images/users_groups.thumbnail.png" alt="Manage Groups" title="Manage Groups" class="inline_illustration" /></a></div>
+<div class="float_left" style="margin-right:10px;"><a href="http://blog.mybboard.net/wp-content/uploads/2008/03/users_groups_add.png" title="Adding a Group"><img src="{{ site.baseurl }}/assets/images/users_groups_add.thumbnail.png" alt="Adding a Group" title="Adding a Group" class="inline_illustration" /></a></div>
+<div class="float_left" style="margin-right:10px;"><a href="http://blog.mybboard.net/wp-content/uploads/2008/03/users_groups_edit.png" title="Editing a Group"><img src="{{ site.baseurl }}/assets/images/users_groups_edit.thumbnail.png" alt="Editing a Group" title="Editing a Group" class="inline_illustration" /></a></div>
+<div class="float_left" style="margin-right:10px;"><a href="http://blog.mybboard.net/wp-content/uploads/2008/03/users_groups_edit2.png" title="Editing a Group"><img src="{{ site.baseurl }}/assets/images/users_groups_edit2.thumbnail.png" alt="Editing a Group" title="Editing a Group" class="inline_illustration" /></a></div>
+<div class="float_left" style="margin-right:10px;"><a href="http://blog.mybboard.net/wp-content/uploads/2008/03/users_groups_edit3.png" title="Editing a Group"><img src="{{ site.baseurl }}/assets/images/users_groups_edit3.thumbnail.png" alt="Editing a Group" title="Editing a Group" class="inline_illustration" /></a></div>
+<div class="float_left" style="margin-right:10px;"><a href="http://blogdotmybbdotcom.files.wordpress.com/2008/03/users_groups_edit4.png" title="Editing a Group"><img src="{{ site.baseurl }}/assets/images/users_groups_edit4.thumbnail.png" alt="Editing a Group" title="Editing a Group" class="inline_illustration" /></a></div>
+<h4 style="clear:both;">User Titles</h4>
+<p>The user titles section hasn't changed much from the Admin CP in 1.2.  It allows you to manage the default user titles that members will automatically be assigned based on their post count.  The interface is straightforward just like its MyBB 1.2 counterpart.</p>
+<div class="float_left" style="margin-right:10px;"><a href="http://blogdotmybbdotcom.files.wordpress.com/2008/03/users_titles.png" title="User Titles"><img src="{{ site.baseurl }}/assets/images/users_titles.thumbnail.png" alt="User Titles" title="User Titles" class="inline_illustration" /></a></div>
+<div class="float_left" style="margin-right:10px;"><a href="http://blog.mybboard.net/wp-content/uploads/2008/03/users_titles_add.png" title="Adding a User Title"><img src="{{ site.baseurl }}/assets/images/users_titles_add.thumbnail.png" alt="Adding a User Title" title="Adding a User Title" class="inline_illustration" /></a></div>
+<div class="float_left" style="margin-right:10px;"><a href="http://blog.mybboard.net/wp-content/uploads/2008/03/users_titles_edit.png" title="Editing a User Title"><img src="{{ site.baseurl }}/assets/images/users_titles_edit.thumbnail.png" alt="Editing a User Title" title="Editing a User Title" class="inline_illustration" /></a></div>
+<h4 style="clear:both;">Banning</h4>
+<p>One of the things we thought was messy in 1.2 was that banning options weren't placed in the best of places in the Admin CP.  You could ban a user in the banning section, but to disallow specific usernames, IPs or email addresses you would instead have to look through the settings area to find the appropriate options.  In 1.4 all of these options are placed in the same place making it easier to find the specific banning options you require.  We included screenshots of the "Banned IPs", "Disallowed Usernames" and "Disallowed Email Addresses" pages in <a href="http://blog.mybboard.net/2008/02/09/mybb-14-admin-cp-the-complete-overview-part-1/">Part 1</a>, as they are technically under the Configuration portion of the Admin CP, so here's a screenshot of the "Banned Accounts" page which instead falls under the Users portion of the Admin CP.</p>
+<div class="float_left" style="margin-right:10px;"><a href="http://blog.mybboard.net/wp-content/uploads/2008/03/users_banning.png" title="Banning"><img src="{{ site.baseurl }}/assets/images/users_banning.thumbnail.png" alt="Banning" title="Banning" class="inline_illustration" /></a></div>
+<h4 style="clear:both;">Admin Permissions</h4>
+<p>The "Admin Permissions" section has received the same kind of tabbed layout used in the users and groups editing pages.  The permissions are spread over five tabs which correspond to the main tabs of the Admin CP.</p>
+<div class="float_left" style="margin-right:10px;"><a href="http://blogdotmybbdotcom.files.wordpress.com/2008/03/users_adminperms.png" title="Admin Permissions"><img src="{{ site.baseurl }}/assets/images/users_adminperms.thumbnail.png" alt="Admin Permissions" title="Admin Permissions" class="inline_illustration" /></a></div>
+<div class="float_left" style="margin-right:10px;"><a href="http://blogdotmybbdotcom.files.wordpress.com/2008/03/users_adminperms_default.png" title="Default Admin Permissions"><img src="{{ site.baseurl }}/assets/images/users_adminperms_default.thumbnail.png" alt="Default Admin Permissions" title="Default Admin Permissions" class="inline_illustration" /></a></div>
+<div class="float_left" style="margin-right:10px;"><a href="http://blogdotmybbdotcom.files.wordpress.com/2008/03/users_adminperms_edit.png" title="Editing Admin Permissions"><img src="{{ site.baseurl }}/assets/images/users_adminperms_edit.thumbnail.png" alt="Editing Admin Permissions" title="Editing Admin Permissions" class="inline_illustration" /></a></div>
+<div class="float_left" style="margin-right:10px;"><a href="http://blogdotmybbdotcom.files.wordpress.com/2008/03/users_adminperms_groups.png" title="Admin Group Permissions"><img src="{{ site.baseurl }}/assets/images/users_adminperms_groups.thumbnail.png" alt="Admin Group Permissions" title="Admin Group Permissions" class="inline_illustration" /></a></div>
+<h4 style="clear:both;">Mass Mail</h4>
+<p>The Mass Mail section has changed a fair bit.  The first thing you'll see when you click the mass mail page is the current message queue, which contains mass emails which are still sending. Yes, this means mass emails are now sent using the task system, and you can also schedule mass emails to be sent at a later time. Aside from the obvious layout changes, many of the sending options remain the same but with one significant addition.  It's now possible to send mass emails in plain text, HTML format, or both.  If sending in both formats, you can either enter a specific HTML and plain text version of the message, or have MyBB attempt to create the plain text version automatically based on the HTML version.</p>
+<div class="float_left" style="margin-right:10px;"><a href="http://blogdotmybbdotcom.files.wordpress.com/2008/03/users_massmail.png" title="Mass Mail"><img src="{{ site.baseurl }}/assets/images/users_massmail.thumbnail.png" alt="Mass Mail" title="Mass Mail" class="inline_illustration" /></a></div>
+<div class="float_left" style="margin-right:10px;"><a href="http://blogdotmybbdotcom.files.wordpress.com/2008/03/users_massmail_send1.png" title="Creating a New Email"><img src="{{ site.baseurl }}/assets/images/users_massmail_send1.thumbnail.png" alt="Creating a New Email" title="Creating a New Email" class="inline_illustration" /></a></div>
+<h4 style="clear:both;">Group Promotions</h4>
+<p>The group promotions system is a major new feature in MyBB 1.4.  The system allows you to promote users of specific groups to another primary or secondary group when they meet the required criteria, such as post count, reputation and time registered. Promotions are then performed using the new task system in MyBB 1.4.  This system solves many requests administrators have made to restrict forums or features to users with a specified number of posts or time registered.</p>
+<div class="float_left" style="margin-right:10px;"><a href="http://blogdotmybbdotcom.files.wordpress.com/2008/03/users_promotions.png" title="Group Promotions"><img src="{{ site.baseurl }}/assets/images/users_promotions.thumbnail.png" alt="Group Promotions" title="Group Promotions" class="inline_illustration" /></a></div>
+<div class="float_left" style="margin-right:10px;"><a href="http://blogdotmybbdotcom.files.wordpress.com/2008/03/users_promotions_add.png" title="Adding a New Promotions"><img src="{{ site.baseurl }}/assets/images/users_promotions_add.thumbnail.png" alt="Adding a New Promotion" title="Adding a New Promotion" class="inline_illustration" /></a></div>
+<div class="float_left" style="margin-right:10px;"><a href="http://blogdotmybbdotcom.files.wordpress.com/2008/03/users_promotions_add2.png" title="Adding a New Promotions"><img src="{{ site.baseurl }}/assets/images/users_promotions_add2.thumbnail.png" alt="Adding a New Promotion" title="Adding a New Promotion" class="inline_illustration" /></a></div>
+<div class="float_left" style="margin-right:10px;"><a href="http://blogdotmybbdotcom.files.wordpress.com/2008/03/users_promotions_edit.png" title="Editing a New Promotions"><img src="{{ site.baseurl }}/assets/images/users_promotions_edit.thumbnail.png" alt="Editing a New Promotion" title="Editing a New Promotion" class="inline_illustration" /></a></div>
+<div class="float_left" style="margin-right:10px;"><a href="http://blogdotmybbdotcom.files.wordpress.com/2008/03/users_promotions_logs.png" title="Viewing Promotion Logs"><img src="{{ site.baseurl }}/assets/images/users_promotions_logs.thumbnail.png" alt="Viewing Promotion Logs" title="Viewing Promotion Logs" class="inline_illustration" /></a></div>
+<h2 style="clear:both;"><strong>Technical Decisions</strong></h2>
+<p>From the beginning of MyBB 1.4 development to this very day, MyBB 1.4 has nearly <strong>doubled</strong> in the amount of code compared to MyBB 1.2. Here are some figures:</p>
+<p><strong>MyBB 1.2:</strong><br />
+Source code lines (not counting blank lines): 65,165 lines<br />
+Comment lines: 6,994</p>
+<p><strong>MyBB 1.4:</strong><br />
+Source code lines (not counting blank lines): 113,503 lines<br />
+Comment lines: 13,722</p>
+<p></p>
+<p>Throughout all of MyBB 1.4's development process, we've seen many new and exciting features. I'm going to talk a bit about some of the less known and more technical side of things in MyBB 1.4, so feel free to skip over this section if you lack interest when it comes to code.</p>
+<p>PostgreSQL, SQLite 2, and SQLite 3 (via PDO) are all supported in MyBB 1.4. What's more is we've implemented Slave/Master technologies allowing people to hook up multiple SQL servers. If I had two MySQL servers, the code in inc/config.php for databases would look something along the lines of this:</p>
+<p><code><br />
+$config['database']['type'] = 'mysqli';<br />
+$config['database']['read']['database'] = 'mybb';<br />
+$config['database']['read']['table_prefix'] = 'mybb_';<br />
+$config['database']['read']['hostname'] = 'localhost_read_address';<br />
+$config['database']['read']['username'] = 'root';<br />
+$config['database']['read']['password'] = '';<br />
+</code></p>
+<p><code><br />
+$config['database']['write']['database'] = 'mybb';<br />
+$config['database']['write']['table_prefix'] = 'mybb_';<br />
+$config['database']['write']['hostname'] = 'localhost_write_address';<br />
+$config['database']['write']['username'] = 'root';<br />
+$config['database']['write']['password'] = '';<br />
+</code></p>
+<p>You could even have multiple read and write databases like:</p>
+<p><code><br />
+$config['database']['type'] = 'mysqli';<br />
+$config['database']['read'][]['database'] = 'mybb';<br />
+$config['database']['read'][]['table_prefix'] = 'mybb_';<br />
+$config['database']['read'][]['hostname'] = 'localhost_read_address';<br />
+$config['database']['read'][]['username'] = 'root';<br />
+$config['database']['read'][]['password'] = '';<br />
+</code></p>
+<p><code><br />
+$config['database']['read'][]['database'] = 'mybb';<br />
+$config['database']['read'][]['table_prefix'] = 'mybb_';<br />
+$config['database']['read'][]['hostname'] = 'localhost_read_address2';<br />
+$config['database']['read'][]['username'] = 'root';<br />
+$config['database']['read'][]['password'] = '';<br />
+</code></p>
+<p><code><br />
+$config['database']['write'][]['database'] = 'mybb';<br />
+$config['database']['write'][]['table_prefix'] = 'mybb_';<br />
+$config['database']['write'][]['hostname'] = 'localhost_write_address';<br />
+$config['database']['write'][]['username'] = 'root';<br />
+$config['database']['write'][]['password'] = '';<br />
+</code></p>
+<p><code><br />
+$config['database']['write'][]['database'] = 'mybb';<br />
+$config['database']['write'][]['table_prefix'] = 'mybb_';<br />
+$config['database']['write'][]['hostname'] = 'localhost_write_address2';<br />
+$config['database']['write'][]['username'] = 'root';<br />
+$config['database']['write'][]['password'] = '';<br />
+</code></p>
+<p>Now, in the event that you do have multiple read / write servers setup in the config, MyBB would connect to all the write servers so it can update all of them, and select 1 read server at random. I wish we could easily detect the load of the read servers and pick the lowest one, but unfortunately that's not very practical yet. </p>
+<p>If you are going to have multiple read and write servers, you should put your read servers on a load balancer rather than in MyBB's config file. The only difference is you would point the read array towards your load balancer.</p>
+<p>On a different note, I'm sure you saw the picture at the top of this blog post depicting some code. This code <strong>is</strong> from MyBB 1.4 and it is of the new code in the ACP; specifically, the Users page in the ACP. I won't go into detail about all the new code in the ACP but I'll briefly cover what was shown in that picture.</p>
+<p>The first thing you'll notice is $form-&gt;output_row(...). What it does is fairly obvious but just in case, it outputs a row to your MyBB ACP page. The arguments for this function are as follows:</p>
+<p><code><br />
+title - string The title of the row.<br />
+description - string The description of the row/field.<br />
+content - string The HTML content to show in the row.<br />
+label_for - string The ID of the control this row should be a label for.<br />
+options - array Array of options for the row cell.<br />
+row_options - array Array of options for the row container.<br />
+</code><br />
+<code><br />
+output_row(title, description="", content="", label_for="", options=array(), row_options=array())<br />
+</code></p>
+<p>Now you may be thinking we use pure HTML all the time in $form-&gt;output_row. As you look closer at the picture, however, you will also see $form-&gt;generate_select_box and $form-&gt;generate_check_box, the arguments of which are:</p>
+<p><code><br />
+name - string The name of the select box.<br />
+option_list - array Array of options in key =&gt; val format.<br />
+selected - mixed Either a string containing the selected item or an array containing multiple selected items (options['multiple'] must be true)<br />
+options - array Array of options for the select box (multiple, class, id, size)<br />
+</code><br />
+<code><br />
+generate_select_box(name, option_list, selected=array(), options=array())<br />
+<code></p>
+<p>and</p>
+<p><code><br />
+name - string The name of the check box.<br />
+value - string The value of the check box.<br />
+label - string The label of the check box if there is one.<br />
+options - array Array of options for the check box (id, class, checked)<br />
+</code><br />
+<code><br />
+generate_check_box(name, value="", label="", options=array())<br />
+<code></p>
+<p>Those are just two of several functions that allow you to generate code automatically for the new ACP.</p>
+<h4 style="clear:both;">Questions? Comments? Anything else?</h4>
+<p>As with the rest of the Admin CP, the Users &amp; Groups tab packs a huge number of features and functionality in an easy to use interface. Once you use 1.4's Admin CP, you'll be able to tell a lot of planning was put in to forming the best layout possible for all features.</p>
+<p>Another overview covering the "Theme &amp; Templates" tab and will be posted within the next few weeks as well as a few other things we haven't covered. We will also get into the questions you left us last week and this week. <strong>Leave a comment with your question and check to see if your question has been answered!</strong></p>
+<p>There is still some left to cover, but as always, we're happy to hear any questions or feedback you may have. We'll try to take advice on board, but understand it isn't always possible. There's still more exciting parts of the Admin CP left to share, so by no means is this all we'll be posting!</p>
+<p><em>Multiple people contributed to the writing of this article, including MusicalMidget, DennisTT, Tikitiki, Chris Boulton, and Justin S.</em></code></code></code></code></p>

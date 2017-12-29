@@ -1,0 +1,42 @@
+---
+layout: post
+title: Preparing your Plugins for 1.4
+date: 2008-07-11 11:31:37.000000000 -04:00
+categories:
+- Updates
+tags:
+- Development
+- Forum
+- MyBB
+- PHP
+author: Chris Boulton
+---
+<p>Hello,</p>
+<p>With the MyBB 1.4 release pending ever closer, we are stepping up to get your plugins ready for 1.4. There are two main things you should do:</p>
+<ul>
+<li><span style="font-size:large;">Update your plugins to work with MyBB 1.4 ahead of time.</span><br />
+      MyBB 1.4 Beta has been available to download to those who request it. Requesting it is easy. Just click <u><a href="http://community.mybboard.net/usercp.php?action=usergroups">here</a></u>, find "MyBB 1.4 Beta Testers" and click "Join Group". For the reason, we suggest you put "Upgrade Plugins to 1.4", which will let us know you want to upgrade your plugins to 1.4. Theme authors may also do the same thing. It's very important to us to make sure we give the time and resources necessary, in order to make your transition to 1.4 as smooth as possible.</li>
+<li><span style="font-size:large;">Can't upgrade your plugins in time for 1.4's release? Here's what we recommend:</span><br />
+      GUID's (Globally Unique Identifiers) are used in MyBB 1.4's plugin system to allow users to check their plugins for updates. If you were to add your plugin's assigned guid to your plugin, prior to the release of 1.4, the users who update to it and who download it from there on out, will be able to use the version checking functionality. There is no harm in adding a guid to any 1.2 designed plugin. Versions below MyBB 1.4 will just ignore it. We also recommend adding 'compatibility clauses'. More information on adding GUID's and compatibility clauses to your plugin can be found below.</li>
+</ul>
+<p><span style="font-size:large;"><strong>What is a GUID?</strong></span><br />
+Your GUID is a unique identifier that has been generated for your plugin. By including this GUID in your plugin file (see below), users of MyBB 1.4 will be able to check for new versions of your plugin on the MyBB Mods server, with a click from their Admin CP. To allow users to take full advantage of this functionality, please follow the instructions below to add your GUID to your plugin file.</p>
+<p><span style="font-size:large;"><strong>What is a 'compatibility clause'?</strong></span><br />
+Your 'compatibility' clause is a way to tell MyBB which versions of MyBB your plugin will work on. This adds the ability to stop users from installing or running plugins that won't work with their version of MyBB. To allow users to take full advantage of this functionality, please follow the instructions below to add your 'compatibility clause' to your plugin file.</p>
+<p><span style="font-size:large;"><strong>Implementing your GUID &amp; Compatibility Clause</strong></span><br />
+To implement your GUID &amp; 'compatibility clause' into your plugin, you need simply add it to the info function of your plugin before uploading it below.</p>
+<p>PHP Code:</p>
+<pre>
+ 'test',
+        'description' =&gt; 'test',
+        'website'     =&gt; 'http://mods.mybboard.net/',
+        'version'     =&gt; '1234',
+        'author'      =&gt; '',
+        'authorsite'  =&gt; 'http://your-site.com/',
+        'guid'        =&gt; '1234567890abcdefghijklmopqrstuvwxyz',
+        'compatibility' =&gt; '14*',
+    );
+}
+?&gt;
+</pre>
+<p>More information on changes in 1.4 that will require changes in your plugins can be found here: <a href="http://blog.mybboard.net/2008/07/11/plugin-upgrade-guide-for-plugin-authors/">http://blog.mybboard.net/2008/07/11/plugin-upgrade-guide-for-plugin-authors/</a></p>

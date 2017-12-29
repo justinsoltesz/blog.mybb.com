@@ -1,0 +1,62 @@
+---
+layout: post
+title: MyBB 1.6.5 Released - Feature Update, Security & Maintenance Release
+date: 2011-11-25 20:33:50.000000000 -05:00
+categories:
+- Releases
+- Updates
+tags:
+- '1.6'
+author: Chris Boulton
+---
+<p>MyBB 1.6.5 is now available from the MyBB website and is a feature update, security and maintenance release for the 1.6 series.</p>
+<h4>What's added/changed in this version?</h4>
+<p>In 1.6.5, there are <strong>3 vulnerabilities</strong> and over <strong>70 reported issues</strong> fixed. Please be aware that not all of the existing problems have been fixed in this version.</p>
+<ul>
+<li>Vulnerabilities:
+<ul>
+<li>Non Critical: Unparsed user avatar in the buddy list - reported by labrocca</li>
+<li>Non Critical: Potential XSS vulnerability validating usernames via AJAX - reported by Will G</li>
+<li>Low Risk: CSRF vulnerability in ?language - reported by Nathan Malcolm (<a href="http://dev.mybb.com/projects/mybb/issues/1729" target="_blank">Issue #1729</a>)</li>
+</ul>
+<p>Thanks to everyone who helped find and resolve the issues!</li>
+<li><a href="http://dev.mybb.com/projects/mybb/versions/39" target="_blank">Fixed issues in 1.6.5</a></li>
+<li><a href="http://dev.mybb.com/projects/mybb/issues" target="_blank">Unfixed issues</a></li>
+</ul>
+<p>There are also over <strong>10 new feature updates</strong> in 1.6.5. These range from the ability to locate spam users from the ACP to reCAPTCHA support. To get a summary of these new updates and for a list of changed files and language pack changes, please see the Wiki on 1.6.5.</p>
+<blockquote><p><a href="http://wiki.mybb.com/index.php/1.6.5" target="_blank">View 1.6.5 Changes in the Wiki</a></p></blockquote>
+<h4>Upgrading from 1.6.4 and Other Versions</h4>
+<p>Before performing any upgrade, please remember to backup your forum's files and database and store them safely. If you have edited core files, including language files, please make sure you make a changelog for these changes so you can make them again once the upgrade is complete.</p>
+<p>If you have any plugins installed that limit signatures or provide reCAPTCHA, or might not be needed because of the new default settings available, it's suggested to uninstall these before the upgrade. If you're unsure, create a thread in the General Support section of the Community Forum with your plugin list and a useful member will be able to tell you the plugins that need to be disabled.</p>
+<p>To upgrade, follow the Upgrading process. The <strong>upgrade script</strong> is required. There are also <strong>language</strong> and <strong>theme</strong> changes.</p>
+<blockquote><p>If you're using MyBB 1.6.4</p>
+<ul>
+<li>Download and use the <a href="https://github.com/downloads/mybb/mybb16/1605_changedfiles.zip">Changed Files Package</a></li>
+</ul>
+<p><a href="http://mybb.com"> </a></p>
+<li><a href="http://wiki.mybb.com/index.php/Upgrading#Beginning_the_Upgrade">Follow the Wiki Upgrading instructions</a></li>
+<p>If you're not using MyBB 1.6.4</p>
+<ul>
+<li>Download and use the full <a href="http://www.mybb.com/download/latest">1.6.5 release package</a></li>
+</ul>
+<p><a href="http://mybb.com/downloads/latest/"> </a></p>
+<li><a href="http://mybb.com/downloads/latest/">Follow the </a><a href="http://wiki.mybb.com/index.php/Upgrading#Beginning_the_Upgrade" target="_blank">Wiki Upgrading instructions</a></li>
+</blockquote>
+<h4>Plugin System Changes</h4>
+<p>In 1.6.5, there are some fundamental changes to the Plugin System. These changes were made to provide greater support for PHP 5.3 and above.</p>
+<p>These changes mean that you may need to upgrade some of the plugins you are running on your forum <strong>before</strong> upgrading to 1.6.5. If you are a Plugin Developer, you need to check your plugins to see if you are required to change them so they work with the new version.</p>
+<p>Please see the <a href="http://wiki.mybb.com/index.php/1.6.5#Plugin_System_Changes" target="_blank">1.6.5 Plugin System Changes Wiki</a> for an explanation of the changes. There is also the <a href="http://community.mybb.com/thread-106729.html" target="_blank">Plugin Changes coming in 1.6.5</a> thread on the Community Forums.</p>
+<h4>MyBB Merge System 1.6.2 Update</h4>
+<p>For those users who have been using Merge System 1.6.1 and earlier, there is a new update ready for you.</p>
+<p>You can read more about it in the <a href="http://blog.mybb.com/2011/09/26/mybb-merge-system-1-6-2/" target="_blank">1.6.2 Update Blog Post</a>.</p>
+<p>In the near future, the Merge System will be following the main branch of MyBB - for example, if you're using MyBB 1.6.8 you'll need Merge System 1.6.8. This will mean that the Merge System will jump several minor points. These changes have yet to come into effect, so please continue to use Merge System 1.6.2. We'll announce further details nearer the time of the changes.</p>
+<h4>MyBB 1.6.4 Vulnerability</h4>
+<p>In October, we found that <a href="http://blog.mybb.com/2011/10/25/some-closure-on-the-1-6-4-security-vulnerability/" target="_blank">a 3rd party had compromised the MyBB server</a> and the 1.6.4 release was modified to contain a hidden vulnerability. If you're current using 1.6.4 and have had no prior knowledge of this, then we urge you to upgrade to 1.6.5 as soon as possible.</p>
+<p>As a result of the compromise to our systems we <strong>will be hosting our download packages on github</strong>, we will continue to do this until we are confident our systems here are just as secure as what github can offer.</p>
+<p>Here are the MD5 checksums for the release packages:</p>
+<p>mybb_1605.zip: 032403cee9d25110370ace935803ab9d</p>
+<p>1605_changedfiles.zip: 91e6055b758c0aa233503a2a7528a7b0</p>
+<p>If you think you've found a vulnerability in MyBB, we advise you not to publicly post it on these forums or publicly release information about it elsewhere until we've had time to prepare and release a patch.</p>
+<p>As always, you can send through security related messages on the MyBB website from the <a href="http://mybb.com/contact" target="_blank">Contact Us</a> page.</p>
+<p>Thank you,<br />
+MyBB Team</p>

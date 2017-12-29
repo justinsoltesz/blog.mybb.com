@@ -1,0 +1,26 @@
+---
+layout: post
+title: MyBB 2.0 Repositories Are Finally Public
+date: 2015-12-24 00:00:00.000000000 -05:00
+categories:
+- 2.0 Dev Posts
+- Development
+tags:
+- '2.0'
+author: Euan T
+excerpt: Yep, you read that right. The MyBB 2.0 repositories are finally open to the
+  public for browsing and contribution.
+---
+<p>Yep, you read that right. The MyBB 2.0 repositories are finally open to the public for browsing and contribution. The repositories we are opening are:</p>
+<ul>
+<li><a href="https://github.com/mybb/mybb2">mybb/mybb2</a> - the core of MyBB 2.0, based on a Laravel skeleton template. This repository contains the core forum and is where the majority of work happens. The overall structure of this repository will be changing through the New Year to make deployment easier on shared hosts and other setups.</li>
+<li><a href="https://github.com/mybb/Auth">mybb/Auth</a> - a modified authentication package for MyBB 2.0. This is based around the Laravel 5.0 Auth package, and is about to receive a major overhaul to make use of the Laravel 5.1 and 5.2 authentication changes.</li>
+<li><a href="https://github.com/mybb/Parser">mybb/Parser</a> - the core post parser for MyBB 2.0. The majority of the parsing logic has simply been imported from MyBB 1.x in the current incarnation in order to get a working parser implementation. The future plans for this repository include adding further unit tests and refactoring the BBCode/MyCode parsing to use a proper parser/lexer rather than a large jumble of regular expressions.</li>
+<li><a href="https://github.com/mybb/settings">mybb/Settings</a> - the core settings system of MyBB 2.0. This package provides both site-wide and user settings and can easily be used for other projects and plugins. Settings are split into "packages", with "mybb/core" being the core MyBB package. Further documentation and details will be explained about this package in an upcoming development post.</li>
+</ul>
+<p>Browsing these repositories should make it fairly clear that while MyBB 2.0 has had a good start so far, it is still far from done. Original plans were to have an Alpha release available by the end of 2015, but these plans have unfortunately not come to fruition. It is our hope that making these repositories public will bring more contributions, suggestions and feedback from you the community.</p>
+<p>For now we are simply opening these repositories, but over the New Year and Christmas holidays we will be documenting our code formatting, contribution guidelines and our roadmap and plans for MyBB 2.0 more fully in the <a href="http://community.mybb.com/forum-194.html">MyBB 2.0 Planned Features</a> forum. Rather than blogging about each of these, we will be writing topics that will be stuck to that forum to provide guidelines about our expectations.</p>
+<p>We also plan to keep up our (recently lacking) development blog posts which will cover the usage of the components we are open sourcing as well as other components that will be created in the future. Future components and progress will be developed fully in the open, utilising <a href="http://blog.mybb.com/2015/05/09/change-of-license-for-mybb-2-0/">our new BSD-3 licence</a>.</p>
+<p>As a closing note, MyBB 2 is in no way stable yet and should <strong>not</strong> be used on a live forum at all right now. Open sourcing these repositories is aimed primarily at developers and experienced administrators wanting to provide input and feedback on the future direction of MyBB. No support will be provided for any of the code in these repositories until we reach a Beta release.</p>
+<p>We wish all of our users a happy holiday season,</p>
+<p>The MyBB team</p>

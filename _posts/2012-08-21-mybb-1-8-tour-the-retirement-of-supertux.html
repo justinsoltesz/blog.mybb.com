@@ -1,0 +1,30 @@
+---
+layout: post
+title: 'MyBB 1.8 Tour: The Retirement of Supertux'
+date: 2012-08-21 08:44:11.000000000 -04:00
+categories:
+- Development
+- General
+- Updates
+tags:
+- '1.8'
+author: Tom Moore
+---
+<p>As MyBB approaches its 10th-year anniversary it's quite easy for us to dwell on history. Even with the changes we're working on in MyBB 1.8 you can still compare the early versions of our product to our next major release and see that they are made from the same group of people. Despite the dozens of Developers, SQA Testers, Support Team members, PR guys and Management we've had over this time, who have each made their mark in their own way, the consistency of MyBB as a forum system at its core is one of the fundamental mantras of the MyBB Group.</p>
+<p>With that in mind, whenever we do come to develop around a feature, we're cautious to remove the legacy it might leave behind. It is often a tough decision between moving forward and embracing something new and doing what we know. MyBB 1.8 gives us a great chance to look around and research how to improve these features for our users; with around 40 planned research projects into different areas of MyBB we're aiming to bring a higher level of usability and functionality to your forum.</p>
+<h4>Avatar Changes</h4>
+<p>With <a href="http://gravatar.com">Gravatar</a>, an avatar hosting service, being integrated into Wordpress, Redmine and GitHub (alongside other websites and many 3rd party addons for other software) it brings together an opportunity for us to provide a consistent platform for users to have the same look wherever they go. In MyBB 1.8 you can now use your Gravatar email in the Avatar URL field. Options in the ACP allow Administrators to control the content of avatars with Gravatar's age-based rating systems.</p>
+<p>[caption id="attachment_1925" align="aligncenter" width="300"]<a href="http://blogdotmybbdotcom.files.wordpress.com/2012/08/g548rw.png"><img class="size-medium wp-image-1925" title="Changing Avatar" src="{{ site.baseurl }}/assets/images/g548rw.png?w=300" alt="Changing Avatar" width="300" height="101" /></a> The MyBB 1.8 Change Avatar[/caption]</p>
+<p>Alongside Gravatar is our new format_avatar function. This introduces the ability to pass a user's avatar information to a single function to work out the correct dimensions to display on the page; it also means we aren't parsing the same avatar twice for the same user on the same page. If the user has no avatar set Administrators are able to set a default avatar from the ACP to use instead.</p>
+<p>These changes do come with some sad news; in MyBB 1.8, we've removed the avatar gallery feature. We'll all be disappointed to see the end of Supertux and Mr Spam but we thought it best to keep a clear and simple method to change user avatars in which the avatar gallery was a much non-used feature to the majority of forums.</p>
+<h4>News and Version Check Changes</h4>
+<p>One of the main aims of MyBB 1.8 is to help improve the services we offer to our own users. This involves keeping users up to date about what's happening and new versions of MyBB.</p>
+<p>[caption id="attachment_1926" align="aligncenter" width="300"]<a href="http://blogdotmybbdotcom.files.wordpress.com/2012/08/bb8fc.png"><img class="size-medium wp-image-1926" title="News Feed in the ACP" src="{{ site.baseurl }}/assets/images/bb8fc.png?w=300" alt="News Feed in the ACP" width="300" height="157" /></a> News Feed in the ACP[/caption]</p>
+<p>In the ACP, we've introduced a small news feed into the Dashboard. We've also moved the Version Check, which used to have its own section, into the Dashboard too so that all updates are in the same place right in front of administrators. A new task is to be added to regularly check for any updates (versions and news) rather than relying on users to catch the 'Your last version check was...' message that may otherwise be easily missed.</p>
+<h4>The Little Things</h4>
+<p>Some of the other, smaller changes to MyBB 1.8 come to fix those trivial things people may (or may not) have noticed. These include removing the option to rate your own thread and changing trim() in templates to rtrim() so that those with OCD can create pretty source code for their themes.</p>
+<p>We're also looking to provide public access to our GitHub repositories in the very near future where a few problems have stopped us from doing so sooner. As soon as the MyBB 1.8 theme changes are ready we'll also be making that project available too - alongside development standards for non-team members for those who want to get involved in helping us create the best free forum software.</p>
+<h4>Changes on the Team</h4>
+<p>Many will have noticed some changes on the team recently. We've welcomed back on-board Polarbear541 to our SQA Team and StefanT and Nathan Malcolm have moved over from SQA to the Development Team. All have quickly jumped into their new roles and we're looking forward to their contributions.</p>
+<h4>Joining the Team</h4>
+<p>Being apart of the MyBB family and developing the future of forum software is no small task. Being volunteers takes dedication and patience as well as the skills to pull off your role. Take a look at <a title="Join the Team" href="http://www.mybb.com/about/apply" target="_blank">Joining the Team</a>, and if you meet the descriptions, send us an application – we’d love to have you on the Team!</p>

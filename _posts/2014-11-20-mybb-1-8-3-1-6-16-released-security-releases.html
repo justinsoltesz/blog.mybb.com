@@ -1,0 +1,78 @@
+---
+layout: post
+title: MyBB 1.8.3 & 1.6.16 Released – Security Releases
+date: 2014-11-20 11:13:47.000000000 -05:00
+categories:
+- Releases
+- Security
+- Updates
+tags:
+- '1.6'
+- '1.8'
+author: StefanT
+---
+<h2>MyBB 1.8.3</h2>
+<p>MyBB 1.8.3 is now available from the MyBB website. It fixes 1 high risk vulnerability, 2 medium risk vulnerabilities and 3 low risk vulnerabilities. We recommend everyone upgrades to this release immediately.</p>
+<h4>What's added/changed in this version?</h4>
+<p>The vulnerabilities are:</p>
+<ul>
+<li>High Risk: A SQL injection vulnerability in theme selection (reported by <a href="http://community.mybb.com/user-2824.html" target="_blank">StefanT</a>)</li>
+<li>Medium Risk: A XSS vulnerability in calender.php (reported by <a href="http://community.mybb.com/user-90703.html" target="_blank">-Acid</a>)</li>
+<li>Medium Risk: A XSS vulnerability in MyCode editor (reported by <a href="http://community.mybb.com/user-69212.html" target="_blank">My-BB.Ir</a>)</li>
+<li>Low Risk: A XSS vulnerability related to post icons (reported by <a href="http://community.mybb.com/user-58253.html" target="_blank">Destroy666</a>)</li>
+<li>Low Risk: unserialize may call PHP magic methods (reported by <a href="http://community.mybb.com/user-90701.html" target="_blank">chtg</a>)</li>
+<li>Low Risk: PHP setting request_order can break register globals handling (reported by <a href="http://community.mybb.com/user-90701.html" target="_blank">chtg</a>)</li>
+</ul>
+<p>Additionally we've fixed an issue with the video MyCode introduced with MyBB 1.8.2 (<a href="https://github.com/mybb/mybb/issues/1625" target="_blank">#1625</a>) and revised the handling of data fetched from our website as a direct consequence of the <a href="http://blog.mybb.com/2014/11/15/github-account-compromised/" target="_blank">compromised GitHub account</a> (<a href="https://github.com/mybb/mybb/issues/1617" target="_blank">#1617</a>). In addition to that, we've set the adminsid cookie as httpOnly (<a href="https://github.com/mybb/mybb/issues/1622" target="_blank">#1622</a>). We also plan to add enhanced options to protect the Admin CP like two factor authentication with one of the next maintenance releases.</p>
+<p><span style="color:red;font-size:x-larger;"><strong>Please note, that you do not need to run the upgrade script for this version.</strong></span><br />
+<em>There are <strong>no</strong> database schema changes in this version.</em></p>
+<h4>Upgrading from 1.8.2 and Other Versions</h4>
+<p>Before performing any upgrade please remember to backup your forum's files and database and store them safely. If you have edited core files, including language files, please make sure you make a changelog for these changes so you can make them again (if necessary) once the upgrade is complete.</p>
+<p>To upgrade, follow the Upgrading process. The <strong>upgrade script</strong> is not required. There are no changes to language files. No templates have been changed or added.</p>
+<ul>
+<li>Download and use the <a href="http://resources.mybb.com/downloads/changed_files_1803.zip">Changed Files Package</a> (MD5: 0bef95fee272b767c3c07584e7af410f)</li>
+<li><a href="http://docs.mybb.com/1.8/install/upgrade/#beginning-the-upgrade">Follow the Docs Upgrading Instructions</a></li>
+</ul>
+<p>If you're using MyBB 1.8.1 or lower</p>
+<ul>
+<li>Download and use the full <a href="http://resources.mybb.com/downloads/mybb_1803.zip">1.8.3 Release Package</a> (MD5: 1f5d1246da4174f3b29799eca435d86c)</li>
+<li>Follow the Docs Upgrading Instructions</li>
+</ul>
+<h2>MyBB 1.6.16</h2>
+<p>MyBB 1.6.16 is now available from the MyBB website. It fixes 5 low risk vulnerabilities.</p>
+<h4>What's added/changed in this version?</h4>
+<p>The vulnerabilities are:</p>
+<ul>
+<li>Low Risk: A XSS vulnerability related to post icons (reported by <a href="http://community.mybb.com/user-58253.html" target="_blank">Destroy666</a>)</li>
+<li>Low Risk: A XSS vulnerability in admin/modules/style/templates.php</li>
+<li>Low Risk: A XSS vulnerability in admin/modules/config/languages.php</li>
+<li>Low Risk: unserialize may call magic methods (reported by <a href="http://community.mybb.com/user-90701.html" target="_blank">chtg</a>)</li>
+<li>Low Risk: request_order can break register globals handling (reported by <a href="http://community.mybb.com/user-90701.html" target="_blank">chtg</a>)</li>
+</ul>
+<p>Additionally we've revised the handling of data fetched from our website as a direct consequence of the <a href="http://blog.mybb.com/2014/11/15/github-account-compromised/" target="_blank">compromised GitHub account</a> (<a href="https://github.com/mybb/mybb/issues/1617" target="_blank">#1617</a>). In addition to that, we've set the adminsid cookie as httpOnly (<a href="https://github.com/mybb/mybb/issues/1622" target="_blank">#1622</a>).</p>
+<p><span style="color:red;font-size:x-larger;"><strong>Please note, that you do not need to run the upgrade script for this version.</strong></span><br />
+<em>There are <strong>no</strong> database schema changes in this version.</em></p>
+<h4>Upgrading from 1.6.15 and Other Versions</h4>
+<p>Before performing any upgrade please remember to backup your forum's files and database and store them safely. If you have edited core files, including language files, please make sure you make a changelog for these changes so you can make them again (if necessary) once the upgrade is complete.</p>
+<p>To upgrade, follow the Upgrading process. The <strong>upgrade script</strong> is not required. There are no changes to language files. No templates have been changed or added.</p>
+<ul>
+<li>Download and use the <a href="http://resources.mybb.com/downloads/changed_files_1616.zip">Changed Files Package</a> (MD5: 08d8f6ea9df512a9f2c924409ddb78ce)</li>
+<li><a href="http://docs.mybb.com/1.8/install/upgrade/#beginning-the-upgrade">Follow the Docs Upgrading Instructions</a></li>
+</ul>
+<p>If you're using MyBB 1.6.14 or lower</p>
+<ul>
+<li>Download and use the full <a href="http://resources.mybb.com/downloads/mybb_1616.zip">1.6.16 Release Package</a> (MD5: 98e84e5de337843f407a4b58d70253c9)</li>
+<li>Follow the Docs Upgrading Instructions</li>
+</ul>
+<h4>Reporting MyBB security vulnerabilities</h4>
+<p>If you think you've found a vulnerability in MyBB, we advise you not to publicly post it on these forums or publicly release information about it elsewhere until we've had time to prepare and release a patch.</p>
+<p>As always, you can send through security related messages on the MyBB website from the <a href="http://www.mybb.com/contact/">Contact Us</a> page or in our <a href="http://community.mybb.com/forum-135.html" target="_blank">Private Inquiries</a> forum – where you can start a new thread that only you and the MyBB Team can see.</p>
+<p>Thanks,</p>
+<p>MyBB Team</p>
+<h2>Note about updated package for 1.6.16</h2>
+<p>Due to a minor issue with the original packages an updated package set has been released.</p>
+<p>If you installed or updated your forums using either the full or changed files packages prior to 18:00 p.m. on November 20, 2014 GMT please download a fresh package from the links above and replace the following file:</p>
+<p>admin/modules/home/version_check.php<br />
+calendar.php (reverted to previous version)</p>
+<p>You do not need to run the installer or make any further changes. You can use the file verification tool to determine whether you have the latest package, the file above will appear to be modified if you need to download an updated copy.</p>
+<p>We apologise of any inconvenience.</p>

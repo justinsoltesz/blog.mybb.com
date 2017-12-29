@@ -1,0 +1,104 @@
+---
+layout: post
+title: MyBB 1.8.5, 1.6.17 & Merge System 1.8.5 Release
+date: 2015-05-27 19:17:38.000000000 -04:00
+categories:
+- Merge System
+- Releases
+- Security
+- Updates
+tags:
+- '1.6'
+- '1.8'
+author: StefanT
+---
+<h2>MyBB 1.8.5 -  Security &amp; Maintenance Release</h2>
+<p>MyBB 1.8.5 is now available from the MyBB website, and is a security and maintenance release.</p>
+<h4>What's added/changed in this version?</h4>
+<p>This release fixes <strong>6 security vulnerabilities</strong> and <strong>58 reported issues</strong> causing incorrect functionality of MyBB. Please be aware that not all issues have been fixed in this version in order to provide easy to manage updates.</p>
+<ul>
+<li>Vulnerabilities:
+<ul>
+<li>Medium Risk: Reset password code check could be circumvented in member.php – reported by <a href="http://community.mybb.com/user-93439.html">solati.sadegh</a></li>
+<li>Medium Risk: Sender email could be spoofed when sending an email to a user in member.php – reported by <a href="http://community.mybb.com/user-76342.html">onlinedevelopers</a></li>
+<li>Medium Risk: Permissions not checked for post search with old sid in search.php – reported by <a href="http://community.mybb.com/user-27126.html">pedder55655</a></li>
+<li>Medium Risk: XSS in quick edit function of xmlhttp.php – reported by <a href="http://community.mybb.com/user-94216.html">TiberiusG</a></li>
+<li>Low Risk: CSRF in ACP mass mail cancellation – reported by <a href="http://community.mybb.com/user-58253.html">Destroy666</a></li>
+<li>Low Risk: Use of the U+200E Unicode character to create "duplicate" username – reported by <a href="http://community.mybb.com/user-5309.html">mahdy2021</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>Bugs fixed:
+<ul>
+<li><a href="https://github.com/mybb/mybb/issues?q=milestone%3A1.8.5+is%3Aclosed">Fixed issues in 1.8.5</a></li>
+<li><a href="https://github.com/mybb/mybb/issues?q=is%3Aopen+label%3A1.8+is%3Aissue">Unfixed issues</a></li>
+</ul>
+</li>
+</ul>
+<p>Please view the <a href="http://docs.mybb.com/versions/1.8.5">1.8.5 changes</a> on the Docs site for more information about the changes in this version.</p>
+<p><span style="color:red;font-size:x-larger;">Please note, that you <strong>do</strong> need to run the upgrade script for this version.</span></p>
+<h4>Upgrading from 1.8.4 and Other Versions</h4>
+<p>Before performing any upgrade please remember to backup your forum’s files and database and store them safely. If you have edited core files, including language files, please make sure you make a changelog for these changes so you can make them again (if necessary) once the upgrade is complete.</p>
+<p>To upgrade, follow the Upgrading process. The <strong>upgrade script</strong> is required. There are changes to <strong>12</strong> language files and <strong>9</strong> templates were changed or added.</p>
+<p>If you're using MyBB 1.8.4:</p>
+<ul>
+<li>Download and use the <a href="http://resources.mybb.com/downloads/changed_files_1805.zip">Changed Files Package</a> (MD5: 47e930b70f94991ad3f4435a93bc5c28)</li>
+<li><a href="http://docs.mybb.com/1.8/install/upgrade/">Follow the Docs Upgrading Instructions</a></li>
+</ul>
+<p>If you're using MyBB 1.8.3 or lower:</p>
+<ul>
+<li>Download and use the <a href="http://resources.mybb.com/downloads/mybb_1805.zip">full 1.8.5 Release Package</a> (MD5: 80a24a9a434e0c70e2a21e3b1744378f)</li>
+<li><a href="http://docs.mybb.com/1.8/install/upgrade/">Follow the Docs Upgrading Instructions</a></li>
+</ul>
+<h4>Reporting MyBB security vulnerabilities</h4>
+<p>If you think you’ve found a vulnerability in MyBB, we advise you not to publicly post it on these forums or publicly release information about it elsewhere until we’ve had time to prepare and release a patch.</p>
+<p>As always, you can send through security related messages on the MyBB website from the <a href="http://www.mybb.com/contact/">Contact Us</a> page or in our <a href="http://community.mybb.com/forum-135.html" target="_blank">Private Inquiries</a> forum – where you can start a new thread that only you and the MyBB Team can see.</p>
+<h2>MyBB 1.6.17 - Security Release</h2>
+<p>MyBB 1.6.17 is now available from the MyBB website. It fixes 2 medium risk and 5 low risk vulnerabilities.</p>
+<p>Please note that MyBB 1.6 is approaching its end of life and no support will be provided after 1st of September 2015 (see the <a href="http://blog.mybb.com/2015/05/13/mybb-1-6-end-of-life-announcement/" target="_blank">EOL announcement</a>).</p>
+<h4>What's added/changed in this version?</h4>
+<p>The vulnerabilities are:</p>
+<ul>
+<li>Medium Risk: Reset password code check could be circumvented in member.php – reported by <a href="http://community.mybb.com/user-93439.html">solati.sadegh</a></li>
+<li>Medium Risk: Permissions not checked for post search with old sid in search.php – reported by <a href="http://community.mybb.com/user-27126.html">pedder55655</a></li>
+<li>Low Risk: CSRF in ACP mass mail cancellation – reported by <a href="http://community.mybb.com/user-58253.html">Destroy666</a></li>
+<li>Low Risk: Use of the U+200E Unicode character to create "duplicate" username – reported by <a href="http://community.mybb.com/user-5309.html">mahdy2021</a></li>
+<li>Low Risk: Multiple XSS vulnerability requiring admin permissions - reported by <a href="http://community.mybb.com/user-79858.html">adamziaja</a>, <a href="http://community.mybb.com/user-47371.html">Devilshakerz</a>, <a href="http://community.mybb.com/user-91920.html">DingjieYang</a> and <a href="http://community.mybb.com/user-92512.html">sroesemann</a></li>
+<li>Low Risk: A CSRF vulnerability within ACP login - reported by <a href="http://community.mybb.com/user-47371.html">Devilshakerz</a></li>
+<li>Low Risk: Cache handler using var_export without encoding checks - reported by <a href="http://community.mybb.com/user-90701.html">chtg</a></li>
+</ul>
+<p>Please view the <a href="http://docs.mybb.com/versions/1.6.17">1.6.17 changes</a> on the Docs site for more information about the changes in this version.</p>
+<p><span style="color:red;font-size:x-larger;"><strong>Please note, that you do not need to run the upgrade script for this version.</strong></span><br />
+<em>There are <strong>no</strong> database schema changes in this version.</em></p>
+<h4>Upgrading from 1.6.16 and Other Versions</h4>
+<p>Before performing any upgrade please remember to backup your forum's files and database and store them safely. If you have edited core files, including language files, please make sure you make a changelog for these changes so you can make them again (if necessary) once the upgrade is complete.</p>
+<p>To upgrade, follow the Upgrading process. The <strong>upgrade script</strong> is not required. There are no changes to language files. No templates have been changed or added.</p>
+<p>If you're using MyBB 1.6.16:</p>
+<ul>
+<li>Download and use the <a href="http://resources.mybb.com/downloads/changed_files_1617.zip">Changed Files Package</a> (MD5: 7dcd16daa063020b9773b78901a54f32)</li>
+<li><a href="http://docs.mybb.com/1.8/install/upgrade/#beginning-the-upgrade">Follow the Docs Upgrading Instructions</a></li>
+</ul>
+<p>If you're using MyBB 1.6.15 or lower</p>
+<ul>
+<li>Download and use the full <a href="http://resources.mybb.com/downloads/mybb_1617.zip">1.6.17 Release Package</a> (MD5: b9dd9e8cd9c6390626f850bb83cb03cb)</li>
+<li>Follow the Docs Upgrading Instructions</li>
+</ul>
+<h2>MyBB Merge System 1.8.5</h2>
+<p>MyBB Merge System 1.8.5 is <a href="http://resources.mybb.com/downloads/merge_1805.zip">now available</a> on the MyBB website and is a maintenance update to the MyBB Merge 1.8 series.</p>
+<p>This release is to ensure that all users of MyBB Merge 1.8 have the latest fixes.</p>
+<p>This release fixes several reported issues since the release of 1.8.4, which caused some incorrect functionality of the Merge System. These bugs have been fixed to provide a more stable version of the Merge System for public use.</p>
+<h4>What's new in this version?</h4>
+<ul>
+<li>26 bug fixes (<a href="https://github.com/mybb/merge-system/issues?q=milestone%3A1.8.5">View all</a>)
+<ul>
+<li>Including several changes to the private message modules, forum permissions, the usergroup module and attachments</li>
+<li>Support for phpBB 3.1</li>
+<li>Support for IPB 4</li>
+</ul>
+</li>
+</ul>
+<h4>Note about the loginconvert Plugin</h4>
+<p>The official loginconvert plugin was also updated to version 1.4.1, including fixes for password resets and special passwords. If you've run a merge in the past please update your plugin. Also the plugin was added to our <a href="http://community.mybb.com/mods.php?action=view&amp;pid=473">mods site</a>.</p>
+<p>Thanks,</p>
+<p>MyBB Team</p>

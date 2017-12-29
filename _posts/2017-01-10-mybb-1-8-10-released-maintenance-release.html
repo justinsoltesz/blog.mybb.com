@@ -1,0 +1,67 @@
+---
+layout: post
+title: MyBB 1.8.10 Released – Maintenance Release
+date: 2017-01-10 18:58:26.000000000 -05:00
+categories:
+- Releases
+- Updates
+tags:
+- '1.8'
+author: StefanT
+---
+<p>MyBB 1.8.10 is now available from the MyBB website, and is maintenance release.</p>
+<h4>What’s added/changed in this version?</h4>
+<p>This release fixes <strong>22 reported issues</strong> causing incorrect functionality of MyBB. Please be aware that not all issues have been fixed in this version in order to provide easy to manage updates.</p>
+<p>We've decided to publish MyBB 1.8.10 only 3 weeks after the previous release to fix an issue breaking some Javascript-based features that was introduced with MyBB 1.8.9.</p>
+<ul>
+</ul>
+<ul>
+<li>Bugs fixed:
+<ul>
+<li><a href="https://github.com/mybb/mybb/issues?q=milestone%3A1.8.10+is%3Aclosed">Fixed issues in 1.8.10</a></li>
+<li><a href="https://github.com/mybb/mybb/issues?q=is%3Aopen+label%3A1.8+is%3Aissue">Unfixed issues</a></li>
+</ul>
+</li>
+</ul>
+<p>Please view the <a href="http://docs.mybb.com/versions/1.8.10">1.8.10 changes</a> on the Docs site for more information about the changes in this version.</p>
+<p>Please note, that you <strong>do</strong> need to run the upgrade script for this version.</p>
+<h4>Upgrading from 1.8.9 and Other Versions</h4>
+<p>Before performing any upgrade please remember to backup your forum’s files and database and store them safely. If you have edited core files, including language files, please make sure you make a changelog for these changes so you can make them again (if necessary) once the upgrade is complete.</p>
+<p>To upgrade, follow the Upgrading process. The <strong>upgrade script</strong> is required. There are changes to <strong>5</strong> language files and <strong>11</strong> templates were changed or added.</p>
+<p>If you’re using MyBB 1.8.9:</p>
+<ul>
+<li>Download and use the <a href="http://resources.mybb.com/downloads/changed_files_1810.zip">Changed Files Package</a>
+<ul style="font-size:.8em;word-break:break-all;">
+<li>MD5: <code>9695cb97ff6928640c72436ce3667b05</code></li>
+<li>SHA1: <code>16fd567b118525e0619c6749f27da96c8ceec1a9</code></li>
+<li>SHA256: <code>6eae4b078283a533797ee9692d436b45309c79af4657c9885f79606c50365ec3</code></li>
+<li>SHA512: <code>124cdafcfad72a72ad71d8bbab1c30c335e20edfa89af1976963531e7bebcfdcb4e353a11191d3ef3b2af66effe402e30e093f52c3bea3b3e17d68f6247ba7d9</code></li>
+</ul>
+</li>
+<li><a href="http://docs.mybb.com/1.8/install/upgrade/">Follow the Docs Upgrading Instructions</a></li>
+</ul>
+<p>If you’re using MyBB 1.8.8 or lower:</p>
+<ul>
+<li>Download and use the <a href="http://resources.mybb.com/downloads/mybb_1810.zip">full 1.8.10 Release Package</a>
+<ul style="font-size:.8em;word-break:break-all;">
+<li>MD5: <code>40868d918262384ce4c1d31399f66b4d</code></li>
+<li>SHA1: <code>192f0c7949e867c800bafd06640bf4b7d1cac6ea</code></li>
+<li>SHA256: <code>34907b26e7534327b828ae7d98d4ab9e5184f985ef8c155fd2b8690809ce6dc0</code></li>
+<li>SHA512: <code>cb4584f00c60b757f9ce72e16a8eb8596cc8d4d22bed38085b6967706ab08c1c1bdeb7effba578c388156b57862266a8b30ce181c47968ddb1c1ce7691bec66b</code></li>
+</ul>
+</li>
+<li><a href="http://docs.mybb.com/1.8/install/upgrade/">Follow the Docs Upgrading Instructions</a></li>
+</ul>
+<h4>Reporting MyBB security vulnerabilities</h4>
+<p>If you think you’ve found a vulnerability in MyBB, we advise you not to publicly post it on these forums or publicly release information about it elsewhere until we’ve had time to prepare and release a patch.</p>
+<p>As always, you can send through security related messages on the MyBB website from the <a href="http://www.mybb.com/contact/">Contact Us</a> page or in our <a href="http://community.mybb.com/forum-135.html" target="_blank">Private Inquiries</a> forum – where you can start a new thread that only you and the MyBB Team can see.</p>
+<p>Thanks,</p>
+<p>MyBB Team</p>
+<h2>Note about updated packages</h2>
+<p>The original packages have been replaced by updated packages to fix an issue causing incorrect last post information on index.</p>
+<p>If you installed or updated your forums using either the full or changed files packages prior to 20:00 p.m. on January 12, 2017 GMT please download a fresh package from the links above and replace the following file:</p>
+<ul>
+<li>inc/datahandlers/post.php</li>
+</ul>
+<p>You do not need to run the installer or make any further changes. You can use the file verification tool to determine whether you have the latest package, the file above will appear to be modified if you need to download an updated copy.</p>
+<p>We apologise of any inconvenience.</p>

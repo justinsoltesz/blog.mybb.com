@@ -1,0 +1,89 @@
+---
+layout: post
+title: MyBB 1.8.7 & Merge System 1.8.7 Release
+date: 2016-03-11 16:20:56.000000000 -05:00
+categories:
+- Merge System
+- Releases
+- Security
+- Updates
+tags:
+- '1.8'
+author: StefanT
+---
+<h2>MyBB 1.8.7 - Security &amp; Maintenance Release</h2>
+<p>MyBB 1.8.7 is now available from the MyBB website, and is a security and maintenance release.</p>
+<h4>What's added/changed in this version?</h4>
+<p>This release fixes <strong>13 security vulnerabilities</strong> and <strong>83 reported issues</strong> causing incorrect functionality of MyBB. Please be aware that not all issues have been fixed in this version in order to provide easy to manage updates.</p>
+<ul>
+<li>Vulnerabilities:
+<ul>
+<li>Medium risk: Possible SQL Injection in moderation tool – reported by <a href="http://community.mybb.com/user-102514.html">jamslater</a></li>
+<li>Low risk: Missing permission check in newreply.php – reported by <a href="http://community.mybb.com/user-2824.html">StefanT</a></li>
+<li>Low risk: Possible XSS Injection on login – reported by <a href="http://community.mybb.com/user-47371.html">Devilshakerz</a></li>
+<li>Low risk: Possible XSS Injection in member validation – reported by <a href="http://www.curesec.com/">Tim Coen</a></li>
+<li>Low risk: Possible XSS Injection in User CP – reported by <a href="http://www.curesec.com/">Tim Coen</a></li>
+<li>Low risk: Possible XSS Injection in Mod CP logs – reported by <a href="http://community.mybb.com/user-4041.html">Starpaul20</a></li>
+<li>Low risk: Possible XSS Injection when editing users in Mod CP – reported by <a href="http://www.curesec.com/">Tim Coen</a></li>
+<li>Low risk: Possible XSS Injection when pruning logs in ACP – reported by <a href="http://community.mybb.com/user-47371.html">Devilshakerz</a></li>
+<li>Low risk: Possibility of retrieving database details through templates – reported by <a href="http://www.curesec.com/">Tim Coen</a></li>
+<li>Low risk: Disclosure of ACP path when sending mails from ACP – reported by <a href="http://community.mybb.com/user-53148.html">sarisisop</a></li>
+<li>Low risk: Low adminsid &amp; sid entropy – reported by <a href="http://community.mybb.com/user-47371.html">Devilshakerz</a></li>
+<li>Low risk: Clickjacking in ACP – reported by <a href="http://community.mybb.com/user-91920.html">DingjieYang</a></li>
+<li>Low risk: Missing directory listing protection in upload directories – reported by <a href="http://www.curesec.com/">Tim Coen</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>Bugs fixed:
+<ul>
+<li><a href="https://github.com/mybb/mybb/issues?q=milestone%3A1.8.7+is%3Aclosed">Fixed issues in 1.8.7</a></li>
+<li><a href="https://github.com/mybb/mybb/issues?q=is%3Aopen+label%3A1.8+is%3Aissue">Unfixed issues</a></li>
+</ul>
+</li>
+</ul>
+<p>Please view the <a href="http://docs.mybb.com/versions/1.8.7">1.8.7 changes</a> on the Docs site for more information about the changes in this version.</p>
+<p><span style="color:red;font-size:x-larger;">Please note, that you <strong>do</strong> need to run the upgrade script for this version.</span></p>
+<h4>Upgrading from 1.8.6 and Other Versions</h4>
+<p>Before performing any upgrade please remember to backup your forum’s files and database and store them safely. If you have edited core files, including language files, please make sure you make a changelog for these changes so you can make them again (if necessary) once the upgrade is complete.</p>
+<p>To upgrade, follow the Upgrading process. The <strong>upgrade script</strong> is required. There are changes to <strong>15</strong> language files and <strong>41</strong> templates were changed or added.</p>
+<p>If you're using MyBB 1.8.6:</p>
+<ul>
+<li>Download and use the <a href="http://resources.mybb.com/downloads/changed_files_1807.zip">Changed Files Package</a> (MD5: 5542aee753edfd18fc9b9e5783058d9d)</li>
+<li><a href="http://docs.mybb.com/1.8/install/upgrade/">Follow the Docs Upgrading Instructions</a></li>
+</ul>
+<p>If you're using MyBB 1.8.5 or lower:</p>
+<ul>
+<li>Download and use the <a href="http://resources.mybb.com/downloads/mybb_1807.zip">full 1.8.7 Release Package</a> (MD5: 20fd51c3c8a9cefc54be55a6d3b42c60)</li>
+<li><a href="http://docs.mybb.com/1.8/install/upgrade/">Follow the Docs Upgrading Instructions</a></li>
+</ul>
+<h4>Reporting MyBB security vulnerabilities</h4>
+<p>If you think you’ve found a vulnerability in MyBB, we advise you not to publicly post it on these forums or publicly release information about it elsewhere until we’ve had time to prepare and release a patch.</p>
+<p>As always, you can send through security related messages on the MyBB website from the <a href="http://www.mybb.com/contact/">Contact Us</a> page or in our <a href="http://community.mybb.com/forum-135.html" target="_blank">Private Inquiries</a> forum – where you can start a new thread that only you and the MyBB Team can see.</p>
+<h2>MyBB Merge System 1.8.7</h2>
+<p>MyBB Merge System 1.8.7 is <a href="http://resources.mybb.com/downloads/merge_1807.zip">now available</a> on the MyBB website and is a maintenance update to the MyBB Merge 1.8 series.</p>
+<p>This release is to ensure that all users of MyBB Merge 1.8 have the latest fixes.</p>
+<p>This release fixes several reported issues since the release of 1.8.6, which caused some incorrect functionality of the Merge System. These bugs have been fixed to provide a more stable version of the Merge System for public use.</p>
+<h4>What's new in this version?</h4>
+<ul>
+<li>5 bug fixes (<a href="https://github.com/mybb/merge-system/issues?q=milestone%3A1.8.7">View all</a>)
+</li>
+</ul>
+<p>Thanks,</p>
+<p>MyBB Team</p>
+<h2>Note about updated packages</h2>
+<p>The original packages have been replaced by updated packages to fix minor compatibility issues with PHP 5.2 and PostgreSQL and to fix issues with font MyCode and search functionality.</p>
+<p>If you installed or updated your forums using either the full or changed files packages prior to 19:00 p.m. on March 25, 2016 GMT please download a fresh package from the links above and replace the following files:</p>
+<ul>
+<li>inc/cachehandlers/apc.php</li>
+<li>inc/cachehandlers/eaccelerator.php</li>
+<li>inc/cachehandlers/interface.php</li>
+<li>inc/cachehandlers/memcache.php</li>
+<li>inc/cachehandlers/memcached.php</li>
+<li>inc/cachehandlers/xcache.php</li>
+<li>inc/class_parser.php</li>
+<li>install/resources/upgrade35.php</li>
+<li>search.php</li>
+</ul>
+<p>You do not need to run the installer or make any further changes. You can use the file verification tool to determine whether you have the latest package, the file above will appear to be modified if you need to download an updated copy.</p>
+<p>We apologise of any inconvenience.</p>

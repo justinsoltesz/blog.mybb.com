@@ -1,0 +1,30 @@
+---
+layout: post
+title: We'll be back soon
+date: 2012-06-02 05:09:41.000000000 -04:00
+categories:
+- General
+- Security
+tags: []
+author: Tim B.
+---
+<p>As most of you who will be reading this are aware, three days ago (beginning the 31st of May) the MyBB.com domain (along with our other domains) were hijacked by a group of hackers (we're not going to identify them by name but they have been very vocal in claiming responsibility so you should have no problem finding them if you're so inclined). They also tried to access our server and many other services we use.</p>
+<p>At this stage we have access to all our systems back and are in the process of restoring services, however we're pleased to say that we are also taking this opportunity to retool components of our website and upgrade our server infrastructure.</p>
+<p>This blog post will probably be the first of many, but we'll endeavor to keep you updated as much as possible regarding progress. At this stage we don't expect all services to be online for at least a week while the new servers are configured and we prepare new components of our website, however this blog is obviously already online and the MyBB home page will be up very soon too.</p>
+<h3>The story to date</h3>
+<p>There are still a few missing pieces, but at this stage we have a pretty clear understanding of what happened. Contrary to what has been posted elsewhere, we do not believe social engineering was the culprit, although the hackers did try unsuccessfully to gain access to several of our accounts via this method.</p>
+<p>The main incident that lead to the breach was a compromise of Chris' personal Apple ID (iCloud, etc) account. From there, the hackers were able to reset passwords to our hosting and domain accounts. It's still not clear how they got access to this account, however they also had numerous personal details about Chris, including contact details and knowledge of at least the last four numbers of his primary credit card.</p>
+<p>Fortunately SoftLayer (our host) called Chris when his password was reset which alerted us to the situation unfolding and all public access to the server was shut off soon thereafter. <strong>As far we can tell they were not able to log into our server and do not have copies of our databases.</strong> We have been very pleased by the response we received from SoftLayer and without their vigilance the situation could have been far worse.</p>
+<p>While Chris was trying to reset his passwords to NameCheap (our Domain Registrar at the time) and Apple ID accounts, the hackers even went as far as to remote wipe his iPhone via iCloud to prevent him from having 3G access. Unfortunately they successfully took control of Chris's NameCheap account and redirected the domain to their defacement page, later we discovered they even tried to transfer the domain.</p>
+<p>Unfortunately we did not get the expedited response from NameCheap that we would have hoped for given the severity of the situation, and it was about six hours before we got access to our account back. As a result we have already transferred MyBB.com to another domain registrar with better controls around account security.</p>
+<p>Since then we have been planning the recovery effort, including taking the opportunity to improve our infrastructure.  We will be moving to a new server setup, but given our security scare a few months ago we are also auditing the site software we use and only moving what we know is clean to the new server. More details on changes to the site are detailed further down this article.</p>
+<p>With regard to why we were targeted, frankly we are baffled by the logic. The group identified MyBB as being targeted because one of our user's runs an online forum dedicated to hacking. <strong>By this same analogy, if someone purchases a car and then uses it to run someone down or damage another's property, then the manufacturer of the car should be responsible, which is obviously corrupted logic.</strong></p>
+<p>The group totes freedom as their cause but by attacking an Open Source project they are undermining freedom in every sense of the word. <strong>Anyone is free to download and use our software, no matter if you're rich or poor, a nurse or a hacker</strong>, and the fact they targeted us for this is an utter contradiction of their reasoning.</p>
+<p>As many MyBB users will know, we don't even offer support on our community forums to hacking sites, and there are no exceptions. We can only conclude that attention and notoriety are their true motivations, and that their sense of ethics is a disgrace to the online community. We sincerely hope the perpetrators are brought to justice.</p>
+<h3>What we're doing</h3>
+<p>First and foremost we have adopted two factor authentication wherever possible. As mentioned above, the domain names have already been transferred to a registrar offering two factor authentication, among other security features. We'll also be adopting two factor authentication on our new servers, and to various internal services. The new servers should improve performance of our website, and CloudFlare has also been setup.</p>
+<p>As you might have also noticed, this blog has already been moved from being a locally hosted WordPress installation to being hosted on WordPress.com, which should ensure it is accessible even when our servers are down. We are hoping to make a similar change to the wiki before services are fully restored and as previously announced, development will be moving to GitHub with 1.8. Our goal with moving services offsite is to improve availability, improve maintainability, reduce load on our servers and improve security.</p>
+<p>Finally,  although our website infrastructure did not contribute to the intrusion, we are reviewing the security of all our services prior to moving them to our new server to ensure our systems are as secure as they could be.</p>
+<p>We thank everyone for their continued patience and support over this difficult time and hope to have everything back online soon.</p>
+<p>Regards,</p>
+<p>Chris, Tim, and the rest of the MyBB Team</p>

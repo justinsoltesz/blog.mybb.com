@@ -1,0 +1,95 @@
+---
+layout: post
+title: MyBB 1.4.11 Released - Minor Patch & Security Update
+date: 2009-12-29 11:38:23.000000000 -05:00
+categories:
+- Releases
+- Security
+- Updates
+tags:
+- '1.4'
+author: Chris Boulton
+---
+<p>MyBB 1.4.11 is now available on the MyBB website and is a minor patch update to 1.4.10.</p>
+<p>This release is to ensure that all users on 1.4.10 have the latest patches, to fix a small and rare bug that with malicious intent can be used to assist a Denial-of-Service attack, and to patch a low security issue that can allow a user to check for file existence outside of the web root.</p>
+<p>Thank you to Labrocca and Secunia (through a third party) for alerting us of these issues.</p>
+<h4><strong>What's fixed in this version?</strong></h4>
+<ul>
+<li><a href="http://dev.mybboard.net/issues/617">Issue #617</a></li>
+<li><a href="http://dev.mybboard.net/issues/603">Issue #603</a></li>
+<li><a href="http://dev.mybboard.net/issues/600">Issue #600</a></li>
+<li><a href="http://dev.mybboard.net/issues/584">Issue #584</a></li>
+<li><a href="http://dev.mybboard.net/issues/580">Issue #580</a></li>
+<li><a href="http://dev.mybboard.net/issues/581">Issue #581</a></li>
+<li><a href="http://dev.mybboard.net/issues/567">Issue #567</a></li>
+<li><a href="http://dev.mybboard.net/issues/563">Issue #563</a></li>
+<li><a href="http://dev.mybboard.net/issues/536">Issue #536</a></li>
+</ul>
+<p>This release has been tested by our Software Quality Assurance group.</p>
+<p><span style="color:red;font-size:x-larger;"><strong>This update does <u>not</u> require running the upgrader.</strong></span><br />
+<i>There are <strong>no</strong> database schema, language string, or template changes in this version.</i></p>
+<h4><strong>MyBB 1.4.10 to MyBB 1.4.11 Patch</strong></h4>
+<p>This patch is only for users running MyBB 1.4.10. If you are running an older version of MyBB then please download MyBB 1.4.11 from the MyBB site and update to it using the general <a href="http://wiki.mybboard.net/index.php/Upgrading" target="_blank" title="View the MyBB Wiki page for Upgrading">[Wiki: Upgrading]</a> guide.</p>
+<p>Please download the attached ZIP archive and replace the files in your forum directory with those from the ZIP archive.<br />
+<a href="http://mybboard.net/download/114">changed_files_1411.zip</a></p>
+<p>If you wish to manually patch your board please download "mybb_1410_patches.txt" and follow the instructions in that file.<br />
+<a href="http://mybboard.net/download/115">mybb_1410_patches.txt</a></p>
+<p><strong>The manual patch set instructions only fixes the security vulnerabilities and is only made available to temporarily secure your forum until you have time to run the complete upgrade.</strong></p>
+<h4>The following files were changed since the initial MyBB 1.4.10 release:</h4>
+<ul>
+<li>admin
+<ul>
+<li>modules
+<ul>
+<li>style
+<ul>
+<li>templates.php</li>
+</ul>
+</li>
+<li>tools
+<ul>
+<li>backupdb.php</li>
+</ul>
+</li>
+<li>user
+<ul>
+<li><span style="color:red;">users.php</span></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>inc
+<ul>
+<li>datahandlers
+<ul>
+<li>event.php</li>
+<li>user.php</li>
+</ul>
+</li>
+<li>class_core.php</li>
+<li>class_error.php</li>
+<li>class_moderation.php</li>
+<li>functions_upload.php</li>
+<li><span style="color:red;">functions_time.php</span></li>
+<li>tasks
+<ul>
+<li>backupdb.php</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>calendar.php</li>
+<li><span style="color:red;">usercp.php</span></li>
+</ul>
+<p>* <span style="color:red;">Red represents files that contain security updates</span><br />
+* <span style="color:green;">Green represents new files added in this release</span></p>
+<h4><strong>Reporting MyBB security vulnerabilities</strong></h4>
+<p>If you think you've found a vulnerability in MyBB, we advise you not to publicly post it on these forums or publicly release information about it elsewhere until we've had time to prepare and release a patch.</p>
+<p>As always, you can send through security related messages on the MyBB website from the <a href="http://www.mybboard.net/contact/" target="_blank">Contact Us</a> page.</p>
+<h4><strong>MyBB 1.2.14 Patch</strong></h4>
+<p>Please follow step #1 in the mybb_1410_patches.txt file as listed above.</p>
+<p>Please note all users of the 1.2.x series are urged to upgrade to the latest release of MyBB. (1.4.11) MyBB 1.2 is no longer being supported and security updates for the MyBB 1.2 series will only last through December 2009.</p>
+<p>Thank you,<br />
+MyBB Team</p>

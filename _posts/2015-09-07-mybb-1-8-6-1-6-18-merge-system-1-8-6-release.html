@@ -1,0 +1,98 @@
+---
+layout: post
+title: MyBB 1.8.6, 1.6.18 & Merge System 1.8.6 Release
+date: 2015-09-07 19:14:18.000000000 -04:00
+categories:
+- Merge System
+- Releases
+- Security
+- Updates
+tags:
+- '1.6'
+- '1.8'
+author: StefanT
+---
+<h2>MyBB 1.8.6 - Security &amp; Maintenance Release</h2>
+<p>MyBB 1.8.6 is now available from the MyBB website, and is a security and maintenance release.</p>
+<h4>What's added/changed in this version?</h4>
+<p>This release fixes <strong>5 security vulnerabilities</strong> and <strong>51 reported issues</strong> causing incorrect functionality of MyBB. Please be aware that not all issues have been fixed in this version in order to provide easy to manage updates.</p>
+<ul>
+<li>Vulnerabilities:
+<ul>
+<li>Medium Risk: Forum password bypass in xmlhttp.php – reported by <a href="http://community.mybb.com/user-47371.html">Devilshakerz</a></li>
+<li>Low Risk: SQL Injection in Grouppromotions module (ACP) – reported by <a href="http://community.mybb.com/user-47371.html">Devilshakerz</a></li>
+<li>Low Risk: Possible XSS Injection in the error handler – reported by <a href="http://community.mybb.com/user-96507.html">FooBar123</a></li>
+<li>Low Risk: Possible XSS issues in old upgrade files – reported by <a href="http://community.mybb.com/user-96507.html">FooBar123</a></li>
+<li>Low Risk: Possible Full Path Disclosure in publicly accessible error log files – reported by <a href="http://community.mybb.com/user-47371.html">Devilshakerz</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>Bugs fixed:
+<ul>
+<li><a href="https://github.com/mybb/mybb/issues?q=milestone%3A1.8.6+is%3Aclosed">Fixed issues in 1.8.6</a></li>
+<li><a href="https://github.com/mybb/mybb/issues?q=is%3Aopen+label%3A1.8+is%3Aissue">Unfixed issues</a></li>
+</ul>
+</li>
+</ul>
+<p>Please view the <a href="http://docs.mybb.com/versions/1.8.6">1.8.6 changes</a> on the Docs site for more information about the changes in this version.</p>
+<p><span style="color:red;font-size:x-larger;">Please note, that you <strong>do</strong> need to run the upgrade script for this version.</span></p>
+<h4>Upgrading from 1.8.5 and Other Versions</h4>
+<p>Before performing any upgrade please remember to backup your forum’s files and database and store them safely. If you have edited core files, including language files, please make sure you make a changelog for these changes so you can make them again (if necessary) once the upgrade is complete.</p>
+<p>To upgrade, follow the Upgrading process. The <strong>upgrade script</strong> is required. There are changes to <strong>7</strong> language files and <strong>19</strong> templates were changed or added.</p>
+<p>If you're using MyBB 1.8.5:</p>
+<ul>
+<li>Download and use the <a href="http://resources.mybb.com/downloads/changed_files_1806.zip">Changed Files Package</a> (MD5: 1fa6a941ba49c6e5308bc74a16f6c09f)</li>
+<li><a href="http://docs.mybb.com/1.8/install/upgrade/">Follow the Docs Upgrading Instructions</a></li>
+</ul>
+<p>If you're using MyBB 1.8.4 or lower:</p>
+<ul>
+<li>Download and use the <a href="http://resources.mybb.com/downloads/mybb_1806.zip">full 1.8.6 Release Package</a> (MD5: 31e91be52df744ccc4ba3c1c12208ec3)</li>
+<li><a href="http://docs.mybb.com/1.8/install/upgrade/">Follow the Docs Upgrading Instructions</a></li>
+</ul>
+<h4>Reporting MyBB security vulnerabilities</h4>
+<p>If you think you’ve found a vulnerability in MyBB, we advise you not to publicly post it on these forums or publicly release information about it elsewhere until we’ve had time to prepare and release a patch.</p>
+<p>As always, you can send through security related messages on the MyBB website from the <a href="http://www.mybb.com/contact/">Contact Us</a> page or in our <a href="http://community.mybb.com/forum-135.html" target="_blank">Private Inquiries</a> forum – where you can start a new thread that only you and the MyBB Team can see.</p>
+<h2>MyBB 1.6.18 - Security Release</h2>
+<p>MyBB 1.6.18 is now available from the MyBB website. It fixes 1 medium risk and 3 low risk vulnerabilities.</p>
+<p>Please note that we've extended support period for MyBB 1.6 to give you additional time for upgrading your forum until 1st of October 2015. After that time no support will be provided for MyBB 1.6.</p>
+<h4>What's added/changed in this version?</h4>
+<p>The vulnerabilities are:</p>
+<ul>
+<li>Medium Risk: Forum password bypass in xmlhttp.php – <a href="http://community.mybb.com/user-47371.html">reported by Devilshakerz</a></li>
+<li>Low Risk: SQL Injection in Grouppromotions module (ACP) – <a href="http://community.mybb.com/user-47371.html">reported by Devilshakerz</a></li>
+<li>Low Risk: Possible XSS Injection in the error handler – <a href="http://community.mybb.com/user-96507.html">reported by FooBar123</a></li>
+<li>Low Risk: Possible XSS issues in old upgrade files – <a href="http://community.mybb.com/user-96507.html">reported by FooBar123</a></li>
+</ul>
+<p>Please view the <a href="http://docs.mybb.com/versions/1.6.18">1.6.18 changes</a> on the Docs site for more information about the changes in this version.</p>
+<p><span style="color:red;font-size:x-larger;"><strong>Please note, that you do not need to run the upgrade script for this version.</strong></span><br />
+<em>There are <strong>no</strong> database schema changes in this version.</em></p>
+<h4>Upgrading from 1.6.17 and Other Versions</h4>
+<p>Before performing any upgrade please remember to backup your forum's files and database and store them safely. If you have edited core files, including language files, please make sure you make a changelog for these changes so you can make them again (if necessary) once the upgrade is complete.</p>
+<p>To upgrade, follow the Upgrading process. The <strong>upgrade script</strong> is not required. There are no changes to language files. No templates have been changed or added.</p>
+<p>If you're using MyBB 1.6.17:</p>
+<ul>
+<li>Download and use the <a href="http://resources.mybb.com/downloads/changed_files_1618.zip">Changed Files Package</a> (MD5: 542f2ecfdc29f326607a2f82616cc95c)</li>
+<li><a href="http://docs.mybb.com/1.8/install/upgrade/#beginning-the-upgrade">Follow the Docs Upgrading Instructions</a></li>
+</ul>
+<p>If you're using MyBB 1.6.16 or lower</p>
+<ul>
+<li>Download and use the full <a href="http://resources.mybb.com/downloads/mybb_1618.zip">1.6.18 Release Package</a> (MD5: ad17b498116831a1d1d75bf07351ea0c)</li>
+<li>Follow the Docs Upgrading Instructions</li>
+</ul>
+<h2>MyBB Merge System 1.8.6</h2>
+<p>MyBB Merge System 1.8.6 is <a href="http://resources.mybb.com/downloads/merge_1806.zip">now available</a> on the MyBB website and is a maintenance update to the MyBB Merge 1.8 series.</p>
+<p>This release is to ensure that all users of MyBB Merge 1.8 have the latest fixes.</p>
+<p>This release fixes several reported issues since the release of 1.8.5, which caused some incorrect functionality of the Merge System. These bugs have been fixed to provide a more stable version of the Merge System for public use.</p>
+<h4>What's new in this version?</h4>
+<ul>
+<li>11 bug fixes (<a href="https://github.com/mybb/merge-system/issues?q=milestone%3A1.8.6">View all</a>)
+<ul>
+<li>New module: Avatars are now finally merged!</li>
+<li>Counters are finally updated automatically - no need to run them manually after the merge</li>
+<li>Multiple changes to make the merge system more intuitive</li>
+</ul>
+</li>
+</ul>
+<p>Thanks,</p>
+<p>MyBB Team</p>

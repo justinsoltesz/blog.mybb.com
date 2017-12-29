@@ -1,0 +1,87 @@
+---
+layout: post
+title: MyBB 1.8.8 & Merge System 1.8.8 Release
+date: 2016-10-17 18:48:50.000000000 -04:00
+categories:
+- Merge System
+- Releases
+- Security
+- Updates
+tags:
+- '1.8'
+author: Euan T
+---
+<p>MyBB 1.8.8 is now available from the MyBB website, and is a security and maintenance release.</p>
+<h4>What’s added/changed in this version?</h4>
+<p>This release fixes <strong>7 security vulnerabilities</strong> and <strong>58 reported issues</strong> causing incorrect functionality of MyBB. Please be aware that not all issues have been fixed in this version in order to provide easy to manage updates.</p>
+<ul>
+<li>Vulnerabilities:
+<ul>
+<li>Medium risk: Style import CSS overwrite on Windows servers – reported by <a href="https://community.mybb.com/user-107659.html">patryk</a></li>
+<li>Medium risk: SQL Injection in the users data handler - reported by <a href="https://community.mybb.com/user-108677.html">afinepl</a></li>
+<li>Medium risk: SSRF attack in fetch_remote_file() - reported by <a href="https://community.mybb.com/user-108945.html">dawid_golunski</a></li>
+<li>Medium risk: Possible short name access to ACP backups on Windows servers – reported by <a href="https://community.mybb.com/user-109452.html">kevinoclam</a></li>
+<li>Low risk: Stored XSS in the ACP – reported by <a href="https://community.mybb.com/user-107659.html">patryk</a></li>
+<li>Low risk: Loose comparison false positives – reported by <a href="http://community.mybb.com/user-47371.html">Devilshakerz</a></li>
+<li>Low risk: Possible XSS injection in ACP users module - reported by <a href="https://community.mybb.com/user-108677.html">afinepl</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>Bugs fixed:
+<ul>
+<li><a href="https://github.com/mybb/mybb/issues?q=milestone%3A1.8.8+is%3Aclosed">Fixed issues in 1.8.8</a></li>
+<li><a href="https://github.com/mybb/mybb/issues?q=is%3Aopen+label%3A1.8+is%3Aissue">Unfixed issues</a></li>
+</ul>
+</li>
+</ul>
+<p>Please view the <a href="http://docs.mybb.com/versions/1.8.8">1.8.8 changes</a> on the Docs site for more information about the changes in this version.</p>
+<p>Please note, that you <strong>do</strong> need to run the upgrade script for this version.</p>
+<h4>Upgrading from 1.8.7 and Other Versions</h4>
+<p>Before performing any upgrade please remember to backup your forum’s files and database and store them safely. If you have edited core files, including language files, please make sure you make a changelog for these changes so you can make them again (if necessary) once the upgrade is complete.</p>
+<p>To upgrade, follow the Upgrading process. The <strong>upgrade script</strong> is required. There are changes to <strong>23</strong> language files and <strong>64</strong> templates were changed or added.</p>
+<p>If you’re using MyBB 1.8.7:</p>
+<ul>
+<li>Download and use the <a href="http://resources.mybb.com/downloads/changed_files_1808.zip">Changed Files Package</a>
+<ul style="font-size:.8em;word-break:break-all;">
+<li>MD5: <code>43028accb46eecf8016ef5fdc4fe522a</code></li>
+<li>SHA1: <code>2c9985353e87c8710bdcdcf1856b0a6c63961317</code></li>
+<li>SHA256: <code>bb479145b44f169c301c21425f78742d8cacd9fd9ef4543c2a5e39ab540f769e</code></li>
+<li>SHA512: <code>47ddbd601d008e9cb7309b328d36df95f901d1935593ded61e70cef22dc1312257266e056e5ea9d214babfd47a0aeb9560e9d11a5abb8d68a244f442467c41854a73f915ee3f4e6bd2f654334ca0f75</code></li>
+</ul>
+</li>
+<li><a href="http://docs.mybb.com/1.8/install/upgrade/">Follow the Docs Upgrading Instructions</a></li>
+</ul>
+<p>If you’re using MyBB 1.8.6 or lower:</p>
+<ul>
+<li>Download and use the <a href="http://resources.mybb.com/downloads/mybb_1808.zip">full 1.8.8 Release Package</a>
+<ul style="font-size:.8em;word-break:break-all;">
+<li>MD5: <code>2e09c9fd3b2416ac3fea9bada18d61e5</code></li>
+<li>SHA1: <code>2b8469cb42c3a66ec7e3253aa0cced464585d3dd</code></li>
+<li>SHA256: <code>e63bd3ce5b8a7c4166102baa75f0aab1d12fc64379658a027d8bf49a437a469a</code></li>
+<li>SHA512: <code>8dec5923737b11deae578ed02f259acda01ca5bcc9032bc01df1e2d77ce36c54f87e66e42850460c8ea07515d99d4b5da4a73f915ee3f4e6bd2f654334ca0f75</code></li>
+</ul>
+</li>
+<li><a href="http://docs.mybb.com/1.8/install/upgrade/">Follow the Docs Upgrading Instructions</a></li>
+</ul>
+<p><strong>This update includes security fixes that may need your attention:</strong></p>
+<ul>
+<li>Additional rules disallowing access to the database backups directory (<code>admin/backups/</code>) were added to <code>htaccess.txt</code> and <code>htaccess-nginx.txt</code>, addressing a security issue affecting Windows installations - remember to update your configuration files.</li>
+<li><code>$config['disallowed_remote_hosts']</code> and <code>$config['disallowed_remote_addresses']</code> variables, containing default loopback hosts and IPv4 addresses, were added to the <code>inc/config.php</code> file, addressing a SSRF vulnerability - remember to <a href="https://docs.mybb.com/1.8/administration/security/protection/#configure-access-to-private-hosts-and-ip-addresses">update your configuration files</a> and, if applicable, add further hosts and/or addresses that MyBB shouldn't attempt to access.</li>
+</ul>
+<h4>Reporting MyBB security vulnerabilities</h4>
+<p>If you think you’ve found a vulnerability in MyBB, we advise you not to publicly post it on these forums or publicly release information about it elsewhere until we’ve had time to prepare and release a patch.</p>
+<p>As always, you can send through security related messages on the MyBB website from the <a href="http://www.mybb.com/contact/">Contact Us</a> page or in our <a href="http://community.mybb.com/forum-135.html" target="_blank">Private Inquiries</a> forum – where you can start a new thread that only you and the MyBB Team can see.</p>
+<h2>MyBB Merge System 1.8.8</h2>
+<p>MyBB Merge System 1.8.8 is <a href="http://resources.mybb.com/downloads/merge_1808.zip">now available</a> on the MyBB website and is a maintenance update to the MyBB Merge 1.8 series.</p>
+<p>This release is to ensure that all users of MyBB Merge 1.8 have the latest fixes.</p>
+<p>This release fixes several reported issues since the release of 1.8.7, which caused some incorrect functionality of the Merge System. These bugs have been fixed to provide a more stable version of the Merge System for public use.</p>
+<h4>What’s new in this version?</h4>
+<ul>
+<li>5 bug fixes (<a href="https://github.com/mybb/merge-system/issues?q=milestone%3A1.8.8">View all</a>)</li>
+<li>Preliminary support for merges from vBulletin 5 installations. This module hasn't had a lot of testing, so please report back with how vBulletin 5 merges go and always test your merge on a local machine first.</li>
+</ul>
+<p><strong>Important note</strong></p>
+<p>This will be the last release of the Merge System 1.8. We're instead concentrating development efforts on MyBB 2.0 and a brand new Merge System to accompany it - please stay tuned for more news on the new merge system!</p>
+<p>Thanks,</p>
+<p>MyBB Team</p>

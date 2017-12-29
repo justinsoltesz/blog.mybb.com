@@ -1,0 +1,47 @@
+---
+layout: post
+title: MyBB 1.6.4 Released - Feature Update, Security & Maintenance Release
+date: 2011-07-26 20:42:04.000000000 -04:00
+categories:
+- Releases
+- Security
+- Updates
+tags:
+- '1.6'
+author: Chris Boulton
+---
+<p>MyBB 1.6.4 is now available from the MyBB website and is a feature update, security and maintenance release for the 1.6 series.</p>
+<h4>What's added/changed in this version?</h4>
+<p>In 1.6.4, there are <strong>2 new updates</strong> and over <strong>100 reported issues</strong> fixed.</p>
+<p>Please be aware that not all of the existing problems have been fixed in this version. Because of the size of the updates, these will be fixed in a later release.</p>
+<ul>
+<li><a href="http://dev.mybb.com/projects/mybb/versions/38">Issues fixed in 1.6.4</a></li>
+<li><a href="http://dev.mybb.com/projects/mybb/issues">Unfixed Issues</a></li>
+</ul>
+<p>The 2 new updates included in 1.6.4 are only small - one globally switches on/off plugins and the other detects whether an Administrator has renamed the Portal to check for file verifications.</p>
+<h4>Security Updates</h4>
+<p>There are also 3 security updates for 1.6.4. Overall, they are low risk vulnerabilities as they all require administrator permissions - however, one of these is classed as high risk if a user manages to get into the Admin Control Panel (ACP).</p>
+<p>As a result of this, it is recommended that only certain types of variables are used in templates that follow the MyBB Development Standards - although other types may be used it the templates are installed to the database through your plugin, Administrators will not be able to save templates with these variables in.</p>
+<p>Theme Artists and Plugin Developers should take a close look at the new changes to see if their work will be affected by the new changes and update them accordingly.</p>
+<h4>Performance</h4>
+<p>In 1.6.4, there are a number of performance-related updates. These range from small code changes to caching thread prefixes. More information about these are available on 1.6.4's page in the Wiki.</p>
+<p>Almost everyone should be able to see at least some benefits from these changes.</p>
+<h4>Upgrading from 1.6.3 and Other Versions</h4>
+<p>Due to the size of this release and due to release errors earlier in the 1.6 series, <strong><span style="text-decoration:underline;">all files</span></strong> need to be changed. This is to ensure that you have the latest versions of the software's files which can be hard to trace from earlier releases.</p>
+<p>This upgrade process is the same for any version of MyBB. Before performing any upgrade, please remember to backup your forum's files and database and store them safely. If you have edited core files, please make sure you make a changelog for these changes so you can make them again once the upgrade is complete.</p>
+<p>If you have installed plugins that require changes to core files, you will need to make those changes again.</p>
+<p>To upgrade, follow the Upgrading process. The <strong>upgrade script</strong> is required. There are also <strong>language</strong> and <strong>theme</strong> changes.</p>
+<ul>
+<li>First, <a href="http://mybb.com/download/latest">download MyBB 1.6.4</a></li>
+<p><a href="http://mybb.com/download/latest"> </a></p>
+<li><a href="http://mybb.com/download/latest">Once downloaded, follow the instructions in the Wiki - </a><a href="http://wiki.mybb.com/index.php/Upgrading">MyBB Wiki: Upgrading</a>.</li>
+</ul>
+<p>If you require support for upgrading to 1.6.4, please see the 1.6 General Support Forum.</p>
+<h4>Changes in 1.6.4</h4>
+<p>We've made a handy reference guide to what's changed in 1.6.4 in the Wiki. We'll be doing this for each version in the future too so you can see what we're working on.</p>
+<p><a href="http://wiki.mybb.com/index.php/1.6.4">View 1.6.4 Changes in the Wiki</a>.</p>
+<h4>MyBB Merge System 1.6.1 Update</h4>
+<p>For those users who have been using Merge System 1.6.1 and earlier, there is an important security update ready for you.</p>
+<p>You can read more about it in the <a href="http://blog.mybb.com/2011/07/21/important-attention-users-of-the-merge-system-version-1-6-1-and-earlier/">1.6.1 Update Blog Post</a>.</p>
+<p>Thank you,<br />
+MyBB Team</p>

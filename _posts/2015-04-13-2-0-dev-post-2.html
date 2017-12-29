@@ -1,0 +1,39 @@
+---
+layout: post
+title: '2.0 dev post #2'
+date: 2015-04-13 22:40:50.000000000 -04:00
+categories:
+- 2.0 Dev Posts
+- Development
+tags:
+- '2.0'
+- MyBB
+author: Euan T
+---
+<p>It's that time again, time for another MyBB 2.0 dev blog! This post is the second in a series of development update posts regarding MyBB 2.0.  Currently in pre-alpha, MyBB 2.0 is the long awaited upcoming major version of the open source MyBB forum software.  We’ll be posting regular updates (we promise!) in regards to the development to keep you all updated. The development team have been hard at work since <a href="http://blog.mybb.com/2015/03/09/2-0-dev-post-1/">our last dev post</a>, adding new features and polishing existing functionality. This post will explore some of these new features and highlight our approach to the development of the system.<!--more--></p>
+<h2>Some development background</h2>
+<p>As we announced in our previous post, MyBB 2.0 is being developed using the Laravel 5.0 PHP framework, and utilising the Twig templating engine. In this post, we want to explore some of the more specific development practices and techniques that we are using in order to prepare third party developers for what's to come. In MyBB 2.0, we have decided to follow the <a href="http://www.php-fig.org/psr/psr-2/">PSR-2 coding style</a>, meaning our code styling rules of old are to be abandoned with the 1.x series of releases. This change means that the code behind MyBB follows a common standard followed by many other modern PHP applications, meaning switching between differing platforms during development should be far simpler. Additionally, MyBB 2.0 follows the <a href="http://www.php-fig.org/psr/psr-4/">PSR-4 autoloading standard</a> and utilises the <a href="https://getcomposer.org">Composer dependency manager</a> to manage third party libraries and dependencies. Both of the above are common standards and tools used to develop modern PHP applications and should provide a much easier entrance to writing extensions and modifications for the MyBB platform. As part of the development process, several core components of the core MyBB system are being split off into separate packages. This allows core components from MyBB which were previously tightly coupled to the main codebase to be easily used in other projects. So far, we have split packages for parsing posts from BBCode to HTML (and performing filtering on said parsed HTML), as well as our core settings package. As we progress, other core components will be split into reusable packages and released for public use. All of these packages will feature a full set of unit tests and documentation for usage and will be installable within any Composer based project. This means that projects building upon a MyBB core can easily utilise well tested components core to their forum platform and build on top of the solid base we have already provided. In the future, we will be doing development posts focusing on individual packages that are available for use, including examine their package structure and the features they provide. This will start next month with a look at our core settings package, which provides both general board settings and individual user settings.</p>
+<h2>And now for a quick look at some of our new features</h2>
+<p>So for everyone who's managed to stick with us so far, here's what you've been really looking forward to - screenshot time! In this section we'll have a look at one of the new commonly requested features coming to MyBB 2.0 and at the new look some existing features have received.</p>
+<h3>Liking content</h3>
+<p>The ability to like content has long been a requested feature in the MyBB core, as has been evidenced by the large number of third party plugins that provide just such functionality. We're glad to acknowledge that this functionality is now a core feature in MyBB 2.0 and upgrading boards will have all existing reputation points received for posts converted to these new likes. <a href="https://blogdotmybbdotcom.files.wordpress.com/2015/04/screen-shot-2015-04-13-at-23-18-52.png"><img class="aligncenter size-large wp-image-2471" src="{{ site.baseurl }}/assets/images/screen-shot-2015-04-13-at-23-18-52.png?w=660" alt="Liking a post in MyBB 2.0." width="660" height="125" /></a> For developers, it's extremely easy to add the ability to like content to their own custom code. This means that third party systems such as image galleries can easily add the ability to like their content with only a few lines of code, as can be seen below.</p>
+<p>[code language="php"]<br />
+&lt;?php</p>
+<p>namespace MyBB\Core\Database\Models;</p>
+<p>use Illuminate\Database\Eloquent\Model;<br />
+use Illuminate\Database\Eloquent\SoftDeletes;<br />
+use MyBB\Core\Likes\Traits\LikeableTrait;</p>
+<p>class Post extends Model implements HasPresenter<br />
+{<br />
+	use SoftDeletes;<br />
+	use LikeableTrait;</p>
+<p>	// The rest of your database model implementation code goes here...<br />
+}<br />
+[/code]</p>
+<p>This should mean that this feature will be extremely common across third party applications and extensions. This approach to easy extension and customisability has always been at the core of MyBB, and we aim to keep it so throughout the lifetime of 2.0.</p>
+<h3>The new look member list</h3>
+<p>As with the rest of MyBB 2.0, the old member list has received quite a face lift. Rather than the tabular list of old showing very few details, members are now presented as individual user cards, with their personal avatars given front and centre. <a href="https://blogdotmybbdotcom.files.wordpress.com/2015/04/screen-shot-2015-04-13-at-23-28-27.png"><img class="aligncenter size-large wp-image-2472" src="{{ site.baseurl }}/assets/images/screen-shot-2015-04-13-at-23-28-27.png?w=660" alt="The MyBB 2.0 user list" width="660" height="254" /></a></p>
+<h3>The new look forum view</h3>
+<p>What's a forum system without forums? In MyBB 2.0, the forum overview has received a minor facelift, and the commonly requested feature of showing the avatar of the last user to post a reply to a topic has been integrated into the core. The approach to the forum view is to offer a minimalistic approach to bringing your content to the forefront. It is for this reason that there is very little clutter or extraneous information presented - we want to bring what really matters straight to the attention of your users. <a href="https://blogdotmybbdotcom.files.wordpress.com/2015/04/screen-shot-2015-04-13-at-23-31-20.png"><img class="aligncenter size-large wp-image-2473" src="{{ site.baseurl }}/assets/images/screen-shot-2015-04-13-at-23-31-20.png?w=660" alt="MyBB 2.0 Forum View" width="660" height="234" /></a></p>
+<h2>Wrapping up</h2>
+<p>Well, that's it for this month's MyBB 2.0 development progress post. As you can hopefully see, the team has been hard at work and listening to user feedback. If you have any suggestions, post them in a comment or in the <a href="http://community.mybb.com/forum-152.html">2.0 suggestion forum</a>. We still have a lot more to both announce and to show, so keep your eyes tuned to the blog for future updates.</p>

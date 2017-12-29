@@ -1,0 +1,130 @@
+---
+layout: post
+title: MyBB 1.6.3 and 1.4.16 Security Update
+date: 2011-04-17 17:08:51.000000000 -04:00
+categories:
+- Releases
+- Security
+- Updates
+tags:
+- '1.4'
+- '1.6'
+author: Chris Boulton
+---
+<p>MyBB 1.6.3 and 1.4.16 are now available to download. They fix 1 high risk vulnerability and 1 low risk vulnerability. We recommend everyone upgrades to this release immediately or patch their boards with the manual patching instructions below.</p>
+<p>Thanks to Charlie Somerville and <a rel="nofollow" href="http://thebod.de/" target="_blank">thebod</a> for discovering them. These vulnerabilities are:</p>
+<ul>
+<li>An SQL injection vulnerability in showthread.php (internal report)</li>
+<li><a href="http://dev.mybb.com/issues/1487" target="_blank">Issue #1487 - CSRF vulnerability in misc.php?action=markread</a></li>
+</ul>
+<p>In addition to the vulnerabilities, the updates also fix the following issues:</p>
+<ul>
+<li><a href="http://dev.mybb.com/issues/1537" target="_blank">SQL error on malformed search keywords</a></li>
+<li><a href="http://dev.mybb.com/issues/1501" target="_blank">IE9 Javascript Issues</a> (1.6.3 only)</li>
+<li><a href="http://dev.mybb.com/issues/1379" target="_blank">MySQL 5.5 compatibility</a> (1.6.3 only)</li>
+</ul>
+<p>All other outstanding issues will be resolved in the next maintainence release.</p>
+<h4>For MyBB 1.6</h4>
+<p>The update to MyBB 1.6.3 also upgrades the Prototype and Scriptaculous javascript libraries to their latest versions. This is to help your MyBB forum work properly with Internet Explorer 9.</p>
+<p><strong>MyBB 1.6.2 to 1.6.3 Patch</strong><br />
+This patch is only for those users running MyBB 1.6.2. If you're running an older version of MyBB then please <a href="http://mybb.com/downloads" target="_blank">download the full version</a> and update to it.</p>
+<p>For help upgrading, see the <a href="http://wiki.mybb.com/index.php/Upgrading" target="_blank">MyBB Wiki: Upgrading</a>.</p>
+<p>Please download the attached ZIP archive below and replace the files in your forum directory with those from the ZIP archive.</p>
+<p><a href="http://www.mybb.com/download/145">1.6.3 changed files</a></p>
+<p><strong><em>You are required to run the upgrader for 1.6.3</em></strong>. After replacing the files above, remove the 'lock' file located in forum_root/install/, then visit forum_root/install/upgrade.php and follow the instructions (where forum_root is the web address for your forum). <strong><em>Remember to backup your forum's files and database</em></strong> before performing this upgrade.</p>
+<p>Once the upgrade has completed, visit the Templates &amp; Style area of your ACP - click on Templates on the left and go to the "Find Updated Templates". Revise and amend all affected templates here, paying attention to headerinclude, index_boardstats and forumdisplay_threadlist.</p>
+<p>If you wish to manually patch your board please download "1.6.3 patches" and follow the instructions in that file. You are also required to amend templates to ensure functionality for your board. For this, please download "1.6.3 template patches" and follow the instructions - you must do these for all custom themes you have installed.</p>
+<p><a href="http://www.mybb.com/download/142">1.6.3 patches</a><br />
+<a href="http://www.mybb.com/download/143">1.6.3 template patches</a></p>
+<p>Please remember that applying patches should only be a temporary measure until you can fully upgrade your board. The upgrader is required to run to allow the default templates to be updated with the new security fixes.</p>
+<p><strong>Changed Files since 1.6.2</strong></p>
+<ul>
+<li><span style="font-weight:bold;">inc</span>
+<ul>
+<li>class_core.php</li>
+<li><span style="color:red;">functions_search.php</span></li>
+</ul>
+</li>
+<li><span style="font-weight:bold;">install</span>
+<ul>
+<li><span style="font-weight:bold;">resources</span>
+<ul>
+<li>mysql_db_tables.php</li>
+<li><span style="color:red;">mybb_theme.xml</span></li>
+<li>upgrade12.php</li>
+<li>upgrade17.php</li>
+<li><span style="color:green;">upgrade19.php</span></li>
+<li>upgrade3.php</li>
+<li>upgrade5.php</li>
+</ul>
+</li>
+<li>upgrade.php</li>
+</ul>
+</li>
+<li><span style="font-weight:bold;">jscripts</span>
+<ul>
+<li>controls.js</li>
+<li>dragdrop.js</li>
+<li>effects.js</li>
+<li><span style="color:red;">general.js</span></li>
+<li>prototype.js</li>
+<li>scriptaculous.js</li>
+<li>slider.js</li>
+<li>thread.js</li>
+</ul>
+</li>
+<li><span style="color:red;">forumdisplay.php</span></li>
+<li><span style="color:red;">index.php</span></li>
+<li><span style="color:red;">misc.php</span></li>
+<li><span style="color:red;">showthread.php</span></li>
+</ul>
+<p>* <span style="color:red;">Red represents files that contain security updates</span><br />
+* <span style="color:green;">Green represents new files added in this release</span></p>
+<h4>For MyBB 1.4</h4>
+<p>For MySQL 5.5 compatibility and IE9 javascript fixes, please upgrade to MyBB 1.6.3. Support for MyBB 1.4 will be ending on 1st July 2011, after which there will be no more security updates for the 1.4 series.</p>
+<p><strong>1.4.15 to 1.4.16 Patches</strong><br />
+This patch is only for those users running MyBB 1.4.15. If you're running an older version of MyBB 1.4, and don't want to upgrade to 1.6 just yet, then please the latest version of MyBB 1.4 from the <a href="http://wiki.mybb.com/index.php/Versions" target="_blank">MyBB Wiki: Versions</a>.</p>
+<p>For help upgrading, see the <a href="http://wiki.mybb.com/index.php/Upgrading" target="_blank">MyBB Wiki: Upgrading</a>.</p>
+<p>Please download the attached ZIP archive below and replace the files in your forum directory with those from the ZIP archive.</p>
+<p><a href="http://www.mybb.com/download/144">1.4.15 changed files</a></p>
+<p><strong><em>You are required to run the upgrader for 1.4.16</em></strong>. After replacing the files above, remove the 'lock' file located in forum_root/install/, then visit forum_root/install/upgrade.php and follow the instructions (where forum_root is the web address for your forum). <strong><em>Remember to backup your forum's files and database</em></strong> before performing this upgrade.</p>
+<p>Once the upgrade has completed, visit the Templates &amp; Style area of your ACP - click on Templates on the left and go to the "Find Updated Templates". Revise and amend all affected templates here, paying attention to headerinclude, index_boardstats and forumdisplay_threadlist.</p>
+<p>If you wish to manually patch your board please download "1.4.16 patches" and follow the instructions in that file. You are also required to amend templates to ensure functionality for your board. For this, please download "1.4.16 template patches" and follow the instructions - you must do these for all custom themes you have installed.</p>
+<p><a href="http://www.mybb.com/download/140">1.4.15 patches</a><br />
+<a href="http://www.mybb.com/download/141">1.4.15 template patches</a></p>
+<p>Please remember that applying patches should only be a temporary measure until you can fully upgrade your board. The upgrader is required to run to allow the default templates to be updated with the new security fixes.</p>
+<p><strong><em>Changed Files since 1.4.15</em></strong></p>
+<ul>
+<li><span style="font-weight:bold;">inc</span>
+<ul>
+<li>class_core.php</li>
+<li><span style="color:red;">functions_search.php</span></li>
+</ul>
+</li>
+<li><span style="font-weight:bold;">install</span>
+<ul>
+<li><span style="font-weight:bold;">resources</span>
+<ul>
+<li><span style="color:red;">mybb_theme.xml</span></li>
+</ul>
+</li>
+<li>upgrade.php</li>
+</ul>
+</li>
+<li><span style="font-weight:bold;">jscripts</span>
+<ul>
+<li><span style="color:red;">general.js</span></li>
+</ul>
+</li>
+<li><span style="color:red;">forumdisplay.php</span></li>
+<li><span style="color:red;">index.php</span></li>
+<li><span style="color:red;">misc.php</span></li>
+<li><span style="color:red;">showthread.php</span></li>
+</ul>
+<p>* <span style="color:red;">Red represents files that contain security updates</span><br />
+* <span style="color:green;">Green represents new files added in this release</span></p>
+<h4><strong>Reporting MyBB security vulnerabilities</strong></h4>
+<p>If you think you've found a vulnerability in MyBB, we advise you not to publicly post it on these forums or publicly release information about it elsewhere until we've had time to prepare and release a patch.</p>
+<p>As always, you can send through security related messages on the MyBB website from the <a href="http://www.mybb.com/contact/" target="_blank">Contact Us</a> page.</p>
+<p>Thank you,<br />
+MyBB Team</p>

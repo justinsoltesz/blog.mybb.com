@@ -1,0 +1,102 @@
+---
+layout: post
+title: MyBB 1.8 Beta 3 Released
+date: 2014-07-21 20:30:50.000000000 -04:00
+categories:
+- Development
+- Releases
+tags:
+- '1.8'
+author: Pirata Nervo
+---
+<p>Guess what? The 3rd and last Beta version of MyBB 1.8 is out! After this version (unless something very bad or unexpected happens), we're rolling out 1.8.0 Stable/Gold for all of you. We need your help testing Beta 3 though so we can release 1.8.0 as stable as possible.</p>
+<p><strong><span style="color:#ba0f00;">NOTE THAT THIS IS NOT READY TO BE USED ON A LIVE WEBSITE.</span></strong></p>
+<p>You can see the currently open issues for Gold <a href="https://github.com/mybb/mybb/issues?direction=desc&amp;labels=1.8&amp;milestone=2&amp;page=1&amp;sort=updated&amp;state=open">here</a>.</p>
+<p>Color legend:</p>
+<ul>
+<li><span style="color:#0059ba;">Dark Blue</span> - Small (new) feature/change</li>
+<li><span style="color:#0090ff;">Light Blue</span> - Enhancement</li>
+<li><span style="color:#ff6e00;">Orange</span> - New Feature</li>
+</ul>
+<p>&nbsp;</p>
+<p>We're <strong>not</strong> mentioning bug fixes below (the same bug fixes applied to the 1.6 branch are also applied to 1.8 as of now and the bugs for 1.8 only are not mentioned as that would only be important if 1.8 was already stable.), only small feature changes, enhancements and entirely new features.</p>
+<p>Some of the enhancements mentioned below are related to the previous Beta versions (1st and 2nd) of 1.8 and they should appear as one only in the final list of enhancements for MyBB 1.8.</p>
+<p>&nbsp;</p>
+<p><strong>AdminCP and Front-end</strong></p>
+<ul>
+<li><span style="color:#0059ba;">Remove PHP Closing tags </span>- <a href="https://github.com/mybb/mybb/issues/979">#979</a></li>
+<li><span style="color:#0059ba;">Performance improvement: intval to (int) conversion </span>- <a href="https://github.com/mybb/mybb/issues/491">#491</a></li>
+<li><span style="color:#0059ba;">Update 3rd part libraries </span>- <a href="https://github.com/mybb/mybb/issues/957">#957</a></li>
+<li><span style="color:#0059ba;"><span style="color:#0090ff;">Warnings class/datahandler </span></span>- <a href="https://github.com/mybb/mybb/issues/957">#922</a></li>
+<li><span style="color:#ff6e00;">Hide signtature of users to certain groups </span>- <a href="https://github.com/mybb/mybb/issues/949">#949</a></li>
+<li><span style="color:#ff6e00;">Hide website links/buttons from certain groups </span>- <a href="https://github.com/mybb/mybb/issues/922">#922</a></li>
+<li><span style="color:#0059ba;">Add more hooks v2 </span>- <a href="https://github.com/mybb/mybb/issues/882">#882</a></li>
+<li><span style="color:#0059ba;">Allow custom flash messages </span>- <a href="https://github.com/mybb/mybb/issues/881">#881</a></li>
+<li><span style="color:#ff6e00;">Allow website field for certain groups only </span>- <a href="https://github.com/mybb/mybb/issues/808">#808</a></li>
+</ul>
+<p><strong>AdminCP</strong></p>
+<ul>
+<li><span style="color:#0090ff;">Option to disable contact details </span>- <a href="https://github.com/mybb/mybb/issues/900">#900</a></li>
+<li><span style="color:#ff6e00;">Log all 'locked out' failures in ACP </span>- <a href="https://github.com/mybb/mybb/issues/859">#859</a></li>
+<li><span style="color:#0090ff;">Add reported posts stats to ACP </span>- <a href="https://github.com/mybb/mybb/issues/858">#858</a></li>
+<li><span style="color:#0090ff;">Delayed moderation improvements </span>- <a href="https://github.com/mybb/mybb/issues/440">#440</a></li>
+<li><span style="color:#0090ff;">New Promotion rules </span>- <a href="https://github.com/mybb/mybb/issues/429">#429</a></li>
+</ul>
+<p><strong>Front-end</strong></p>
+<ul>
+<li><span style="color:#0059ba;">Overqualified selectors v2 </span>- <a href="https://github.com/mybb/mybb/issues/976">#976</a></li>
+<li><span style="color:#ff6e00;">inline_moderation.js friendly to table-less themes </span>- <a href="https://github.com/mybb/mybb/issues/915">#915</a></li>
+<li><span style="color:#0090ff;">Memberlist sorting </span>- <a href="https://github.com/mybb/mybb/issues/914">#914</a></li>
+<li><span style="color:#ff6e00;">Force Login </span>- <a href="https://github.com/mybb/mybb/issues/906">#906</a></li>
+<li><span style="color:#0059ba;">Add class to smilies </span>- <a href="https://github.com/mybb/mybb/issues/905">#905</a></li>
+<li><span style="color:#0059ba;">AJAX for security questions </span>- <a href="https://github.com/mybb/mybb/issues/894">#894</a></li>
+<li><span style="color:#0059ba;">Add get_user_by_username() helper function </span>- <a href="https://github.com/mybb/mybb/issues/893">#893</a></li>
+<li><span style="color:#0059ba;">find_replace_templates() accepts SID </span>- <a href="https://github.com/mybb/mybb/issues/889">#889</a></li>
+<li><span style="color:#0059ba;">$this-&gt;options in class_parser.php </span>- <a href="https://github.com/mybb/mybb/issues/880">#880</a></li>
+<li><span style="color:#0059ba;">Add class to announcements </span>- <a href="https://github.com/mybb/mybb/issues/879">#879</a></li>
+<li><span style="color:#0059ba;">Make forum friendly to outside pages </span>- <a href="https://github.com/mybb/mybb/issues/878">#878</a></li>
+<li><span style="color:#0059ba;">Change showthread.php icons to sprite </span>- <a href="https://github.com/mybb/mybb/issues/877">#877</a></li>
+<li><span style="color:#0059ba;">Add rebuild settings to cache tools </span>- <a href="https://github.com/mybb/mybb/issues/875">#875</a></li>
+<li><span style="color:#0059ba;">Add email description editing to editor </span>- <a href="https://github.com/mybb/mybb/issues/869">#869</a></li>
+<li><span style="color:#0059ba;">Add video sites to editor </span>- <a href="https://github.com/mybb/mybb/issues/862">#862</a></li>
+<li><span style="color:#ff6e00;">Check new members against StopForumSpam </span>- <a href="https://github.com/mybb/mybb/issues/860">#860</a></li>
+<li><span style="color:#0090ff;">Jump to Page in pagination </span>- <a href="https://github.com/mybb/mybb/issues/857">#857</a></li>
+<li><span style="color:#0059ba;">send_pm() should consider users' language </span>- <a href="https://github.com/mybb/mybb/issues/834">#834</a></li>
+<li><span style="color:#0090ff;">Forum statistics improvements </span>- <a href="https://github.com/mybb/mybb/issues/824">#824</a></li>
+<li><span style="color:#0090ff;">Image re-scaling and long words/text wrapping CSS/HTML changes </span>- <a href="https://github.com/mybb/mybb/issues/816">#816</a></li>
+<li><span style="color:#ff6e00;">Moderate Groups </span>- <a href="https://github.com/mybb/mybb/issues/439">#439</a></li>
+<li><span style="color:#0090ff;">Portal Improvements </span>- <a href="https://github.com/mybb/mybb/issues/436">#436</a></li>
+<li><span style="color:#0090ff;">Moderation Notifications </span>- <a href="https://github.com/mybb/mybb/issues/430">#430</a></li>
+<li><span style="color:#0090ff;">Thread Prefix system improvements </span>- <a href="https://github.com/mybb/mybb/issues/427">#427</a></li>
+<li><span style="color:#0090ff;">Ability to Stop tracking all messages </span>- <a href="https://github.com/mybb/mybb/issues/364">#364</a></li>
+<li><span style="color:#0059ba;">Settings description on installation </span>- <a href="https://github.com/mybb/mybb/issues/197">#197</a></li>
+</ul>
+<p>&nbsp;</p>
+<h4>Download</h4>
+<p><strong><span style="color:#ba0f00;">ONCE AGAIN, THIS IS NOT READY TO BE USED ON A LIVE WEBSITE! DO NOT UPGRADE YOUR LIVE WEBSITE TO THIS VERSION.</span></strong></p>
+<p>The download can be found <a href="http://resources.mybb.com/downloads/18/beta/MyBB%201.8%20Beta%203.zip">here</a>.</p>
+<p>&nbsp;</p>
+<h4>Upgrade</h4>
+<p>You are <em><strong>NOT</strong> </em>supposed to upgrade any 1.6 boards to 1.8 Beta 3 hence why we do not provide upgrading instructions. This is because you will not be able to upgrade from any of the Betas to 1.8. While we've done some work on the upgrader to guarantee that users no longer experience errors, this hasn't been tested thoroughly. This is our number one priority in the next development phase.</p>
+<p>&nbsp;</p>
+<h4>Bug Reports</h4>
+<p>Found a bug? (or perhaps a few more...) Please post your <strong>detailed</strong> bug report in the <a href="http://community.mybb.com/forum-157.html">1.8 Bug Reports forum</a>.</p>
+<p><strong>Please always double-check</strong> if the issue hasn't been reported already.</p>
+<p>&nbsp;</p>
+<h4>Themes and Plugins Assistance</h4>
+<p>If you have any <strong>development</strong> questions about possible issues you may have while upgrading your themes or your plugins - or issues you may actually be having - please post in <a href="http://community.mybb.com/forum-156.html">this forum</a>.</p>
+<p>&nbsp;</p>
+<h4>Contributors</h4>
+<p>We'd like to thank the following contributors, they have been exceptional during the 1.8 development:</p>
+<ul>
+<li><a title="martec" href="https://github.com/martec">martec</a></li>
+<li><a href="https://github.com/ATofighi">ATofighi</a></li>
+<li><a title="Cu8eR" href="https://github.com/Cu8eR">Cu8eR</a></li>
+<li><a title="Nik101010" href="https://github.com/Nik101010">Nik101010</a></li>
+<li><a title="xykul" href="https://github.com/xykul">xykul</a></li>
+</ul>
+<p>They have created many Pull Requests, they helped us out solving bugs and finishing features and took part in many discussions on GitHub. MyBB is no longer a product developed by the team only, but by the community as well.</p>
+<p>If you want to help us out and become a Contributor, be sure to read <a href="http://blog.mybb.com/2014/05/30/getting-involved-contributors/">this blog post</a>. If you'd rather <a href="http://www.mybb.com/about/apply">join the team</a>, feel free to contact us through <a href="http://community.mybb.com/forum-135.html">Private Inquires</a>.</p>
+<p>&nbsp;</p>
+<p>Best Regards,<br />
+The MyBB Group</p>

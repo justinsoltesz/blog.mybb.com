@@ -1,0 +1,56 @@
+---
+layout: post
+title: MyBB 1.6.6 Security Release
+date: 2012-02-10 13:36:25.000000000 -05:00
+categories:
+- Releases
+- Security
+- Updates
+tags:
+- '1.6'
+author: Chris Boulton
+---
+<p>MyBB 1.6.6 is now available from the MyBB website and is a security release for the 1.6 series.</p>
+<h4>What's added/changed in this version?</h4>
+<p>In 1.6.6, <strong>1 major issue</strong> and <strong>14 low risk vulnerabilities</strong> have been fixed. Only the issues listed below are fixed; a further maintenance release will be available with general fixes to functionality in the near future.</p>
+<ul>
+<li>Vulnerabilities:
+<ul>
+<li>Non Critical: Import a non-CSS stylesheet (Theme)</li>
+<li>Low Risk: CSRF vulnerability on Admin CP logout (<a href="http://dev.mybb.com/issues/1769" target="_blank">Issue #1769</a>)</li>
+<li>Low Risk: CSRF vulnerability when clearing a stored password (<a href="http://dev.mybb.com/issues/1824" target="_blank">Issue #1824</a>)</li>
+<li>Low Risk: CSRF vulnerability when removing a buddy (<a href="http://dev.mybb.com/issues/1825" target="_blank">Issue #1825</a>)</li>
+<li>Low Risk: CSRF vulnerability with Admin CP join requests (<a href="http://dev.mybb.com/issues/1834" target="_blank">Issue #1834</a>)</li>
+<li>Low Risk: CSRF vulnerability in Group Promotions Enable/Disable</li>
+<li>Low Risk: CSRF vulnerability in ACP Edit User (Avatar)</li>
+<li>Low Risk: CSRF vulnerability with activating a user</li>
+<li>Low Risk: XSS vulnerability when moving an event (Calendar)</li>
+<li>Low Risk: XSS vulnerabilities in Akismet plugin</li>
+<li>Low Risk: XSS vulnerabilities in Forum Subscriptions (User CP)</li>
+<li>Low Risk: XSS vulnerability in Moderator Logs</li>
+<li>Low Risk: XSS vulnerability in Edit Post</li>
+<li>Low Risk: XSS vulnerability when editing Announcements</li>
+</ul>
+<p><span>Thanks to SQA Team Member Nathan Malcolm for finding all of these!</span></li>
+<li>Vanishing Announcements in 1.6.5 (<a href="http://dev.mybb.com/issues/1781" target="_blank">Issue #1781</a>, <a href="http://dev.mybb.com/issues/1785" target="_blank">#1785</a>) - with thanks to Paul H and Vini Holden.</li>
+</ul>
+<p>For more information on these vulnerabilities, please <a href="http://wiki.mybb.com/index.php/1.6.6" target="_blank">view the 1.6.6 Changes in the Wiki</a>.</p>
+<h4>Upgrading from 1.6.5 and Other Versions</h4>
+<p>Before performing any upgrade, please remember to backup your forum's files and database and store them safely. If you have edited core files, including language files, please make sure you make a changelog for these changes so you can make them again once the upgrade is complete.</p>
+<p>To upgrade, follow the Upgrading process. The <strong>upgrade script</strong> is required. There are changes to 1 <strong>language</strong> file. There is 1 change to <strong>themes</strong>. Please <a href="http://wiki.mybb.com/index.php/1.6.6" target="_blank">view the 1.6.6 Changes in the Wiki</a> for more information about these changes.</p>
+<blockquote><p>If you're using MyBB 1.6.5</p>
+<ul>
+<li>Download and use the <a href="https://github.com/downloads/mybb/mybb16/changed_files_1606.zip">Changed Files Package</a> (MD5 checksum: 4bc870306925bf40643ad7550479c741)</li>
+<li><a href="http://wiki.mybb.com/index.php/Upgrading#Beginning_the_Upgrade">Follow the Wiki Upgrading instructions</a></li>
+</ul>
+<p>If you're not using MyBB 1.6.5</p>
+<ul>
+<li>Download and use the full <a href="https://github.com/downloads/mybb/mybb16/mybb_1606.zip">1.6.6 release package</a> (MD5 checksum: 79823144eb149fc4f89a1bcf7443a6c3)</li>
+<li><a href="http://mybb.com/downloads/latest/">Follow the </a><a href="http://wiki.mybb.com/index.php/Upgrading#Beginning_the_Upgrade" target="_blank">Wiki Upgrading instructions</a></li>
+</ul>
+</blockquote>
+<h4>Reporting MyBB security vulnerabilities</h4>
+<p>If you think you've found a vulnerability in MyBB, we advise you not to publicly post it on these forums or publicly release information about it elsewhere until we've had time to prepare and release a patch.</p>
+<p>As always, you can send through security related messages on the MyBB website from the <a target="_blank">Contact Us</a> page or in our <a href="http://community.mybb.com/forum-135.html">Private Inquiries</a> forum - where you can start a new thread that only you and the MyBB Team can see.</p>
+<p>Thank you,<br />
+MyBB Team</p>

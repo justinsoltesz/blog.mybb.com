@@ -1,0 +1,12 @@
+---
+layout: blog
+---
+<div class="page-content page-content--sidebar">
+    <h1 class="section-heading">Categorized under {{ page.title }}</h1>
+    {% for post in page.posts %}
+        {% include post_preview.html %}
+    {% endfor %}
+</div>
+<aside class="page-sidebar">
+	{% include sidebar.html %}
+</aside>

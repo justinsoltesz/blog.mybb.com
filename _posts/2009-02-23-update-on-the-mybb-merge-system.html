@@ -1,0 +1,31 @@
+---
+layout: post
+title: Update on the MyBB Merge System
+date: 2009-02-23 15:58:23.000000000 -05:00
+categories:
+- Updates
+tags: []
+author: Chris Boulton
+---
+<p>Hi,</p>
+<p>My name is Ryan Gordon and I am the lead developer of MyBB and the MyBB Merge System. This blog post is here to inform the community members on some of the caveats and successes of the MyBB Merge System.</p>
+<p>Let me first introduce a bit of history on the MyBB Merge System. It has been in development for quite a while - before MyBB 1.2's release - and it hasn't officially reached a "stable" tag in its development. The MyBB Merge System is quite a revolutionary product in terms of the abilities it provides to those who use it. Many people don't realize the full potential or mistakenly think that the MyBB Merge System is used to virtually "link" two forums together, when in fact the Merge System actually takes data from any supported forum software and combines it with your current forum. This is where things start to get interesting.</p>
+<p>So let's get straight to the point- Because of the unique nature of the Merge System, design and development is a grueling process. We have been able to work through most of the problems but several issues have plagued us over the course of its development:</p>
+<ul>
+<li><em>Testing</em> - It is a long enduring process to replicate a bug report, that may not have been caused by the Merge System in the first place.  This is compounded by the fact we are also testing with different forum systems with which we are not familiar.</li>
+<li><em>Complexity</em> - The actual process of converting data from one forum to another is very easy, which is why most forum software choose to go down that path. However, the process of being able to <em>merge</em> two existing forums into one is a much more complex process. In terms of manpower, this has greatly impacted our development abilities for the Merge System.</li>
+<li><em>Mainstream Availability</em> - Many people shy away from testing the Merge System because of the "<acronym title="Release Candidate">RC</acronym>" or "Beta" tags attached to it. Unfortunately, we haven't gotten many people to come forth and test it for that reason and in turn it just creates a catch-22. If we can't get people to test it, then it is difficult for us to move forward. On the flip side, people don't want to test it unless we've completed development to a "stable" point.</li>
+</ul>
+<p>Testing has been a problem since the beginning and the Merge System has gone through 3-4 rewrites because of it. The process of testing and reproducing in its current state is cruel to us developers for a few reasons:</p>
+<ul>
+<li><em>Information </em>- We need very specific information to reproduce problems, which can be sometimes hard to procure from users. And when we get that information we have to determine whether it was caused by the Merge System, the other forum system, or by a modification or plugin that may have skewed with the database data.</li>
+<li><em>Time </em>- The MyBB Merge System is a staircase in a high rise. You have to work your way up from Level A all the way through Level Z to complete the merge. At any point in time, a problem could have happened. If we are able to reproduce the problem, then we have to look at the code to see if there is a way to fix it. If the developers were able to come up with a fix, then we have to test the Merge System again. If the fix didn't work then we're back to square 2 and we have to repeat the process. This means that we are at minimum required to run the Merge System twice on our test data, and usually it's more than that.</li>
+<li><em>Reproduction </em>- In the case that we weren't able to reproduce the problem then we have to go back to square 1 and figure out what more information we need or in some cases, direct access to the test data in the live environment where the problem originally happened. This leads us to our last reason.</li>
+<li><em>Communication </em>- Some of the time users report their problems and never come back because the merge is already completed into their forum and most problems are usually already fixable with a bit of manual work. This makes it really frustrating when we're trying to reproduce and diagnose problems reported by users.</li>
+</ul>
+<p>Complexity has also been a large problem for our developers and one of the reasons progress has been so slow. Not only do we have to perform balancing acts between MyBB and the Merge System, we also have to deal with the complexity of the Merge System when testing and reproducing issues and general updates overall.</p>
+<p>Lastly, mainstream availability has been a big issue with the Merge System. The market for a Merge System is a lot smaller then the market of MyBB and it's a one-time-use program, so people tend to use it, report their problems, and never need to come back to it. </p>
+<p>For the reasons above, we have started looking into automated methods of testing code.  One solution we are currently trying is Unit Testing, a type of testing used in SQA departments.  In fact, I am current about half way through reworking the Merge System to support Unit Testing. </p>
+<p><a href="http://en.wikipedia.org/wiki/Unit_testing">Unit testing</a> is a form of quality assurance where small blocks of a software module such as a single function are tested to ensure that by themselves their outputs correspond correctly to given test inputs.  At a click of a button, a developer or tester can run a set of tests and see the results quite simply as a "pass" or "fail" for each of the test cases.  This will help us quickly identify any "broken" components which may have been caused by the latest changes, and from which component the problem is in.</p>
+<p>Once we have unit testing in place, a large majority of problems we would be able to identify and resolve before it is ever released to the public and in turn we won't need to rely as much on the public to test the Merge System.</p>
+<p>Thanks for reading and I hope you enjoyed this article.</p>

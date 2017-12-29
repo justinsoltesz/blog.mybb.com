@@ -1,0 +1,50 @@
+---
+layout: post
+title: MyBB 1.4.13 Released - Security Patches to MyBB 1.4.12
+date: 2010-04-19 17:57:21.000000000 -04:00
+categories:
+- Releases
+- Security
+- Updates
+tags:
+- '1.4'
+author: Chris Boulton
+---
+<p>MyBB 1.4.13 is now available on the MyBB website and is a patch to MyBB 1.4.12 which introduced two regressions related to the security updates in MyBB 1.4.12.</p>
+<p>This release is to ensure that all users on 1.4.12 have the proper security patches applied to their forum.</p>
+<p>Thank you to Pirata Nervo and Labrocca for alerting us of these issues and to Stefan Esser for assisting us in a patch for <a href="http://dev.mybboard.net/issues/843">Issue #843</a>.</p>
+<h4><strong>What's fixed in this version?</strong></h4>
+<ul>
+<li><a href="http://dev.mybboard.net/issues/880">Issue #880</a></li>
+<li><a href="http://dev.mybboard.net/issues/843">Issue #843</a></li>
+</ul>
+<p><span style="color:red;font-size:x-larger;"><strong>This update does <span style="text-decoration:underline;">not</span> require running the upgrader.</strong></span><br />
+<em>There are <strong>no</strong> database schema, language string, or template changes in this version.</em></p>
+<h4><strong>MyBB 1.4.12 to MyBB 1.4.13 Patch</strong></h4>
+<p>This patch is only for users running MyBB 1.4.12. If you are running an older version of MyBB then please download MyBB 1.4.13 from the MyBB site and update to it using the general <a title="View the MyBB Wiki page for Upgrading" href="http://wiki.mybboard.net/index.php/Upgrading" target="_blank">[Wiki: Upgrading]</a> guide.</p>
+<p>Please download the attached ZIP archive and replace the files in your forum directory with those from the ZIP archive.<br />
+<a href="http://mybboard.net/download/120">changed_files_1413.zip</a></p>
+<p>Alternatively, if you are running MyBB 1.4.11, you may follow the "MyBB 1.4.11 to MyBB 1.4.12 Patch" instructions in the <a href="http://blog.mybboard.net/2010/04/13/mybb-1-4-12-released-security-maintenance-update/">MyBB 1.4.12 announcement</a> and then apply the MyBB 1.4.12 to MyBB 1.4.13 patch above.</p>
+<h4>The following files were changed since the initial MyBB 1.4.12 release:</h4>
+<ul>
+<li>inc
+<ul>
+<li>datahandlers
+<ul>
+<li><span style="color:red;">post.php</span></li>
+</ul>
+</li>
+<li><span style="color:red;">functions.php</span></li>
+<li>class_core.php</li>
+</ul>
+</li>
+</ul>
+<p>* <span style="color:red;">Red represents files that contain security updates</span><br />
+* <span style="color:green;">Green represents new files added in this release</span></p>
+<h4><strong>Reporting MyBB security vulnerabilities</strong></h4>
+<p>If you think you've found a vulnerability in MyBB, we advise you not to publicly post it on these forums or publicly release information about it elsewhere until we've had time to prepare and release a patch.</p>
+<p>As always, you can send through security related messages on the MyBB website from the <a href="http://www.mybboard.net/contact/" target="_blank">Contact Us</a> page.</p>
+<h4><strong>MyBB 1.2.14 Patch</strong></h4>
+<p>All users of the 1.2.x series are urged to upgrade to the latest release of MyBB. (1.4.13) MyBB 1.2 is no longer being supported and security updates for the MyBB 1.2 series ceased as of January 1, 2010.</p>
+<p>Thank you,<br />
+MyBB Team</p>

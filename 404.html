@@ -1,0 +1,35 @@
+---
+layout: simple
+section: blog
+
+title: File Not Found
+permalink: /404.html
+---
+<article class="main">
+    <header class="main-feature">
+        <div class="wrapper">
+            <h1 class="main-feature__page-title">{{ page.title }}</h1>
+            <p class="main-feature__description"><strong>Unfortunately, the page you tried to access could not be found.</strong> If you were brought to this page from our website, please <a href="https://mybb.com/contact/">contact us</a> with a description of how you came to this page. You can also search for what you were looking for below.</p>
+        </div>
+    </header>
+    <section class="home-block home-block--search">
+        <div class="wrapper">
+            <div class="page-content page-content--centered">
+                <form method="get" action="https://www.google.com/search">
+                    <section class="block form">
+                        <div class="form__section">
+                            <div class="form__row">
+                                <h1 class="form__row__title"><label for="q">Search MyBB Development Blog</label></h1>
+                        		<input type="hidden" name="as_sitesearch" id="as_sitesearch" value="blog.mybb.com">
+                                <input name="q" id="q" type="text" class="searchField inputText" placeholder="Search keyword" />
+                            </div>
+                            <div class="form__submit">
+                                <button id="submit" type="submit" class="button">{% include icon.html icon='search' %} Search</button>
+                            </div>
+                        </div>
+                    </section>
+                </form>
+            </div>
+        </div>
+    </section>
+</article>

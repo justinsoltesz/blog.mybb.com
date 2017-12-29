@@ -1,0 +1,226 @@
+---
+layout: post
+title: MyBB 1.4.8 Released - Maintenance & Security Release
+date: 2009-06-26 15:37:08.000000000 -04:00
+categories:
+- Releases
+- Updates
+tags:
+- '1.4'
+author: Chris Boulton
+---
+<p>MyBB 1.4.8 is now available on the MyBB website and is a general maintenance and security release.</p>
+<p>This release fixes several reported issues with version released since 1.4.6 causing some incorrect functionality of MyBB. These bugs have been fixed to provide a more stable version of MyBB for public use.</p>
+<h4><strong>What's added/changed in this version?</strong></h4>
+<ul>
+<li>One Low XSS Vulnerability fixed in the Archive - This is tagged as low because it requires moderator permissions. This vulnerability was discovered and reported by frostschutz.</li>
+<li>One Medium XSS vulnerabilities fixed in Attachments - This vulnerability was reported by frostschutz.<br /><i>Please note that this patch will remove the ability to open some types of attachments directly in your browser (e.g. QuickTime Movies), and will instead ask you to download them.</i></li>
+<li>... Several other bug fixes</li>
+</ul>
+<p>This release has been tested by our Software Quality Assurance group.</p>
+<h4><strong>MyBB 1.4.7 to MyBB 1.4.8 Patch</strong></h4>
+<p>This patch is only for users running MyBB 1.4.7. If you are running any other version of the MyBB 1.4 series then please download MyBB 1.4.8 from the MyBB site and update to it.</p>
+<p>If you wish to manually patch your board please download "mybb_1407_patches.txt" and follow the instructions in that file.</p>
+<p><a href="http://mybboard.net/download/105">mybb_1407_patches.txt</a></p>
+<p><strong>The manual patch set instructions only fixes the security vulnerabilities and is only made available to temporarily secure your forum until you have time to run the complete upgrade.</strong></p>
+<p>Information on upgrading, template changes and language changes can be found in the posts below.</p>
+<p><span style="color:red;font-size:x-larger;"><strong>Please note, that you need to run the upgrade script for this version.</strong></span><br />
+<span style="color:red;"><strong>This is so the templates may be updated.</strong></span><br />
+<i>There are <strong>no</strong> database schema changes in this version.</i></p>
+<h4><strong>Reporting MyBB security vulnerabilities</strong></h4>
+<p>If you think you've found a vulnerability in MyBB, we advise you not to publicly post it on these forums or publicly release information about it elsewhere until we've had time to prepare and release a patch.</p>
+<p>As always, you can send through security related messages on the MyBB website from the Contact Us page.</p>
+<h4><strong>MyBB 1.2.14 Patch</strong></h4>
+<p>Users running MyBB 1.2.14 or any previous release of the MyBB 1.2 series may use the same manual instructions provided in the "mybb_1407_patches.txt" attachment (excluding the version change).</p>
+<h4><strong>Upgrading from the 1.4 series</strong></h4>
+<p>When upgrading from 1.4.7, you will not lose any custom themes, plugins or language packs which you may have installed.</p>
+<p>Follow the general <a href="http://wiki.mybboard.net/index.php/Upgrading" target="_blank" title="View the MyBB Wiki page for Upgrading">[Wiki: Upgrading]</a> guide outlined on the MyBB Wiki to complete the upgrade process. You may download a ZIP archive of changed files here:</p>
+<p><a href="http://mybboard.net/download/106">changed_files_1408.zip</a></p>
+<p><strong>You must then check for modified templates using the instructions below.</strong></p>
+<h4><strong>Upgrading from other versions</strong></h4>
+<p>If you are upgrading from a version earlier than 1.2 then you will lose your custom themes, templates and language packs due to the number of changes between your version and the 1.2 series.</p>
+<p><span style="color:red;"><strong>Before you attempt to upgrade, ensure you have a database backup and a copy of the files currently in use on your board.</strong></span> This is so you can revert back to your earlier version if you need to or something goes horribly wrong with the upgrade process.</p>
+<p>Follow the general <a href="http://wiki.mybboard.net/index.php/Upgrading" target="_blank" title="View the MyBB Wiki page for Upgrading">[Wiki: Upgrading]</a> guide outlined on the MyBB Wiki to complete the upgrade process.</p>
+<h4><strong>Changed files since MyBB 1.4.6</strong></h4>
+<ul>
+<li>announcements.php</li>
+<li><span style="color:red;">attachment.php</span></li>
+<li>forumdisplay.php</li>
+<li>global.php</li>
+<li>member.php</li>
+<li>report.php</li>
+<li>search.php</li>
+<li>sendthread.php</li>
+<li>showthread.php</li>
+<li>syndication.php</li>
+<li>xmlhttp.php</li>
+<li><span style="font-weight:bold;">install/</span>
+<ul>
+<li><span style="font-weight:bold;">resources/</span>
+<ul>
+<li>mybb_theme.xml
+		</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><span style="font-weight:bold;">archive/</span>
+<ul>
+<li><span style="color:red;">index.php<br />
+	</span></li>
+</ul>
+</li>
+<li><span style="font-weight:bold;">admin/</span>
+<ul>
+<li><span style="font-weight:bold;">inc/</span>
+<ul>
+<li>functions_view_manager.php
+		</li>
+</ul>
+</li>
+<li><span style="font-weight:bold;">modules/</span>
+<ul>
+<li><span style="font-weight:bold;">forum/</span>
+<ul>
+<li>management.php
+			</li>
+</ul>
+</li>
+<li><span style="font-weight:bold;">style/</span>
+<ul>
+<li>templates.php
+			</li>
+</ul>
+</li>
+<li><span style="font-weight:bold;">tools/</span>
+<ul>
+<li>adminlog.php
+			</li>
+</ul>
+</li>
+<li><span style="font-weight:bold;">config/</span>
+<ul>
+<li>plugins.php</li>
+<li>spiders.php
+			</li>
+</ul>
+</li>
+<li><span style="font-weight:bold;">user/</span>
+<ul>
+<li>admin_permissions.php</li>
+<li>users.php
+			</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><span style="font-weight:bold;">inc/</span>
+<ul>
+<li>class_core.php</li>
+<li>class_language.php</li>
+<li>class_moderation.php</li>
+<li>functions.php</li>
+<li>functions_search.php</li>
+<li><span style="font-weight:bold;">plugins/</span>
+<ul>
+<li>akismet.php
+		</li>
+</ul>
+</li>
+<li><span style="font-weight:bold;">cachehandlers/</span>
+<ul>
+<li>memcache.php
+		</li>
+</ul>
+</li>
+<li><span style="font-weight:bold;">languages/</span>
+<ul>
+<li>english.php</li>
+<li><span style="font-weight:bold;">english/</span>
+<ul>
+<li>global.lang.php</li>
+<li><span style="font-weight:bold;">admin/</span>
+<ul>
+<li>config_spiders.lang.php
+				</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><span style="font-weight:bold;">datahandlers/</span>
+<ul>
+<li>pm.php</li>
+<li>post.php</li>
+<li>user.php
+		</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>* <span style="color:red;">Red represents files that contain security updates</span><br />
+* <span style="color:green;">Green represents new files added in this release</span></p>
+<h4><strong>Bugs fixed since MyBB 1.4.6</strong></h4>
+<ul>
+<li><a href="http://community.mybboard.net/thread-51407.html" target="_blank">#51407</a> - change permission for admin user</li>
+<li><a href="http://community.mybboard.net/thread-51377.html" target="_blank">#51377</a> - Plugins with Admin CP Hooks run on Plugin Updates page</li>
+<li><a href="http://community.mybboard.net/thread-51257.html" target="_blank">#51257</a> - Syndication.php MySQL Error (Limit Option) [R] [C-StefanT]</li>
+<li><a href="http://community.mybboard.net/thread-51177.html" target="_blank">#51177</a> - [Archive] sticky lack htmlspecialchars_uni() escaping [C-StefanT]</li>
+<li><a href="http://community.mybboard.net/thread-51054.html" target="_blank">#51054</a> - Archive - SQL bug fetching attachments/posts with abandoned thread [C-StefanT]</li>
+<li><a href="http://community.mybboard.net/thread-50833.html" target="_blank">#50833</a> - Birthday without day [C-StefanT]</li>
+<li><a href="http://community.mybboard.net/thread-50441.html" target="_blank">#50441</a> - Search Bug w/ "and" [R] [C-StefanT]</li>
+<li><a href="http://community.mybboard.net/thread-50324.html" target="_blank">#50324</a> - Missing space character [R] [C-Michael S.]</li>
+<li><a href="http://community.mybboard.net/thread-50323.html" target="_blank">#50323</a> - Missing &lt;/tr&gt; in Template modcp_ipsearch_result [R] [C-Michael S.]</li>
+<li><a href="http://community.mybboard.net/thread-50291.html" target="_blank">#50291</a> - Validation Issue [C-Chris W B.]</li>
+<li><a href="http://community.mybboard.net/thread-50287.html" target="_blank">#50287</a> - Akismet plugin username link problem [C-StefanT]</li>
+<li><a href="http://community.mybboard.net/thread-50240.html" target="_blank">#50240</a> - Ability to delete templates [C-Chris W B.]</li>
+<li><a href="http://community.mybboard.net/thread-49888.html" target="_blank">#49888</a> - [typo] memcache.php [C-StefanT]</li>
+<li><a href="http://community.mybboard.net/thread-49838.html" target="_blank">#49838</a> - [pgsql] Reporting posts in unmoderated forums [C-StefanT]</li>
+<li><a href="http://community.mybboard.net/thread-49461.html" target="_blank">#49461</a> - [typo] inc/cachehandlers/memcache.php [C-StefanT]</li>
+<li><a href="http://community.mybboard.net/thread-49898.html" target="_blank">#49898</a> - Template problem with announcements and no threads [C-StefanT]</li>
+<li><a href="http://community.mybboard.net/thread-49276.html" target="_blank">#49276</a> - canviewthreads error problem [C-StefanT]</li>
+<li><a href="http://community.mybboard.net/thread-49258.html" target="_blank">#49258</a> - Notification about new reported posts via PM [C-StefanT]</li>
+<li><a href="http://community.mybboard.net/thread-49256.html" target="_blank">#49256</a> - Notification about new PM from MyBB Engine [R] [C-StefanT]</li>
+<li><a href="http://community.mybboard.net/thread-49255.html" target="_blank">#49255</a> - [pgsql] Report posts [C-StefanT]</li>
+<li><a href="http://community.mybboard.net/thread-49251.html" target="_blank">#49251</a> - [Typo] class_moderation.php (1.4.?) [R] [C-StefanT]</li>
+<li><a href="http://community.mybboard.net/thread-49111.html" target="_blank">#49111</a> - Percent of total posts [R] [C-StefanT]</li>
+<li><a href="http://community.mybboard.net/thread-48814.html" target="_blank">#48814</a> - config_spiders.lang.php overrides $lang-&gt;language [C-sayakb]</li>
+<li><a href="http://community.mybboard.net/thread-48773.html" target="_blank">#48773</a> - Usergroup email limit off by one error [C-sayakb]</li>
+<li><a href="http://community.mybboard.net/thread-48771.html" target="_blank">#48771</a> - Merged Account Reputation Issue</li>
+<li><a href="http://community.mybboard.net/thread-48692.html" target="_blank">#48692</a> - announcement in password protected forum [C-sayakb]</li>
+<li><a href="http://community.mybboard.net/thread-48670.html" target="_blank">#48670</a> - Find user posts - not displaying new posts (when hitting limit) [R]</li>
+<li><a href="http://community.mybboard.net/thread-48668.html" target="_blank">#48668</a> - Displaying search results as posts for moderators [R] [C-StefanT]</li>
+<li><a href="http://community.mybboard.net/thread-48603.html" target="_blank">#48603</a> - Bug? Admins cannot see user list</li>
+<li><a href="http://community.mybboard.net/thread-48601.html" target="_blank">#48601</a> - [pgsql] SQL error if threads are moderated [C-StefanT]</li>
+<li><a href="http://community.mybboard.net/thread-47745.html" target="_blank">#47745</a> - editpost.php issue with closed forums [R]
+</li>
+</ul>
+<h4><strong>Theme and template changes</strong></h4>
+<p>Using the "Find Updated" link under the "Templates" page in the Admin CP you can find a list of the templates that have changed in this release that you've got one or more custom copies of.</p>
+<p>After identifying changed templates using the tool you can either revert your custom template to the default (delete it) or use the "diff" tool to perform a difference analysis on your custom template and the default.</p>
+<p>"Revert required" indicates that for this template to work correctly with MyBB 1.4.8 you'll either need to revert it to the default or modify your custom template to include the changes in the default. If a revert is not required your custom version of the template should work perfectly fine.</p>
+<h4><strong>Template changes</strong></h4>
+<p>Since MyBB 1.4.6 the following templates have had changes to them:</p>
+<ul>
+<li>modcp_ipsearch_result</li>
+<li>forumdisplay_announcements_announcement</li>
+</ul>
+<p>* <span style="color:red;">Red represents the template must be updated or reverted to fix security problems</span></p>
+<h4><strong>Language file changes</strong></h4>
+<p>Since MyBB 1.4.6 the following language files have had changes to them:</p>
+<ul>
+<li>global.lang.php</li>
+<li><span style="font-weight:bold;">admin/</span>
+<ul>
+<li>config_spiders.lang.php
+				</li>
+</ul>
+</li>
+</ul>
+<p>Either update your language packs to include the changes in these files or revert to the standard English language pack.</p>
+<h4><strong>Plugins</strong></h4>
+<p>Most of your MyBB 1.4.x plugins will work correctly with 1.4 without any updates.</p>

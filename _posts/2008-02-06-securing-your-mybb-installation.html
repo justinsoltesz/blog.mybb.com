@@ -1,0 +1,36 @@
+---
+layout: post
+title: Securing your MyBB Installation
+date: 2008-02-06 14:02:42.000000000 -05:00
+categories:
+- Security
+tags:
+- Forum
+- MyBB
+- PHP
+author: Chris Boulton
+---
+<p>There are many things you can do to keep your MyBB Installation secure - the below list contains 5 basic ways to make sure your MyBB Forum is as secure as possible. I've tried to keep it as simple and concise as possible. Leave a comment if you don't understand and we'll clarify.</p>
+<ol>
+<li><strong>Keep your MyBB Software Up-To-Date </strong>- Always make sure your running the latest version of MyBB. Using the <em>Version Check</em> tool from your <em>Administration Control Panel </em>you can always check for the latest version of MyBB and latest announcements.</li>
+<li><strong>Sign up to the MyBB Mailing List</strong> - By signing up to the <a href="http://mybboard.net/mailing-list" title="MyBB Mailing List" target="_blank">MyBB Mailing List</a> you can receive notification of important MyBB updates and releases, allowing you to update your forum in a timely and fashionable manor.</li>
+<li><strong>Rename your "admin" directory</strong> - Renaming your admin directory to something else will greatly reduce the risk of someone being able to hack their way into you Administration Control Panel.
+<ol>
+<li>Using an <a href="http://wiki.mybboard.net/index.php/Using_FTP" title="Using an FTP Program" target="_blank">FTP Program</a>  navigate to your forum directory.</li>
+<li>Find the 'admin' directory and rename it to something less obvious. If you want to be really secure you can use an online program to generate a name for you. For example: <a href="http://www.pctools.com/guides/password/" title="Online Random Password Generator" target="_blank">http://www.pctools.com/guides/password/</a></li>
+<li>Now that you've renamed your admin directory we need to update the configuration file so MyBB knows what it is called. Navigate to your 'inc' directory and open up config.php using a Text Editor such as WordPad.
+<ol>
+<li>In config.php Find:<br />
+<blockquote><p><code>$config['admin_dir'] = 'admin';</code></p></blockquote>
+</li>
+<li>Replace with the new admin name (where <em>admin-name</em> is the name of the new admin directory you set):</li>
+</ol>
+<blockquote><p><code>$config['admin_dir'] = '<em>admin-name</em>';</code></p></blockquote>
+</li>
+</ol>
+</li>
+<li>Save the file on your server.</li>
+</ol>
+<li><strong>Backup Regulary</strong> - Backing up your forum regularly is the best defense you can have against hackers. <strong>At least once per week!</strong> MyBB Offers a Backup solution in the <em>Administration Control Panel</em> under <em>Backup Database</em>.<em> </em>For more information and alternative ways see our wiki: <a href="http://wiki.mybboard.net/index.php/Database_Backup" title="Database Backup" target="_blank">http://wiki.mybboard.net/index.php/Database_Backup</a>. (Note: MyBB 1.4 allows for automatically backing up your database.)</li>
+<li><strong>Keep MySQL, PHP, and Apache Up-To-Date </strong>- Hackings of your forum aren't always caused by exploits in MyBB. Often hosts are running months old versions of MySQL, PHP, Apache, and even other programs and extensions riddled with security exploits. If you find your host is running an old version urge them to upgrade as soon as possible. If you own your own server you can respectively find updates at <a href="http://mysql.com/" title="MySQL" target="_blank">http://mysql.com</a>, <a href="http://php.net/" title="PHP" target="_blank">http://php.net</a> and <a href="http://www.apache.org/" title="Apache" target="_blank">http://www.apache.org</a>.</li>
+<p>We'll have another, more technical blog post on security for all of you IT pros (or in training, of course) later on.</p>

@@ -1,0 +1,291 @@
+---
+layout: post
+title: MyBB 1.4.10 Released - Maintenance Release
+date: 2009-12-01 16:55:20.000000000 -05:00
+categories:
+- Releases
+- Updates
+tags:
+- '1.4'
+author: Chris Boulton
+---
+<p>MyBB 1.4.10 is now available on the MyBB website and is a general maintenance release.</p>
+<p>This release fixes several reported issues with version released since 1.4.8 causing some incorrect functionality of MyBB. These bugs have been fixed to provide a more stable version of MyBB for public use.</p>
+<h4><strong>What's added/changed in this version?</strong></h4>
+<ul>
+<li>MyBB 1.4.10 is now compatible with PHP 5.3.</li>
+<li>Server Statistics are now sent to MyBB at the end of installation for analytical purposes. This is of course anonymous, no confidential information is sent, and you may easily opt out if you wish.</li>
+<li>... many other bug fixes</li>
+</ul>
+<p>This release has been tested by our Software Quality Assurance group.</p>
+<p>Information on upgrading, template changes and language changes can be found in the posts below.</p>
+<p><span style="color:red;font-size:x-larger;"><strong>Please note, that you need to run the upgrade script for this version.</strong></span><br />
+<span style="color:red;"><strong>This is so the templates may be updated.</strong></span><br />
+<i>There are <strong>no</strong> database schema changes in this version.</i></p>
+<h4><strong>Upgrading from the 1.4 series</strong></h4>
+<p>When upgrading from 1.4.9, you will not lose any custom themes, plugins or language packs which you may have installed.</p>
+<p>Follow the general <a href="http://wiki.mybboard.net/index.php/Upgrading" target="_blank" title="View the MyBB Wiki page for Upgrading">[Wiki: Upgrading]</a> guide outlined on the MyBB Wiki to complete the upgrade process. You may download a ZIP archive of changed files here:</p>
+<p><a href="http://mybboard.net/download/112">changed_files_1410.zip</a></p>
+<p><strong>You must then check for modified templates using the instructions below.</strong></p>
+<h4><strong>Upgrading from other versions</strong></h4>
+<p>If you are upgrading from a version earlier than 1.2 then you will lose your custom themes, templates and language packs due to the number of changes between your version and the 1.2 series.</p>
+<p><span style="color:red;"><strong>Before you attempt to upgrade, ensure you have a database backup and a copy of the files currently in use on your board.</strong></span> This is so you can revert back to your earlier version if you need to or something goes horribly wrong with the upgrade process.</p>
+<p>Follow the general <a href="http://wiki.mybboard.net/index.php/Upgrading" target="_blank" title="View the MyBB Wiki page for Upgrading">[Wiki: Upgrading]</a> guide outlined on the MyBB Wiki to complete the upgrade process.</p>
+<h4><strong>Changed files since MyBB 1.4.8</strong></h4>
+<ul>
+<li>calendar.php</li>
+<li>forumdisplay.php</li>
+<li>global.php</li>
+<li>managegroup.php</li>
+<li>member.php</li>
+<li>modcp.php</li>
+<li>moderation.php</li>
+<li>portal.php</li>
+<li>private.php</li>
+<li>search.php</li>
+<li>stats.php</li>
+<li>usercp.php</li>
+<li>xmlhttp.php</li>
+<li>admin</li>
+<ul>
+<li>inc</li>
+<ul>
+<li>functions_themes.php</li>
+<li>functions_view_manager.php</li>
+</ul>
+<li>modules</li>
+<ul>
+<li>home</li>
+<ul>
+<li>credits.php</li>
+</ul>
+<li>forum</li>
+<ul>
+<li>attachments.php</li>
+<li>management.php</li>
+</ul>
+<li>style</li>
+<ul>
+<li>templates.php</li>
+<li>themes.php</li>
+</ul>
+<li>config</li>
+<ul>
+<li>mycode.php</li>
+<li>plugins.php</li>
+<li>settings.php</li>
+</ul>
+<li>tools</li>
+<ul>
+<li>backupdb.php</li>
+<li>mailerrors.php</li>
+<li>maillogs.php</li>
+<li>tasks.php</li>
+</ul>
+<li>user</li>
+<ul>
+<li>admin_permissions.php</li>
+<li>group_promotions.php</li>
+<li>groups.php</li>
+<li>mass_mail.php</li>
+<li>users.php</li>
+</ul>
+</ul>
+</ul>
+<li>install</li>
+<ul>
+<li>index.php</li>
+<li>upgrade.php</li>
+<li>resources</li>
+<ul>
+<li>language.lang.php</li>
+<li>mybb_theme.xml</li>
+<li>output.php</li>
+<li>upgrade16.php</li>
+</ul>
+</ul>
+<li>inc</li>
+<ul>
+<li>class_core.php</li>
+<li>class_error.php</li>
+<li>class_feedgeneration.php</li>
+<li>class_moderation.php</li>
+<li>class_parser.php</li>
+<li>db_pdo.php</li>
+<li>db_pgsql.php</li>
+<li>functions.php</li>
+<li>functions_forumlist.php</li>
+<li>functions_online.php</li>
+<li>functions_post.php</li>
+<li>functions_search.php</li>
+<li><span style="color:green;">functions_serverstats.php</span></li>
+<li>functions_upload.php</li>
+<li>init.php</li>
+<li>3rdparty</li>
+<ul>
+<li>diff</li>
+<ul>
+<li>Diff.php</li>
+</ul>
+</ul>
+<li>languages</li>
+<ul>
+<li>english.php</li>
+<li>english</li>
+<ul>
+<li>datahandler_user.lang.php</li>
+<li>modcp.lang.php</li>
+</ul>
+</ul>
+<li>datahandlers</li>
+<ul>
+<li>event.php</li>
+<li>pm.php</li>
+<li>user.php</li>
+</ul>
+<li>cachehandlers</li>
+<ul>
+<li>eaccelerator.php</li>
+<li>memcache.php</li>
+<li>xcache.php</li>
+</ul>
+<li>tasks</li>
+<ul>
+<li>backupdb.php</li>
+<li>massmail.php</li>
+<li>promotions.php</li>
+</ul>
+</ul>
+</ul>
+<p>* <span style="color:red;">Red represents files that contain security updates</span><br />
+* <span style="color:green;">Green represents new files added in this release</span></p>
+<h4><strong>Bugs fixed since MyBB 1.4.8</strong></h4>
+<ul>
+<li><a href="http://dev.mybboard.net/issues/180" target="_blank">#180</a> - PHP 5.3/6.0 Changes &amp; Support</li>
+<li><a href="http://dev.mybboard.net/issues/249" target="_blank">#249</a> - Server statistics on installation</li>
+<li><a href="http://dev.mybboard.net/issues/297" target="_blank">#297</a> - Old Credits Updated</li>
+<li><a href="http://dev.mybboard.net/issues/307" target="_blank">#307</a> - Mysql Backups - keys not quoted</li>
+<li><a href="http://dev.mybboard.net/issues/308" target="_blank">#308</a> - PostgreSQL error in Forum Management -&gt; Edit Forum</li>
+<li><a href="http://dev.mybboard.net/issues/309" target="_blank">#309</a> - Direct access of some files generates PHP errors</li>
+<li><a href="http://dev.mybboard.net/issues/310" target="_blank">#310</a> - Multiple Smilies PHP Error</li>
+<li><a href="http://dev.mybboard.net/issues/311" target="_blank">#311</a> - RSS Feed incorrect formatting</li>
+<li><a href="http://dev.mybboard.net/issues/318" target="_blank">#318</a> - search_results_inlinemodcol Template Oversight</li>
+<li><a href="http://dev.mybboard.net/issues/319" target="_blank">#319</a> - Forum announcements trow do not alternate</li>
+<li><a href="http://dev.mybboard.net/issues/320" target="_blank">#320</a> - Mod-CP - Edit User &amp; Birthday</li>
+<li><a href="http://dev.mybboard.net/issues/321" target="_blank">#321</a> - Future mass mailings</li>
+<li><a href="http://dev.mybboard.net/issues/322" target="_blank">#322</a> - HTML in forum names in 1.4.8</li>
+<li><a href="http://dev.mybboard.net/issues/323" target="_blank">#323</a> - Delete a PM using the delete button</li>
+<li><a href="http://dev.mybboard.net/issues/324" target="_blank">#324</a> - Maximum Length in Custom Profile Fields do not work</li>
+<li><a href="http://dev.mybboard.net/issues/332" target="_blank">#332</a> - SQLite version</li>
+<li><a href="http://dev.mybboard.net/issues/333" target="_blank">#333</a> - Captcha not shown if board is closed</li>
+<li><a href="http://dev.mybboard.net/issues/334" target="_blank">#334</a> - Missing label tag</li>
+<li><a href="http://dev.mybboard.net/issues/335" target="_blank">#335</a> - Board Statistics inconsistency</li>
+<li><a href="http://dev.mybboard.net/issues/336" target="_blank">#336</a> - Profile Display Problem: usereputationsystem</li>
+<li><a href="http://dev.mybboard.net/issues/353" target="_blank">#353</a> - ACP - group # of users when using additional groups bug</li>
+<li><a href="http://dev.mybboard.net/issues/354" target="_blank">#354</a> - System mail log: Wrong multipage links </li>
+<li><a href="http://dev.mybboard.net/issues/355" target="_blank">#355</a> - member.php custom profile fields alternating trow issue </li>
+<li><a href="http://dev.mybboard.net/issues/356" target="_blank">#356</a> - Search finduserthreads problem with limit</li>
+<li><a href="http://dev.mybboard.net/issues/358" target="_blank">#358</a> - PHP 5.3 my_number_format stats.php PHP warning</li>
+<li><a href="http://dev.mybboard.net/issues/359" target="_blank">#359</a> - Selective delete system mail logs not working</li>
+<li><a href="http://dev.mybboard.net/issues/360" target="_blank">#360</a> - capitalized LIMIT clause in db abstraction layer queries</li>
+<li><a href="http://dev.mybboard.net/issues/361" target="_blank">#361</a> - Hard-coded language string in admin permissions page</li>
+<li><a href="http://dev.mybboard.net/issues/364" target="_blank">#364</a> - Post not quoted from Reply button</li>
+<li><a href="http://dev.mybboard.net/issues/366" target="_blank">#366</a> - Merged Accounts and Join Date</li>
+<li><a href="http://dev.mybboard.net/issues/367" target="_blank">#367</a> - Who's online do_addsubscription and removesubscriptions</li>
+<li><a href="http://dev.mybboard.net/issues/368" target="_blank">#368</a> - Search PHP error</li>
+<li><a href="http://dev.mybboard.net/issues/369" target="_blank">#369</a> - UserCP Ampersand in link not valid</li>
+<li><a href="http://dev.mybboard.net/issues/370" target="_blank">#370</a> - Copy forum - forum can have no parent</li>
+<li><a href="http://dev.mybboard.net/issues/371" target="_blank">#371</a> - Backup DB and Check File task enabling warning</li>
+<li><a href="http://dev.mybboard.net/issues/372" target="_blank">#372</a> - Syndication: Atom and RSS different time</li>
+<li><a href="http://dev.mybboard.net/issues/373" target="_blank">#373</a> - Buddy List doesn't show invisible users as online</li>
+<li><a href="http://dev.mybboard.net/issues/381" target="_blank">#381</a> - &lt;/tr&gt; tag missing in template member_register_customfield</li>
+<li><a href="http://dev.mybboard.net/issues/382" target="_blank">#382</a> - Email notification about errors not working</li>
+<li><a href="http://dev.mybboard.net/issues/383" target="_blank">#383</a> - [PM] &quot;Replied to&quot; icon not shown if you replied to all recipients</li>
+<li><a href="http://dev.mybboard.net/issues/385" target="_blank">#385</a> - &quot;create new forum&quot; generates postgresql error</li>
+<li><a href="http://dev.mybboard.net/issues/386" target="_blank">#386</a> - multiple forums memcache bug</li>
+<li><a href="http://dev.mybboard.net/issues/387" target="_blank">#387</a> - Custom Profile Fields using Check Boxes option forgets settings</li>
+<li><a href="http://dev.mybboard.net/issues/388" target="_blank">#388</a> - Inline Thread Deletion and Reported Posts</li>
+<li><a href="http://dev.mybboard.net/issues/389" target="_blank">#389</a> - thread views is stuck if php shutdown function not enabled.</li>
+<li><a href="http://dev.mybboard.net/issues/392" target="_blank">#392</a> - postgres &quot;Split Threads&quot; SQL error</li>
+<li><a href="http://dev.mybboard.net/issues/394" target="_blank">#394</a> - Naming an admin with special characters during installation doesn't &quot;work&quot;</li>
+<li><a href="http://dev.mybboard.net/issues/400" target="_blank">#400</a> - Profile Editing</li>
+<li><a href="http://dev.mybboard.net/issues/401" target="_blank">#401</a> - Inline Moderation - do_multideleteposts</li>
+<li><a href="http://dev.mybboard.net/issues/411" target="_blank">#411</a> - Highlighted search results..</li>
+<li><a href="http://dev.mybboard.net/issues/412" target="_blank">#412</a> - Promotion bug</li>
+<li><a href="http://dev.mybboard.net/issues/414" target="_blank">#414</a> - 1.4.6, pgsql, 'move thread' gives SQL error</li>
+<li><a href="http://dev.mybboard.net/issues/416" target="_blank">#416</a> - Group Promotions not Working or 'Broke'?</li>
+<li><a href="http://dev.mybboard.net/issues/417" target="_blank">#417</a> - Unapproved threads post count</li>
+<li><a href="http://dev.mybboard.net/issues/423" target="_blank">#423</a> - Users browsing a redirect forum</li>
+<li><a href="http://dev.mybboard.net/issues/426" target="_blank">#426</a> - Problems with language changes in several areas...</li>
+<li><a href="http://dev.mybboard.net/issues/429" target="_blank">#429</a> - MyBB Backups do not preserve NULL and whitespace</li>
+<li><a href="http://dev.mybboard.net/issues/441" target="_blank">#441</a> - Deleting a copied thread deletes the attachments of the original thread too</li>
+<li><a href="http://dev.mybboard.net/issues/442" target="_blank">#442</a> - Wrong dateline of split thread</li>
+<li><a href="http://dev.mybboard.net/issues/451" target="_blank">#451</a> - Unread PM notice dissapears after editing options</li>
+<li><a href="http://dev.mybboard.net/issues/452" target="_blank">#452</a> - Upgraded forums issue with themestylesheets cachefile column</li>
+<li><a href="http://dev.mybboard.net/issues/457" target="_blank">#457</a> - Double Template Rows</li>
+<li><a href="http://dev.mybboard.net/issues/460" target="_blank">#460</a> - Attachment search not working correctly</li>
+<li><a href="http://dev.mybboard.net/issues/462" target="_blank">#462</a> - missing &quot;replied to&quot; at PM replied via draft</li>
+<li><a href="http://dev.mybboard.net/issues/463" target="_blank">#463</a> - latest threads on portal page</li>
+<li><a href="http://dev.mybboard.net/issues/466" target="_blank">#466</a> - Last post date after custom merge</li>
+<li><a href="http://dev.mybboard.net/issues/468" target="_blank">#468</a> - Post count accepts minus numbers</li>
+<li><a href="http://dev.mybboard.net/issues/473" target="_blank">#473</a> - unresetted variable in view manager</li>
+<li><a href="http://dev.mybboard.net/issues/476" target="_blank">#476</a> - Subforum of password protected forum searchable</li>
+<li><a href="http://dev.mybboard.net/issues/479" target="_blank">#479</a> - postgresql merge users error</li>
+<li><a href="http://dev.mybboard.net/issues/482" target="_blank">#482</a> - There was a problem communicating with the mod version server.</li>
+<li><a href="http://dev.mybboard.net/issues/501" target="_blank">#501</a> - Hidden fields in profiles and Moderators</li>
+<li><a href="http://dev.mybboard.net/issues/507" target="_blank">#507</a> - Max password length</li>
+<li><a href="http://dev.mybboard.net/issues/511" target="_blank">#511</a> - managegroup.php and displaygroup</li>
+<li><a href="http://dev.mybboard.net/issues/516" target="_blank">#516</a> - Warning with custom profile field</li>
+<li><a href="http://dev.mybboard.net/issues/517" target="_blank">#517</a> - Incomplete theme exports</li>
+<li><a href="http://dev.mybboard.net/issues/518" target="_blank">#518</a> - Missing mod log entry</li>
+<li><a href="http://dev.mybboard.net/issues/521" target="_blank">#521</a> - Display and sort by rating doesn't work in PostgreSQL</li>
+<li><a href="http://dev.mybboard.net/issues/524" target="_blank">#524</a> - Slight typo in ./inc/functions.php</li>
+<li><a href="http://dev.mybboard.net/issues/531" target="_blank">#531</a> - Findguest/user search error</li>
+<li><a href="http://dev.mybboard.net/issues/532" target="_blank">#532</a> - Email validation weakness</li>
+<li><a href="http://dev.mybboard.net/issues/533" target="_blank">#533</a> - Admincp User Merge and Disabled Forum Postcount</li>
+<li><a href="http://dev.mybboard.net/issues/536" target="_blank">#536</a> - Editing recurring event</li>
+<li><a href="http://dev.mybboard.net/issues/541" target="_blank">#541</a> - Some in cases in error handler don't work as expected</li>
+<li><a href="http://dev.mybboard.net/issues/547" target="_blank">#547</a> - Warnings when adding a group promotion</li>
+<li><a href="http://dev.mybboard.net/issues/549" target="_blank">#549</a> - Cannot edit bio</li>
+</ul>
+<h4><strong>Theme and template changes</strong></h4>
+<p>Using the "Find Updated" link under the "Templates" page in the Admin CP you can find a list of the templates that have changed in this release that you've got one or more custom copies of.</p>
+<p>After identifying changed templates using the tool you can either revert your custom template to the default (delete it) or use the "diff" tool to perform a difference analysis on your custom template and the default.</p>
+<p>"Revert required" indicates that for this template to work correctly with MyBB 1.4.8 you'll either need to revert it to the default or modify your custom template to include the changes in the default. If a revert is not required your custom version of the template should work perfectly fine.</p>
+<h4><strong>Template changes</strong></h4>
+<p>Since MyBB 1.4.8 the following templates have had changes to them:</p>
+<ul>
+<li>member_register_customfield</li>
+<li>posticons</li>
+<li>postbit_ignored</li>
+</ul>
+<p>* <span style="color:red;">Red represents the template must be updated or reverted to fix security problems</span></p>
+<h4><strong>Language file changes</strong></h4>
+<p>Since MyBB 1.4.8 the following language files have had changes to them:</p>
+<ul>
+<li>datahandler_user.lang.php</li>
+</ul>
+<p>Either update your language packs to include the changes in these files or revert to the standard English language pack.</p>
+<h4><strong>Plugins</strong></h4>
+<p>Most of your MyBB 1.4.x plugins will work correctly with 1.4.10 without any updates.</p>
+<hr />
+<h1><span style="color:red;font-weight:bold;">IMPORTANT Update: December 8th, 2009</span></h1>
+<p>Due to a regression introduced by a change between MyBB 1.4.9 and MyBB 1.4.10 if you downloaded the MyBB 1.4.10 package or update before December 7th, 2009, we are releasing a patch to fix this issue.</p>
+<p>Open /admin/modules/style/templates.php and find near line 531:</p>
+<p><em><code>// Only allow users to move non-default templates to stop them from being able to delete it!<br />
+if($template['sid'] == "-2")<br />
+{<br />
+	echo $form-&gt;generate_hidden_field("sid", "-2");<br />
+}<br />
+else<br />
+{<br />
+	$form_container-&gt;output_row($lang-&gt;template_set, $lang-&gt;template_set_desc, $form-&gt;generate_select_box('sid', $template_sets, $sid));<br />
+}</code></em></p>
+<p>and replace with:</p>
+<p><em><code>// Force users to save the default template to a specific set, rather than the "global" templates - where they can delete it<br />
+if($template['sid'] == "-2")<br />
+{<br />
+	unset($template_sets[-1]);<br />
+}</p>
+<p>$form_container-&gt;output_row($lang-&gt;template_set, $lang-&gt;template_set_desc, $form-&gt;generate_select_box('sid', $template_sets, $sid));</code></em></p>
+<p>We apologize for this inconvenience!</p>

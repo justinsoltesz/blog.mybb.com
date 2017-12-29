@@ -1,0 +1,239 @@
+---
+layout: post
+title: MyBB 1.6.1 Release & 1.4.14 Update
+date: 2010-12-15 20:40:46.000000000 -05:00
+categories:
+- Updates
+tags: []
+author: Chris Boulton
+---
+<p>MyBB 1.6.1 is now available on the MyBB website and is a security and maintenance update to the MyBB 1.6 series. A patch has also been made available to provide the security updates for the MyBB 1.4 series.</p>
+<p>This release is to ensure that all users on MyBB 1.6 have the latest fixes, and to patch two medium-risk security issues within MyBB.</p>
+<p>This release fixes several reported issues since the release of 1.6.0, which caused some incorrect functionality of MyBB. These bugs have been fixed to provide a more stable version of MyBB for public use.</p>
+<h4><strong>What's fixed in this version?</strong></h4>
+<ul>
+<li>Two XSS Vulnerabilities in editpost.php, member.php and newreply.php - Thank you to YGN Ethical Hacker Group for alerting us of these issues.</li>
+<li>90+ bug fixes (<a href="http://dev.mybb.com/projects/mybb/versions/32">view all</a>)</li>
+</ul>
+<p>This release has been tested by our Software Quality Assurance group.</p>
+<h4>The following files were changed since the initial MyBB 1.6 release:</h4>
+<ul>
+<li>calendar.php</li>
+<li><span style="color:#ff0000;">editpost.php</span></li>
+<li>forumdisplay.php</li>
+<li><span style="color:#ff0000;">member.php</span></li>
+<li>misc.php</li>
+<li>modcp.php</li>
+<li>moderation.php</li>
+<li><span style="color:#ff0000;">newreply.php</span></li>
+<li>newthread.php</li>
+<li>polls.php</li>
+<li>portal.php</li>
+<li>printthread.php</li>
+<li>private.php</li>
+<li>reputation.php</li>
+<li>showthread.php</li>
+<li>usercp.php</li>
+<li>xmlhttp.php</li>
+<li>admin
+<ul>
+<li>inc
+<ul>
+<li>class_page.php</li>
+<li>functions.php</li>
+<li>functions_view_manager.php</li>
+</ul>
+</li>
+<li>jscripts
+<ul>
+<li>codepress
+<ul>
+<li>languages
+<ul>
+<li>css.css</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>imodal.js</li>
+</ul>
+</li>
+<li>modules
+<ul>
+<li>config
+<ul>
+<li>badwords.php</li>
+<li>banning.php</li>
+<li>calendar.php</li>
+<li>help_documents.php</li>
+</ul>
+</li>
+<li>forum
+<ul>
+<li>announcements.php</li>
+<li>management.php</li>
+</ul>
+</li>
+<li>home
+<ul>
+<li>credits.php</li>
+<li>preferences.php</li>
+</ul>
+</li>
+<li>style
+<ul>
+<li>templates.php</li>
+<li>themes.php</li>
+</ul>
+</li>
+<li>tools
+<ul>
+<li>recount_rebuild.php</li>
+</ul>
+</li>
+<li>user
+<ul>
+<li>groups.php</li>
+<li>users.php</li>
+</ul>
+</li>
+<li>styles
+<ul>
+<li>sharepoint
+<ul>
+<li><span style="color:#008000;">avatar_gallery.css</span></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>inc
+<ul>
+<li>datahandlers
+<ul>
+<li>post.php</li>
+<li>user.php</li>
+</ul>
+</li>
+<li>languages
+<ul>
+<li>english
+<ul>
+<li>admin
+<ul>
+<li>config_badwords.lang.php</li>
+<li>forum_management.lang.php</li>
+<li>tools_recount_rebuild.lang.php</li>
+<li>tools_statistics.lang.php</li>
+</ul>
+</li>
+<li>moderation.lang.php</li>
+<li>portal.lang.php</li>
+<li>reputation.lang.php</li>
+<li>usercp.lang.php</li>
+<li>xmlhttp.lang.php</li>
+</ul>
+</li>
+<li>english.php</li>
+</ul>
+</li>
+<li>tasks
+<ul>
+<li>delayedmoderation.php</li>
+<li>promotions.php</li>
+<li>userpruning.php</li>
+</ul>
+</li>
+<li>class_core.php</li>
+<li>class_custommoderation.php</li>
+<li>class_datacache.php</li>
+<li>class_moderation.php</li>
+<li>class_parser.php</li>
+<li>functions.php</li>
+<li>functions_forumlist.php</li>
+<li>functions_indicators.php</li>
+<li>functions_online.php</li>
+<li>functions_post.php</li>
+<li>functions_search.php</li>
+<li>functions_user.php</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>install
+<ul>
+<li>resources
+<ul>
+<li>mybb_theme.xml</li>
+<li>settings.xml</li>
+<li>upgrade17.php</li>
+<li><span style="color:#008000;">upgrade18.php</span></li>
+</ul>
+</li>
+<li>index.php</li>
+</ul>
+</li>
+<li>jscripts
+<ul>
+<li>editor.js</li>
+</ul>
+</li>
+</ul>
+<p>* <span style="color:#ff0000;">Red represents files that contain security updates</span><br />
+*<span style="color:#008000;"> Green represents new files added in this release</span></p>
+<h4><strong>MyBB 1.6.0 to MyBB 1.6.1 Security Patch</strong></h4>
+<p>This patch is only for users running MyBB 1.6.0. If you are running an older version of MyBB then please download MyBB 1.6.0 from the MyBB site and update to it using the general <a title="View the MyBB Wiki page for Upgrading" href="http://wiki.mybboard.net/index.php/Upgrading" target="_blank">[Wiki: Upgrading]</a> guide.</p>
+<p>If you wish to manually patch your board please download “mybb_1600_patches.txt” and follow the instructions in that file.</p>
+<p><a href="http://mybboard.net/download/129">mybb_1600_patches.txt</a></p>
+<p><strong>The manual patch set instructions only fixes the security vulnerabilities and is only made available to temporarily secure your forum until you have time to run the complete upgrade.</strong></p>
+<h4><strong>MyBB 1.6.0 to MyBB 1.6.1 Full Upgrade</strong></h4>
+<p>When upgrading from 1.6.0, you will not lose any custom themes, plugins or language packs which you may have installed.</p>
+<p>Follow the general <a title="View the MyBB Wiki page for Upgrading" href="http://wiki.mybboard.net/index.php/Upgrading" target="_blank">[Wiki: Upgrading]</a> guide outlined on the MyBB Wiki to complete the upgrade process. You may download a ZIP archive of changed files here:</p>
+<p><a href="http://mybboard.net/download/128">changed_files_1601.zip</a></p>
+<p>Please download the attached ZIP archive and replace the files in your forum directory with those from the ZIP archive.</p>
+<p><span style="color:red;"><strong>This update <span style="font-size:large;text-decoration:underline;">does</span> require running the upgrader.</strong></span><br />
+<em>There <strong>are</strong> database schema, language string, or template changes in this version.</em></p>
+<p><strong>You must then check for modified templates using the instructions below.</strong></p>
+<h4><strong>Theme and template changes</strong></h4>
+<p>Using the "Find Updated" link under the "Templates" page in the Admin CP you can find a list of the templates that have changed in this release that you've got one or more custom copies of.</p>
+<p>After identifying changed templates using the tool you can either revert your custom template to the default (delete it) or use the "diff" tool to perform a difference analysis on your custom template and the default.</p>
+<p>"Revert required" indicates that for this template to work correctly with MyBB 1.6.1 you'll either need to revert it to the default or modify your custom template to include the changes in the default. If a revert is not required your custom version of the template should work perfectly fine.</p>
+<h4><strong>Template changes</strong></h4>
+<p>Since MyBB 1.6.0 the following templates have had changes to them:</p>
+<ul>
+<li>portal_latestthreads_thread</li>
+<li>showthread_poll_option_multiple</li>
+<li>usercp_nav_misc</li>
+</ul>
+<p>* <span style="color:red;">Red represents the template must be updated or reverted to fix security problems</span></p>
+<h4><strong>Language file changes</strong></h4>
+<p>Since MyBB 1.6.0 the following language files have had changes to them:</p>
+<ul>
+<li>moderation.lang.php</li>
+<li>portal.lang.php</li>
+<li>reputation.lang.php</li>
+<li>usercp.lang.php</li>
+<li>xmlhttp.php</li>
+<li>admin
+<ul>
+<li>config_badwords.lang.php</li>
+<li>forum_management.lang.php</li>
+<li>tools_recount_rebuild.lang.php</li>
+<li>tools_statistics.lang.php</li>
+</ul>
+</li>
+</ul>
+<p>Either update your language packs to include the changes in these files or revert to the standard English language pack.</p>
+<h2><strong>MyBB 1.4.14 Update</strong></h2>
+<p>MyBB 1.4.14 was released on August 3rd 2010 to provide full PHP 5.3 functionality as well as improved attachment management. If you're still using 1.4.13, it is recommended to upgrade to 1.4.14. You can do this by following the instructions in the <a href="http://blog.mybb.com/2010/08/03/mybb-1-4-14-released-–-maintenance-release/">MyBB 1.4.14 Release Announcement</a>. The changed files package has been updated with the latest security fixes.</p>
+<p>Please note all users of the 1.4.x series are urged to upgrade to the latest release of MyBB (1.6.1).</p>
+<p>This patch is only for users running MyBB 1.4.14 or any previous release of the MyBB 1.4 series. Please download "mybb_1414_patches.txt" below and follow the manual patching instructions.</p>
+<p><a href="http://mybb.com/download/130">mybb_1414_patches.txt</a></p>
+<h4><strong>Reporting MyBB security vulnerabilities</strong></h4>
+<p>If you think you've found a vulnerability in MyBB, we advise you not to publicly post it on these forums or publicly release information about it elsewhere until we've had time to prepare and release a patch.</p>
+<p>As always, you can send through security related messages on the MyBB website from the <a href="http://www.mybboard.net/contact/" target="_blank">Contact Us</a> page.</p>
+<p>Thank you,<br />
+MyBB Team</p>

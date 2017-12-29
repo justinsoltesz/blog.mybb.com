@@ -1,0 +1,20 @@
+---
+layout: post
+title: Updated Subversion Access Details
+date: 2009-09-12 19:08:09.000000000 -04:00
+categories:
+- Development
+tags:
+- Subversion
+author: Chris Boulton
+---
+<p>As part of our recent (and emergency) server migration, we've just finished restructuring our development server (that hosts the <a href="http://dev.mybboard.net/">MyBB Development Portal</a> and Subversion repositories). As a result, if you're checking out and working with our Subversion repositories, please be aware that the URLs for doing so have changed.</p>
+<p>The new official Subversion repositories are as follows:</p>
+<ul>
+<li>MyBB - <a href="http://svn.mybboard.net/mybb/">http://svn.mybboard.net/mybb/</a></li>
+<li>MyBB Merge System - <a href="http://svn.mybboard.net/mybb-import/">http://svn.mybboard.net/mybb-import/</a></li>
+<li>MyBB Modifications - <a href="http://svn.mybboard.net/mybb-modifications/">http://svn.mybboard.net/mybb-modifications/</a></li>
+</ul>
+<p>If you've already checked out a copy of MyBB using Subversion, you can switch your local copy to the new URL using the following command:<br />
+<code>svn switch --relocate http://dev.mybboard.net/svn/mybb/ http://svn.mybboard.net/mybb</code></p>
+<p><strong>Please note that the old Subversion URLs will continue to work for the majority of users the time being.</strong> However, if you're running Mac OS X, you'll need to switch to the new URLs due to a bug with the Subversion client that ships with Mac OS X.</p>

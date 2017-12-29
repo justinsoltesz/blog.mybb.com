@@ -5,7 +5,7 @@ kramdown:
 highlighter: rouge
 permalink: /:year/:month/:day/:title/
 url: https://blog.mybb.com
-baseurl: /blog.mybb.com-test
+baseurl: /blog.mybb.com
 mainsiteurl: https://mybb.com
 
 search_site: blog.mybb.com

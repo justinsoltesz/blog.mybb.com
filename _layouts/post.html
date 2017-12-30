@@ -13,14 +13,25 @@ layout: blog
         <div class="blog-post__categories-tags">
             {% assign categories = page.categories %}
             {% for category in categories %}
-            <a href="{{ site.baseurl }}/category/{{ category | slugify }}" class="blog-post__categories-tags__link" title="Categorized under {{ category }}">{% include icon.html icon='folder' %} {{ category }}</a>
+            <a href="{{ site.baseurl }}/category/{{ category | slugify }}/" class="blog-post__categories-tags__link" title="Categorized under {{ category }}">{% include icon.html icon='folder' %} {{ category }}</a>
             {% endfor %}
             {% assign tags = page.tags %}
             {% for tag in tags %}
-            <a href="{{ site.baseurl }}/tag/{{ tag | slugify }}" class="blog-post__categories-tags__link" title="Tagged {{ tag }}">{% include icon.html icon='tag' %} {{ tag }}</a>
+            <a href="{{ site.baseurl }}/tag/{{ tag | slugify }}/" class="blog-post__categories-tags__link" title="Tagged {{ tag }}">{% include icon.html icon='tag' %} {{ tag }}</a>
             {% endfor %}
         </div>
     </section>
+    <ul class="pagination pagination--posts">
+        {% if page.previous.url %}
+        <li class="pagination__item pagination__item--previous">
+            <a href="{{ page.previous.url }}" class="pagination__item__link">{% include icon.html icon='chevron-left' %} {{ page.previous.title }}</a>
+        </li>
+        {% endif %}
+        {% if page.next.url %}
+        <li class="pagination__item pagination__item--next">
+            <a href="{{ page.next.url }}" class="pagination__item__link">{{ page.next.title }} {% include icon.html icon='chevron-right' %}</a>
+        {% endif %}
+    </ul>
 </div>
 <aside class="page-sidebar">
 	{% include sidebar.html %}

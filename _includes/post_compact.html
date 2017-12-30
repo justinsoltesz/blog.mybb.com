@@ -1,11 +1,8 @@
-<section class="block blog-post">
+<section class="block blog-post blog-post--compact">
     <header class="block__heading blog-post__heading">
         <h2 class="block__heading__title blog-post__title"><a href="{{ site.baseurl }}{{ post.url }}" class="blog-post__title__link">{{ post.title }}</a></h2>
         <p class="block__heading__subtitle"><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}" class="block__heading__subtitle__link blog-post__permalink"><span class="blog-post__date">{{ post.date | date_to_string }}</span></a></p>
     </header>
-    <div class="blog-post__post post">
-        {{ post.content }}
-    </div>
     <div class="blog-post__categories-tags">
         {% assign categories = post.categories %}
         {% for category in categories %}

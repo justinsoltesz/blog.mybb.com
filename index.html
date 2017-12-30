@@ -1,19 +1,16 @@
 ---
 layout: blog
-title: Development Blog
+title: MyBB Development Blog
+id: index
+pagination:
+  enabled: true
 ---
 <div class="page-content page-content--sidebar">
     {% for post in paginator.posts %}
     {% include post_preview.html %}
     {% endfor %}
 
-    {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
-    {% endif %}
-    <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
-    {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path }}" class="next">Next</a>
-    {% endif %}
+    {% include pagination.html %}
 </div>
 <aside class="page-sidebar">
 	{% include sidebar.html %}

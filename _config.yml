@@ -20,8 +20,14 @@ plugins:
   - jekyll-paginate
   - jekyll-archives
 
-paginate: 5
-paginate_path: /page/:num/
+pagination:
+  enabled: true
+  per_page: 5
+  permalink: '/page/:num/'
+  title: ':title - Page :num'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
 
 jekyll-archives:
   enabled: all

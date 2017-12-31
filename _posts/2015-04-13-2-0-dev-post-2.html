@@ -16,24 +16,35 @@ author: Euan T
 <h2>And now for a quick look at some of our new features</h2>
 <p>So for everyone who's managed to stick with us so far, here's what you've been really looking forward to - screenshot time! In this section we'll have a look at one of the new commonly requested features coming to MyBB 2.0 and at the new look some existing features have received.</p>
 <h3>Liking content</h3>
-<p>The ability to like content has long been a requested feature in the MyBB core, as has been evidenced by the large number of third party plugins that provide just such functionality. We're glad to acknowledge that this functionality is now a core feature in MyBB 2.0 and upgrading boards will have all existing reputation points received for posts converted to these new likes. <a href="https://blogdotmybbdotcom.files.wordpress.com/2015/04/screen-shot-2015-04-13-at-23-18-52.png"><img class="aligncenter size-large wp-image-2471" src="{{ site.baseurl }}/assets/images/screen-shot-2015-04-13-at-23-18-52.png?w=660" alt="Liking a post in MyBB 2.0." width="660" height="125" /></a> For developers, it's extremely easy to add the ability to like content to their own custom code. This means that third party systems such as image galleries can easily add the ability to like their content with only a few lines of code, as can be seen below.</p>
-<p>[code language="php"]<br />
-&lt;?php</p>
-<p>namespace MyBB\Core\Database\Models;</p>
-<p>use Illuminate\Database\Eloquent\Model;<br />
-use Illuminate\Database\Eloquent\SoftDeletes;<br />
-use MyBB\Core\Likes\Traits\LikeableTrait;</p>
-<p>class Post extends Model implements HasPresenter<br />
-{<br />
-	use SoftDeletes;<br />
-	use LikeableTrait;</p>
-<p>	// The rest of your database model implementation code goes here...<br />
-}<br />
-[/code]</p>
+<p>The ability to like content has long been a requested feature in the MyBB core, as has been evidenced by the large number of third party plugins that provide just such functionality. We're glad to acknowledge that this functionality is now a core feature in MyBB 2.0 and upgrading boards will have all existing reputation points received for posts converted to these new likes.</p>
+<p><a href="{{ site.baseurl }}/assets/images/2015/04/screen-shot-2015-04-13-at-23-18-52.png" class="blog-post__image-link"><img class="blog-post__image-link__image" src="{{ site.baseurl }}/assets/images/2015/04/screen-shot-2015-04-13-at-23-18-52.png" alt="Liking a post in MyBB 2.0." /></a></p>
+<p>For developers, it's extremely easy to add the ability to like content to their own custom code. This means that third party systems such as image galleries can easily add the ability to like their content with only a few lines of code, as can be seen below.</p>
+
+{% capture markdown %}
+```php
+<?php
+
+namespace MyBB\Core\Database\Models;
+
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
+use MyBB\Core\Likes\Traits\LikeableTrait;
+
+class Post extends Model implements HasPresenter
+{
+	use SoftDeletes;
+	use LikeableTrait;
+
+	// The rest of your database model implementation code goes here...
+}
+```
+{% endcapture %}
+{{ markdown | markdownify }}
 <p>This should mean that this feature will be extremely common across third party applications and extensions. This approach to easy extension and customisability has always been at the core of MyBB, and we aim to keep it so throughout the lifetime of 2.0.</p>
 <h3>The new look member list</h3>
-<p>As with the rest of MyBB 2.0, the old member list has received quite a face lift. Rather than the tabular list of old showing very few details, members are now presented as individual user cards, with their personal avatars given front and centre. <a href="https://blogdotmybbdotcom.files.wordpress.com/2015/04/screen-shot-2015-04-13-at-23-28-27.png"><img class="aligncenter size-large wp-image-2472" src="{{ site.baseurl }}/assets/images/screen-shot-2015-04-13-at-23-28-27.png?w=660" alt="The MyBB 2.0 user list" width="660" height="254" /></a></p>
+<p>As with the rest of MyBB 2.0, the old member list has received quite a face lift. Rather than the tabular list of old showing very few details, members are now presented as individual user cards, with their personal avatars given front and centre.</p>
+<p><a href="{{ site.baseurl }}/assets/images/2015/04/screen-shot-2015-04-13-at-23-28-27.png" class="blog-post__image-link"><img class="blog-post__image-link__image" src="{{ site.baseurl }}/assets/images/2015/04/screen-shot-2015-04-13-at-23-28-27.png" alt="The MyBB 2.0 user list" /></a></p>
 <h3>The new look forum view</h3>
-<p>What's a forum system without forums? In MyBB 2.0, the forum overview has received a minor facelift, and the commonly requested feature of showing the avatar of the last user to post a reply to a topic has been integrated into the core. The approach to the forum view is to offer a minimalistic approach to bringing your content to the forefront. It is for this reason that there is very little clutter or extraneous information presented - we want to bring what really matters straight to the attention of your users. <a href="https://blogdotmybbdotcom.files.wordpress.com/2015/04/screen-shot-2015-04-13-at-23-31-20.png"><img class="aligncenter size-large wp-image-2473" src="{{ site.baseurl }}/assets/images/screen-shot-2015-04-13-at-23-31-20.png?w=660" alt="MyBB 2.0 Forum View" width="660" height="234" /></a></p>
+<p>What's a forum system without forums? In MyBB 2.0, the forum overview has received a minor facelift, and the commonly requested feature of showing the avatar of the last user to post a reply to a topic has been integrated into the core. The approach to the forum view is to offer a minimalistic approach to bringing your content to the forefront. It is for this reason that there is very little clutter or extraneous information presented - we want to bring what really matters straight to the attention of your users. <a href="{{ site.baseurl }}/assets/images/2015/04/screen-shot-2015-04-13-at-23-31-20.png" class="blog-post__image-link"><img class="blog-post__image-link__image" src="{{ site.baseurl }}/assets/images/2015/04/screen-shot-2015-04-13-at-23-31-20.png" alt="MyBB 2.0 Forum View" width="660" height="234" /></a></p>
 <h2>Wrapping up</h2>
 <p>Well, that's it for this month's MyBB 2.0 development progress post. As you can hopefully see, the team has been hard at work and listening to user feedback. If you have any suggestions, post them in a comment or in the <a href="http://community.mybb.com/forum-152.html">2.0 suggestion forum</a>. We still have a lot more to both announce and to show, so keep your eyes tuned to the blog for future updates.</p>

@@ -24,12 +24,12 @@ layout: blog
     <ul class="pagination pagination--posts">
         {% if page.previous.url %}
         <li class="pagination__item pagination__item--previous">
-            <a href="{{ page.previous.url }}" class="pagination__item__link">{% include icon.html icon='chevron-left' %} {{ page.previous.title }}</a>
+            <a href="{{ site.baseurl }}{{ page.previous.url }}" class="pagination__item__link">{% include icon.html icon='chevron-left' %} {{ page.previous.title }}</a>
         </li>
         {% endif %}
         {% if page.next.url %}
         <li class="pagination__item pagination__item--next">
-            <a href="{{ page.next.url }}" class="pagination__item__link">{{ page.next.title }} {% include icon.html icon='chevron-right' %}</a>
+            <a href="{{ site.baseurl }}{{ page.next.url }}" class="pagination__item__link">{{ page.next.title }} {% include icon.html icon='chevron-right' %}</a>
         {% endif %}
     </ul>
 </article>

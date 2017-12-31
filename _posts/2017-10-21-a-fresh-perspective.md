@@ -7,7 +7,7 @@ categories:
 - Updates
 author: Eric J.
 ---
-<img style="width:100%;height:auto;" src="{{ site.baseurl }}/assets/images/17-head.jpg" alt="Blog header image" />
+<img src="{{ site.baseurl }}/assets/images/2017/10/17-head.jpg" alt="Blog header image" />
 
 MyBB has been making some changes lately, and if you haven’t noticed we’re here to give you the scoop. Discussion about bridging 1.x closer to 2.0 has been settling, and as such we have decided on the best course of action moving forward. This comes with some other updates, including the main site going responsive, our blog getting way more fun, setting up an official demo site, and speeding up that darn extension approval process.
 
@@ -61,7 +61,7 @@ We’re also considering the possibility of adding thread prefixes to the Reques
 
 After a lot of discussion internally, on the forum and in Discord, we’ve decided on the path that the MyBB software will be following leading up to MyBB 2. While we can all agree that MyBB needs to be more modern, rewriting it entirely from scratch is an enormous task and is taking much longer than we anticipated. Judging from the input from users, as well as discussion among staff, our best option moving forward will be to further bridge the 1.x series toward MyBB 2, while updating it to be more usable and modern.
 
-<img src="{{ site.baseurl }}/assets/images/17-screen.png" alt="MyBB Poll results" />
+<a href="{{ site.baseurl }}/assets/images/2017/10/17-screen.png" class="blog-post__image-link"><img src="{{ site.baseurl }}/assets/images/17-screen.png" alt="MyBB Poll results" class="blog-post__image-link__image" /></a>
 
 We have not decided on any specifics, but have discussed some of the following options:
 
